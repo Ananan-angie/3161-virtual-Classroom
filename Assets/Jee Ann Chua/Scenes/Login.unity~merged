@@ -123,11 +123,15 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
+--- !u!1 &1180054
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!1 &27570657
 =======
 --- !u!1 &1180054
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,6 +139,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 27570658}
   - component: {fileID: 27570661}
@@ -143,17 +149,25 @@ GameObject:
   m_Layer: 5
   m_Name: Exit
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 1180055}
   - component: {fileID: 1180057}
   - component: {fileID: 1180056}
   m_Layer: 5
   m_Name: Text
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &1180055
+RectTransform:
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &27570658
 RectTransform:
@@ -181,10 +195,13 @@ MonoBehaviour:
 --- !u!224 &1180055
 RectTransform:
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 27570657}
   m_Enabled: 1
@@ -226,6 +243,7 @@ RectTransform:
       m_Calls: []
 --- !u!114 &27570660
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 1180054}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -240,12 +258,17 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1180056
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 27570657}
   m_Enabled: 1
@@ -256,6 +279,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 1180054}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -264,13 +288,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
@@ -284,6 +313,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &27570661
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -299,12 +329,20 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Register
 --- !u!222 &1180057
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1180054}
+  m_CullTransparentMesh: 1
+--- !u!1 &69607787
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 27570657}
   m_CullTransparentMesh: 1
@@ -314,6 +352,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &69607787
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,6 +360,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 96881420}
   - component: {fileID: 96881422}
@@ -328,27 +369,37 @@ GameObject:
   m_Layer: 5
   m_Name: background
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 69607788}
   - component: {fileID: 69607790}
   - component: {fileID: 69607789}
   m_Layer: 5
   m_Name: Text
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &69607788
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &96881420
 =======
 --- !u!224 &69607788
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 96881419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -365,6 +416,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96881421
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 69607787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -379,34 +431,47 @@ RectTransform:
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69607789
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 69607787}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 96881419}
 =======
   m_GameObject: {fileID: 69607787}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Color: {r: 0.7529412, g: 0.6666667, b: 0.6666667, a: 1}
 =======
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Sprite: {fileID: 0}
   m_Type: 0
@@ -420,6 +485,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &96881422
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -435,12 +501,20 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Login
 --- !u!222 &69607790
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 69607787}
+  m_CullTransparentMesh: 1
+--- !u!1 &85807995
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 96881419}
   m_CullTransparentMesh: 1
@@ -450,6 +524,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &85807995
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,16 +532,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 373298241}
   - component: {fileID: 373298243}
   - component: {fileID: 373298242}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 85807996}
   - component: {fileID: 85807999}
   - component: {fileID: 85807998}
   - component: {fileID: 85807997}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Layer: 5
   m_Name: Password
   m_TagString: Untagged
@@ -474,16 +555,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &85807996
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &373298241
 =======
 --- !u!224 &85807996
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 373298240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -500,6 +587,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373298242
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 85807995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -581,17 +669,24 @@ MonoBehaviour:
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
 --- !u!114 &85807998
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 85807995}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 373298240}
 =======
   m_GameObject: {fileID: 85807995}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -605,6 +700,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_text: Exit Session
   m_isRightToLeft: 0
@@ -677,6 +774,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &373298243
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -688,12 +786,20 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &85807999
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 85807995}
+  m_CullTransparentMesh: 1
+--- !u!1 &177933868
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 373298240}
   m_CullTransparentMesh: 1
@@ -703,6 +809,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &177933868
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -710,6 +817,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1261639858}
   - component: {fileID: 1261639857}
@@ -718,6 +827,7 @@ GameObject:
   m_Name: Main Camera
   m_TagString: MainCamera
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 177933869}
   - component: {fileID: 177933872}
   - component: {fileID: 177933871}
@@ -725,11 +835,18 @@ GameObject:
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &177933869
+RectTransform:
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!81 &1261639856
 AudioListener:
@@ -737,16 +854,20 @@ AudioListener:
 --- !u!224 &177933869
 RectTransform:
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1261639855}
   m_Enabled: 1
 --- !u!20 &1261639857
 Camera:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 177933868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -807,11 +928,16 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &177933871
 MonoBehaviour:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1261639855}
   m_Enabled: 1
@@ -853,6 +979,7 @@ MonoBehaviour:
 --- !u!4 &1261639858
 Transform:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 177933868}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -879,11 +1006,19 @@ Transform:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &177933872
 CanvasRenderer:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 177933868}
+  m_CullTransparentMesh: 1
+--- !u!1 &201917814
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1261639855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -899,6 +1034,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &201917814
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,6 +1042,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1398484864}
   - component: {fileID: 1398484866}
@@ -913,27 +1051,37 @@ GameObject:
   m_Layer: 5
   m_Name: Session Welcome message
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 201917815}
   - component: {fileID: 201917817}
   - component: {fileID: 201917816}
   m_Layer: 5
   m_Name: Text
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &201917815
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1398484864
 =======
 --- !u!224 &201917815
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1398484863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -951,6 +1099,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1398484865
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 201917814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -965,34 +1114,47 @@ RectTransform:
   m_SizeDelta: {x: 323.5381, y: 91.0744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201917816
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 201917814}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1398484863}
 =======
   m_GameObject: {fileID: 201917814}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Color: {r: 0.9137255, g: 0.80784315, b: 0.80784315, a: 1}
 =======
   m_Color: {r: 0, g: 0, b: 0, a: 1}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Sprite: {fileID: 0}
   m_Type: 0
@@ -1006,6 +1168,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1398484866
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 25
@@ -1021,12 +1184,20 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Welcome to Virtual Classroom
 --- !u!222 &201917817
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 201917814}
+  m_CullTransparentMesh: 1
+--- !u!1 &485983635
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1398484863}
   m_CullTransparentMesh: 1
@@ -1036,6 +1207,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &485983635
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1043,6 +1215,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1443504302}
   - component: {fileID: 1443504304}
@@ -1050,28 +1224,38 @@ GameObject:
   m_Layer: 5
   m_Name: Text
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 485983636}
   - component: {fileID: 485983639}
   - component: {fileID: 485983638}
   - component: {fileID: 485983637}
   m_Layer: 5
   m_Name: Login
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &485983636
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1443504302
 =======
 --- !u!224 &485983636
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1443504301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1088,6 +1272,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1443504303
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 485983635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1147,12 +1332,25 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &485983638
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 485983635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1443504301}
 =======
@@ -1169,12 +1367,15 @@ MonoBehaviour:
 =======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
@@ -1192,6 +1393,7 @@ MonoBehaviour:
   m_Text: Session Welcome Message/Document
 --- !u!222 &1443504304
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1203,12 +1405,20 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &485983639
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 485983635}
+  m_CullTransparentMesh: 1
+--- !u!1 &519420028
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1443504301}
   m_CullTransparentMesh: 1
@@ -1218,6 +1428,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &519420028
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1225,6 +1436,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1516011086}
   - component: {fileID: 1516011088}
@@ -1233,17 +1446,25 @@ GameObject:
   m_Name: Text (TMP)
   m_TagString: Untagged
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!81 &519420029
+AudioListener:
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1516011086
 RectTransform:
@@ -1251,10 +1472,13 @@ RectTransform:
 --- !u!81 &519420029
 AudioListener:
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1516011085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1272,15 +1496,21 @@ AudioListener:
 --- !u!114 &1516011087
 MonoBehaviour:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
 --- !u!20 &519420031
 Camera:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1516011085}
   m_Enabled: 1
@@ -1368,6 +1598,7 @@ Camera:
 --- !u!222 &1516011088
 CanvasRenderer:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
@@ -1407,16 +1638,22 @@ CanvasRenderer:
   m_StereoSeparation: 0.022
 --- !u!4 &519420032
 Transform:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1516011085}
   m_CullTransparentMesh: 1
 --- !u!1 &1655536976
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
@@ -1426,7 +1663,10 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &731479595
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1434,6 +1674,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1655536979}
   - component: {fileID: 1655536978}
@@ -1441,21 +1683,28 @@ GameObject:
   m_Layer: 0
   m_Name: EventSystem
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 731479596}
   - component: {fileID: 731479599}
   - component: {fileID: 731479598}
   - component: {fileID: 731479597}
   m_Layer: 5
   m_Name: Username
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!114 &1655536977
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
 --- !u!224 &731479596
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1478,12 +1727,17 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731479597
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1655536976}
   m_Enabled: 1
@@ -1501,6 +1755,7 @@ MonoBehaviour:
 --- !u!114 &1655536978
 MonoBehaviour:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 731479595}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1600,11 +1855,16 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &859119063
 GameObject:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1655536976}
   m_Enabled: 1
@@ -1618,6 +1878,7 @@ GameObject:
 --- !u!4 &1655536979
 Transform:
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859119064}
@@ -1633,11 +1894,16 @@ Transform:
   m_IsActive: 1
 --- !u!224 &859119064
 RectTransform:
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1655536976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1649,6 +1915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731613747
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 859119063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1746,7 +2013,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 859119063}
   m_CullTransparentMesh: 1
 --- !u!1 &913018287
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1754,17 +2024,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1731613751}
   - component: {fileID: 1731613750}
   - component: {fileID: 1731613749}
   - component: {fileID: 1731613748}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 913018291}
   - component: {fileID: 913018290}
   - component: {fileID: 913018289}
   - component: {fileID: 913018288}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1772,21 +2048,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!114 &913018288
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!114 &1731613748
 =======
 --- !u!114 &913018288
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 913018287}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1731613747}
 =======
   m_GameObject: {fileID: 913018287}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -1797,21 +2081,29 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
+--- !u!114 &913018289
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!114 &1731613749
 =======
 --- !u!114 &913018289
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 913018287}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1731613747}
 =======
   m_GameObject: {fileID: 913018287}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -1828,16 +2120,22 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+<<<<<<< HEAD
+--- !u!223 &913018290
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!223 &1731613750
 =======
 --- !u!223 &913018290
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1731613747}
   m_Enabled: 1
@@ -1845,12 +2143,16 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 1261639857}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 913018287}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1861,25 +2163,35 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+<<<<<<< HEAD
+--- !u!224 &913018291
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1731613751
 =======
 --- !u!224 &913018291
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 913018287}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1731613747}
 =======
   m_GameObject: {fileID: 913018287}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - {fileID: 96881420}
   - {fileID: 1940795698}
@@ -1887,6 +2199,7 @@ RectTransform:
   - {fileID: 2029875586}
   - {fileID: 27570658}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - {fileID: 201917815}
   - {fileID: 731479596}
   - {fileID: 85807996}
@@ -1894,7 +2207,10 @@ RectTransform:
   - {fileID: 1632831157}
   - {fileID: 859119064}
   - {fileID: 177933869}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1903,9 +2219,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!1 &1787194922
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
 --- !u!1 &1327382927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +2305,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 1327382927}
   m_CullTransparentMesh: 1
 --- !u!1 &1587604201
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1994,6 +2316,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1787194923}
   - component: {fileID: 1787194925}
@@ -2001,27 +2325,42 @@ GameObject:
   m_Layer: 5
   m_Name: Text
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 1587604202}
   - component: {fileID: 1587604204}
   - component: {fileID: 1587604203}
   m_Layer: 5
   m_Name: Placeholder
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &1587604202
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1787194923
 =======
 --- !u!224 &1587604202
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1587604201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1787194922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2043,6 +2382,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787194924
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Father: {fileID: 731479596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2052,28 +2392,39 @@ RectTransform:
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1587604203
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1587604201}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1787194922}
 =======
   m_GameObject: {fileID: 1587604201}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
 =======
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2083,6 +2434,8 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
     m_FontStyle: 0
     m_BestFit: 0
@@ -2090,17 +2443,25 @@ MonoBehaviour:
     m_MaxSize: 40
     m_Alignment: 4
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
+<<<<<<< HEAD
+  m_Text: Username...
+--- !u!222 &1587604204
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Text: Session Information
 --- !u!222 &1787194925
@@ -2108,11 +2469,17 @@ MonoBehaviour:
   m_Text: Username...
 --- !u!222 &1587604204
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1587604201}
+  m_CullTransparentMesh: 1
+--- !u!1 &1632831156
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1787194922}
   m_CullTransparentMesh: 1
@@ -2122,6 +2489,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &1632831156
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2129,6 +2497,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 1940795698}
   - component: {fileID: 1940795700}
@@ -2136,28 +2506,38 @@ GameObject:
   m_Layer: 5
   m_Name: 'Session information '
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 1632831157}
   - component: {fileID: 1632831160}
   - component: {fileID: 1632831159}
   - component: {fileID: 1632831158}
   m_Layer: 5
   m_Name: Forgot
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &1632831157
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &1940795698
 =======
 --- !u!224 &1632831157
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1940795697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2175,6 +2555,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940795699
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 1632831156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2190,15 +2571,21 @@ RectTransform:
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1632831158
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1940795697}
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 1632831156}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2244,24 +2631,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632831156}
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Color: {r: 0.9137255, g: 0.80784315, b: 0.80784315, a: 1}
 =======
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Sprite: {fileID: 0}
   m_Type: 0
@@ -2269,6 +2667,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2277,16 +2676,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+<<<<<<< HEAD
+--- !u!222 &1632831160
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!222 &1940795700
 =======
 --- !u!222 &1632831160
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1632831156}
+  m_CullTransparentMesh: 1
+--- !u!1 &1922205892
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 1940795697}
   m_CullTransparentMesh: 1
@@ -2296,6 +2704,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!1 &1922205892
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2303,6 +2712,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   - component: {fileID: 2029875586}
   - component: {fileID: 2029875589}
@@ -2311,27 +2722,37 @@ GameObject:
   m_Layer: 5
   m_Name: Enter
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   - component: {fileID: 1922205893}
   - component: {fileID: 1922205895}
   - component: {fileID: 1922205894}
   m_Layer: 5
   m_Name: Placeholder
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
+--- !u!224 &1922205893
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
 --- !u!224 &2029875586
 =======
 --- !u!224 &1922205893
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 2029875585}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -2349,6 +2770,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029875587
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_GameObject: {fileID: 1922205892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2363,22 +2785,31 @@ RectTransform:
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1922205894
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1922205892}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 2029875585}
 =======
   m_GameObject: {fileID: 1922205892}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Navigation:
     m_Mode: 3
@@ -2414,6 +2845,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &2029875588
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0.5}
   m_RaycastTarget: 1
@@ -2482,34 +2914,47 @@ RectTransform:
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1970225841
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 1970225839}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 2029875585}
 =======
   m_GameObject: {fileID: 1970225839}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 =======
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
@@ -2523,6 +2968,7 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2029875589
 =======
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -2762,15 +3208,22 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &2080283001
+<<<<<<< HEAD
+=======
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+  m_GameObject: {fileID: 2080282998}
+=======
 <<<<<<< HEAD:Assets/Feiyu Chen/welcome page.unity
   m_GameObject: {fileID: 2029875585}
 =======
   m_GameObject: {fileID: 2080282998}
 >>>>>>> parent of eea752a (Add CreateSessionView):Assets/Jee Ann Chua/Scenes/Login.unity
+>>>>>>> parent of eea752a (Add CreateSessionView)
   m_CullTransparentMesh: 1
