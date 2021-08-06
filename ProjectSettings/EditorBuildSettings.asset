@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Jingcheng Xu/AppStartView.unity
     guid: 9d3df6dc2cc674b968acedbaf4959896
+  - enabled: 1
+    path: Assets/Feiyu Chen/Setting.unity
+    guid: 30815e1bc66d04f549e04be20b3a5eed
   m_configObjects: {}
