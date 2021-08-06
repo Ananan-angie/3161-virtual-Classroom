@@ -817,7 +817,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 450336406}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 450336403}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &450336406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +879,7 @@ GameObject:
   - component: {fileID: 598870323}
   - component: {fileID: 598870322}
   - component: {fileID: 598870321}
+  - component: {fileID: 598870324}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -922,6 +935,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598870324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598870320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eac9e52fac784ae797a521266c8b4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 0}
 --- !u!1 &737727705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1508,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 984089815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 984089812}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &984089815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2598,7 +2636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1615041097}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1615041094}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1615041097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,7 +2845,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1707064969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1707064966}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1707064969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,7 +2978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1786851635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1786851632}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1786851635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3330,7 +3404,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1983730193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 598870324}
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: PrintButtonName
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1983730190}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1983730193
 MonoBehaviour:
   m_ObjectHideFlags: 0
