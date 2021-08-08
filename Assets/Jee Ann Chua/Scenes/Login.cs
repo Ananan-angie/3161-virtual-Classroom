@@ -26,14 +26,14 @@ public class Login : MonoBehaviour
 
     public void adminDetails()
     {
-        //Get Username from Input then convert it to int
+        //Get Username from Input
         string userName = userNameField.text;
         //Get Password from Input 
         string password = passwordField.text;
 
-        Debug.Log(userName);
-        Debug.Log(password);
         string foundPassword;
+
+        //Look for key-pair value
         if (loginDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
         {
             Application.LoadLevel("AppStartView");
