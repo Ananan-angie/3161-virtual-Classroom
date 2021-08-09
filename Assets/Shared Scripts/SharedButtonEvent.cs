@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SharedButtonEvent : MonoBehaviour
 {
 
-    public void ChangeToScene(string sceneNo)
+    public void ChangeToScene(int sceneNo)
     {
-        Application.LoadLevel(sceneNo);
+        SceneManager.LoadScene(sceneNo);
     }
 
     public void OpenCloseMap(GameObject map)
