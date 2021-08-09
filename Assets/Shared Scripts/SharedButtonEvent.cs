@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonEvent : MonoBehaviour
+public class SharedButtonEvent : MonoBehaviour
 {
     public GameObject map;
 
