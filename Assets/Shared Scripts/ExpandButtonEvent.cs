@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExpandButton : MonoBehaviour
+public class ExpandButtonEvent : MonoBehaviour
 {
     [SerializeField] private string directionToCollapse = "up";
     [SerializeField] private GameObject controlledWindow;
@@ -20,6 +20,7 @@ public class ExpandButton : MonoBehaviour
 
     public void ToggleExpansion()
 	{
+
         bool isActive = !controlledWindow.activeSelf;
         controlledWindow.SetActive(isActive);
         float deltaX = 0, deltaY = 0;
