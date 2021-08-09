@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonEvent : MonoBehaviour
+public class SharedButtonEvent : MonoBehaviour
 {
-    public GameObject map;
 
     public void ChangeToScene(string sceneNo)
     {
         Application.LoadLevel(sceneNo);
     }
 
-    public void OpenCloseMap()
+    public void OpenCloseMap(GameObject map)
     {
-        if (map.active)
+        if (map.activeSelf)
         {
             map.SetActive(false);
         }
