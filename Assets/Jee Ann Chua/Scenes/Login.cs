@@ -10,6 +10,7 @@ public class Login : MonoBehaviour
     public TMP_InputField userNameField;
     public TMP_InputField passwordField;
     public Button loginButton;
+    public GameObject invalidMessage;
 
     void Start()
     {
@@ -40,8 +41,9 @@ public class Login : MonoBehaviour
         }
         else
         {
-            Debug.Log("Invalid username/password");
+            invalidMessage.SetActive(true);
         }
+
     }
     
 }
