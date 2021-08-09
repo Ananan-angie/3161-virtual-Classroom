@@ -8,7 +8,7 @@ Assets/AssetStoreTools*
 [Uu]serSettings/
 
 # Image file metainformation
-Assets/**/*.bmp.meta
+Assets/Images/Game Assets/**/*.meta
 
 # Visual Studio cache directory
 .vs/
