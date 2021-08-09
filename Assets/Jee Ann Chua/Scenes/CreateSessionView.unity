@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 186487995}
   - component: {fileID: 186487994}
   - component: {fileID: 186487993}
-  - component: {fileID: 186487996}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -190,19 +189,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &186487996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186487992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee06d2cb84a7140e5bbb1c3125fca8f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  map: {fileID: 0}
 --- !u!1 &656692816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1597,8 +1583,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2097404397}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: ChangetoScene
+        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_MethodName: ChangeToScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1655,7 +1641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2097404392}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee06d2cb84a7140e5bbb1c3125fca8f0, type: 3}
+  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
