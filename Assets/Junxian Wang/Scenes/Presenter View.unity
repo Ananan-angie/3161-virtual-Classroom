@@ -546,7 +546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee06d2cb84a7140e5bbb1c3125fca8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
 --- !u!114 &165953498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,6 +929,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 736967398}
+  - component: {fileID: 736967399}
   m_Layer: 5
   m_Name: Camera Window
   m_TagString: Untagged
@@ -958,6 +958,18 @@ RectTransform:
   m_AnchoredPosition: {x: -10.6628, y: -111.93271}
   m_SizeDelta: {x: 1441.6995, y: 181.21448}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &736967399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736967397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cea52f38a2ec444fb69cb8b99623d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766060127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1326,7 @@ GameObject:
   - component: {fileID: 1171340850}
   - component: {fileID: 1171340849}
   - component: {fileID: 1171340848}
+  - component: {fileID: 1171340851}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1385,13 +1398,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 165953493}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1171340851}
+        m_TargetAssemblyTypeName: ExpandButtonEvent, Assembly-CSharp
+        m_MethodName: ToggleExpansion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1435,6 +1448,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171340846}
   m_CullTransparentMesh: 1
+--- !u!114 &1171340851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171340846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7525933b08a45c642a83186eedca2c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionToCollapse: up
+  controlledWindow: {fileID: 723414433}
 --- !u!1 &1559011189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,6 +1546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1792573248}
+  - component: {fileID: 1792573249}
   m_Layer: 5
   m_Name: Chat Window
   m_TagString: Untagged
@@ -1547,6 +1575,18 @@ RectTransform:
   m_AnchoredPosition: {x: -164.62, y: -88}
   m_SizeDelta: {x: 170.3815, y: 795.20447}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1792573249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792573247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cea52f38a2ec444fb69cb8b99623d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962197072
 GameObject:
   m_ObjectHideFlags: 0
