@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
@@ -37,7 +38,7 @@ public class Login : MonoBehaviour
         //Look for key-pair value
         if (loginDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
         {
-            Application.LoadLevel("AppStartView");
+            SceneManager.LoadScene(2);
         }
         else
         {
