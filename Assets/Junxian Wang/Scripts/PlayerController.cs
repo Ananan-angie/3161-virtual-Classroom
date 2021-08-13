@@ -6,13 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject playerSprite;
-    [SerializeField] GameObject playerAnimatorParent;
+    [SerializeField] GameObject playerSpriteParent;
     Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = playerAnimatorParent.GetComponent<Animator>();
+        animator = playerSprite.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour
 		/* Change facing */
 		if (movement.magnitude > 0)
 		{
-			playerSprite.transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
-
+            playerSpriteParent.transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
 		}
 
 

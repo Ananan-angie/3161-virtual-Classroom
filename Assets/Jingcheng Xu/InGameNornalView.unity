@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 41672839}
   - component: {fileID: 41672838}
   - component: {fileID: 41672837}
-  - component: {fileID: 41672841}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -156,9 +155,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18737161, y: -0.5954299}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4229902
+  m_Radius: 0.42
 --- !u!50 &41672838
 Rigidbody2D:
   serializedVersion: 4
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   playerSprite: {fileID: 109108380}
-  playerAnimatorParent: {fileID: 1103130226}
+  playerSpriteParent: {fileID: 1103130226}
 --- !u!4 &41672840
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41672836}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.04, y: 11.02, z: -2.0986462}
+  m_LocalPosition: {x: 2.04, y: 2.78, z: -2.098646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 372192532}
@@ -211,57 +210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &41672841
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41672836}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.28, y: 0.17}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &97397106
 GameObject:
   m_ObjectHideFlags: 0
@@ -10826,6 +10774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109108381}
   - component: {fileID: 109108382}
+  - component: {fileID: 109108383}
   m_Layer: 0
   m_Name: Player Sprite
   m_TagString: Untagged
@@ -10841,7 +10790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109108380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18394327, y: -0.6082134, z: 2.098647}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.03207, y: 4.03207, z: 4.03207}
   m_Children: []
   m_Father: {fileID: 1103130227}
@@ -10898,6 +10847,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &109108383
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109108380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5dcb6f8986db014fb2002378ae9cd99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &141210924
 GameObject:
   m_ObjectHideFlags: 0
@@ -11261,7 +11229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372192529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.18394318, y: -0.6082135, z: -7.9013534}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 41672840}
@@ -11485,7 +11453,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1922576865}
-        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
         m_MethodName: PrintButtonName
         m_Mode: 2
         m_Arguments:
@@ -11497,12 +11465,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1922576865}
-        m_TargetAssemblyTypeName: ButtonEvent, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
         m_MethodName: OpenCloseMap
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1932103887}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -12140,9 +12108,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1103130227}
-  - component: {fileID: 1103130228}
   m_Layer: 0
-  m_Name: Player Animation
+  m_Name: Player Sprite Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12163,25 +12130,6 @@ Transform:
   m_Father: {fileID: 41672840}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1103130228
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103130226}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5dcb6f8986db014fb2002378ae9cd99, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1222677335
 GameObject:
   m_ObjectHideFlags: 0
@@ -12349,6 +12297,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 1231497095}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1922576865}
+        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
+        m_MethodName: ChangeToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12889,7 +12849,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922576861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eac9e52fac784ae797a521266c8b4e7, type: 3}
+  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1922576866
