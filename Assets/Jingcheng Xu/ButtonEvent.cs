@@ -6,7 +6,7 @@ public class ButtonEvent : MonoBehaviour
 {
     public GameObject map;
 
-    public void ChangeToScene(string sceneNo)
+    public void ChangeToScene(int sceneNo)
     {
         Application.LoadLevel(sceneNo);
     }
