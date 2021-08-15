@@ -38,7 +38,7 @@ public class Login : MonoBehaviour
         //Look for key-pair value
         if (loginDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(7);
         }
         else
         {
