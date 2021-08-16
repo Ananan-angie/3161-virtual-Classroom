@@ -667,8 +667,8 @@ Canvas:
   m_GameObject: {fileID: 435925772}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 718515791}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1938,8 +1938,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 165953497}
         m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
-        m_MethodName: ChangeToScene
-        m_Mode: 3
+        m_MethodName: BackToLastScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
