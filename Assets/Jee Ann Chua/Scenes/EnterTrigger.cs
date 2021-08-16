@@ -11,6 +11,7 @@ public class EnterTrigger : MonoBehaviour
     private void Update() {
         if (hasPlayer && Input.GetKeyDown(KeyCode.E)) {
             SceneManager.LoadScene(Scene);
+            DataPersistentSystem.SharedInstance.lastScene = SceneManager.GetActiveScene().buildIndex;
         }
     }
  
