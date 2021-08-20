@@ -5,7 +5,8 @@ using UnityEngine;
 public class DataPersistentSystem : MonoBehaviour
 {
 	public static DataPersistentSystem SharedInstance;
-    public int lastScene;
+    public int LastScene;
+	public Vector3 PlayerLastPos;
 
 	private void Awake()
 	{

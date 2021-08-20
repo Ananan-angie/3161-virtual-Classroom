@@ -9,12 +9,12 @@ public class SharedButtonEvent : MonoBehaviour
     public void ChangeToScene(int sceneNo)
     {
         SceneManager.LoadScene(sceneNo);
-        DataPersistentSystem.SharedInstance.lastScene = SceneManager.GetActiveScene().buildIndex;
+        DataPersistentSystem.SharedInstance.LastScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void BackToLastScene()
 	{
-        SceneManager.LoadScene(DataPersistentSystem.SharedInstance.lastScene);
+        SceneManager.LoadScene(DataPersistentSystem.SharedInstance.LastScene);
     }
 
     public void OpenCloseMap(GameObject map)

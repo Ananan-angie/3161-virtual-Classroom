@@ -8,9 +8,10 @@ public class KeyboardSceneEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* Exit Scene */
         if (Input.GetKeyDown(KeyCode.Escape))
-		{
-            SceneManager.LoadScene(DataPersistentSystem.SharedInstance.lastScene);
-		}
+        {
+            SceneManager.LoadScene(DataPersistentSystem.SharedInstance.LastScene);
+        }
     }
 }
