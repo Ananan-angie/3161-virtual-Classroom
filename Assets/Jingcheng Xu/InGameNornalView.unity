@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4046ef750ff169848ae9a3bcebee98c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
   playerSprite: {fileID: 634310934}
   playerSpriteParent: {fileID: 1103130226}
 --- !u!4 &41672840
