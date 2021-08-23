@@ -1,17 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class KeyboardSceneEvent : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    PlayerControl controls;
+
+	private void Awake()
+	{
+        controls = new PlayerControl();
+        controls.UI.Back.performed += ctx => backHandler();
+	}
+
+    // Handles UI "back" action
+	void backHandler()
     {
-        /* Exit Scene */
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(DataPersistentSystem.SharedInstance.LastScene);
-        }
+        SceneManager.LoadScene(DataPersistentSystem.SharedInstance.LastScene);
     }
+
+	private void OnEnable()
+	{
+		controls.Enable();
+	}
+
+	private void OnDisable()
+	{
+		controls.Disable();
+	}
 }
