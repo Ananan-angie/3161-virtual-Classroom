@@ -194,7 +194,7 @@ public class BuildingCreator : MonoBehaviour
 		{
 			for (int y = y1; y <= y2; y++)
 			{
-				map.SetTile(new Vector3Int(x, y, 0), previewTile);
+				drawTile(new Vector3Int(x, y, 0), map);
 			}
 		}
 	}
