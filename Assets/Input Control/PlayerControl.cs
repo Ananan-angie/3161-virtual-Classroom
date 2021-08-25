@@ -115,6 +115,14 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Chating"",
+                    ""type"": ""Button"",
+                    ""id"": ""8ffef716-8029-4c43-a4de-215a2322c822"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -126,6 +134,17 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Back"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9bfc97bb-ba15-40d6-8c1e-be260686b464"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Chating"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -212,6 +231,7 @@ public class @PlayerControl : IInputActionCollection, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
+        m_UI_Chating = m_UI.FindAction("Chating", throwIfNotFound: true);
         // MapEditor
         m_MapEditor = asset.FindActionMap("MapEditor", throwIfNotFound: true);
         m_MapEditor_Paint = m_MapEditor.FindAction("Paint", throwIfNotFound: true);
@@ -308,11 +328,13 @@ public class @PlayerControl : IInputActionCollection, IDisposable
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
     private readonly InputAction m_UI_Back;
+    private readonly InputAction m_UI_Chating;
     public struct UIActions
     {
         private @PlayerControl m_Wrapper;
         public UIActions(@PlayerControl wrapper) { m_Wrapper = wrapper; }
         public InputAction @Back => m_Wrapper.m_UI_Back;
+        public InputAction @Chating => m_Wrapper.m_UI_Chating;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -325,6 +347,9 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                 @Back.started -= m_Wrapper.m_UIActionsCallbackInterface.OnBack;
                 @Back.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnBack;
                 @Back.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnBack;
+                @Chating.started -= m_Wrapper.m_UIActionsCallbackInterface.OnChating;
+                @Chating.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnChating;
+                @Chating.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnChating;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -332,6 +357,9 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                 @Back.started += instance.OnBack;
                 @Back.performed += instance.OnBack;
                 @Back.canceled += instance.OnBack;
+                @Chating.started += instance.OnChating;
+                @Chating.performed += instance.OnChating;
+                @Chating.canceled += instance.OnChating;
             }
         }
     }
@@ -402,6 +430,7 @@ public class @PlayerControl : IInputActionCollection, IDisposable
     public interface IUIActions
     {
         void OnBack(InputAction.CallbackContext context);
+        void OnChating(InputAction.CallbackContext context);
     }
     public interface IMapEditorActions
     {

@@ -102,6 +102,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Chating",
+                    "type": "Button",
+                    "id": "8ffef716-8029-4c43-a4de-215a2322c822",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -113,6 +121,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9bfc97bb-ba15-40d6-8c1e-be260686b464",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Chating",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
