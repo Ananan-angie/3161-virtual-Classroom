@@ -13,6 +13,8 @@ public class ChatManager : MonoBehaviour
     public Color Acolor, Scolor, Pcolor;
 
     [SerializeField]
+    GameObject player;
+    [SerializeField]
     TMP_Dropdown dropdown;
     [SerializeField]
     List<string> dropitems;
@@ -31,6 +33,20 @@ public class ChatManager : MonoBehaviour
         foreach (var item in dropitems)
         {
             dropdown.options.Add(new TMP_Dropdown.OptionData() { text = item });
+        }
+    }
+
+    private void Update()
+    {
+        if (chatBox.isFocused)
+        {
+            PlayerController pc = player.GetComponentInChildren<PlayerController>();
+            player.GetComponentInChildren<PlayerController>().enabled = false;
+        }
+        else
+        {
+            PlayerController pc = player.GetComponentInChildren<PlayerController>();
+            player.GetComponentInChildren<PlayerController>().enabled = true;
         }
     }
 
