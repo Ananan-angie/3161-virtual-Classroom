@@ -149,6 +149,71 @@ public class @PlayerControl : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MapEditor"",
+            ""id"": ""d2eb0fd0-4da7-4398-a097-e6b7f575513b"",
+            ""actions"": [
+                {
+                    ""name"": ""Paint"",
+                    ""type"": ""Button"",
+                    ""id"": ""69db8e31-96f0-49c0-accd-05f925b90f63"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ClearSelection"",
+                    ""type"": ""Button"",
+                    ""id"": ""6fa67707-15cf-4c42-b741-2372854077f5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MousePosChange"",
+                    ""type"": ""Value"",
+                    ""id"": ""580ed227-6439-4df7-b76f-70531e4b3349"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""fdaf92b1-d69a-4b83-b459-15c8c95c31aa"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Paint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0242e67-8be2-43a8-95e0-cc110ee2473e"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClearSelection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40408524-3dcf-4d0e-98a9-c680fca8cf78"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosChange"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -167,6 +232,11 @@ public class @PlayerControl : IInputActionCollection, IDisposable
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Back = m_UI.FindAction("Back", throwIfNotFound: true);
         m_UI_Chating = m_UI.FindAction("Chating", throwIfNotFound: true);
+        // MapEditor
+        m_MapEditor = asset.FindActionMap("MapEditor", throwIfNotFound: true);
+        m_MapEditor_Paint = m_MapEditor.FindAction("Paint", throwIfNotFound: true);
+        m_MapEditor_ClearSelection = m_MapEditor.FindAction("ClearSelection", throwIfNotFound: true);
+        m_MapEditor_MousePosChange = m_MapEditor.FindAction("MousePosChange", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -294,6 +364,55 @@ public class @PlayerControl : IInputActionCollection, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // MapEditor
+    private readonly InputActionMap m_MapEditor;
+    private IMapEditorActions m_MapEditorActionsCallbackInterface;
+    private readonly InputAction m_MapEditor_Paint;
+    private readonly InputAction m_MapEditor_ClearSelection;
+    private readonly InputAction m_MapEditor_MousePosChange;
+    public struct MapEditorActions
+    {
+        private @PlayerControl m_Wrapper;
+        public MapEditorActions(@PlayerControl wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Paint => m_Wrapper.m_MapEditor_Paint;
+        public InputAction @ClearSelection => m_Wrapper.m_MapEditor_ClearSelection;
+        public InputAction @MousePosChange => m_Wrapper.m_MapEditor_MousePosChange;
+        public InputActionMap Get() { return m_Wrapper.m_MapEditor; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MapEditorActions set) { return set.Get(); }
+        public void SetCallbacks(IMapEditorActions instance)
+        {
+            if (m_Wrapper.m_MapEditorActionsCallbackInterface != null)
+            {
+                @Paint.started -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnPaint;
+                @Paint.performed -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnPaint;
+                @Paint.canceled -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnPaint;
+                @ClearSelection.started -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnClearSelection;
+                @ClearSelection.performed -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnClearSelection;
+                @ClearSelection.canceled -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnClearSelection;
+                @MousePosChange.started -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnMousePosChange;
+                @MousePosChange.performed -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnMousePosChange;
+                @MousePosChange.canceled -= m_Wrapper.m_MapEditorActionsCallbackInterface.OnMousePosChange;
+            }
+            m_Wrapper.m_MapEditorActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Paint.started += instance.OnPaint;
+                @Paint.performed += instance.OnPaint;
+                @Paint.canceled += instance.OnPaint;
+                @ClearSelection.started += instance.OnClearSelection;
+                @ClearSelection.performed += instance.OnClearSelection;
+                @ClearSelection.canceled += instance.OnClearSelection;
+                @MousePosChange.started += instance.OnMousePosChange;
+                @MousePosChange.performed += instance.OnMousePosChange;
+                @MousePosChange.canceled += instance.OnMousePosChange;
+            }
+        }
+    }
+    public MapEditorActions @MapEditor => new MapEditorActions(this);
     private int m_NewcontrolschemeSchemeIndex = -1;
     public InputControlScheme NewcontrolschemeScheme
     {
@@ -312,5 +431,11 @@ public class @PlayerControl : IInputActionCollection, IDisposable
     {
         void OnBack(InputAction.CallbackContext context);
         void OnChating(InputAction.CallbackContext context);
+    }
+    public interface IMapEditorActions
+    {
+        void OnPaint(InputAction.CallbackContext context);
+        void OnClearSelection(InputAction.CallbackContext context);
+        void OnMousePosChange(InputAction.CallbackContext context);
     }
 }

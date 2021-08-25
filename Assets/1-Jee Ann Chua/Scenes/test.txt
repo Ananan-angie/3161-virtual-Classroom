@@ -1,0 +1,10 @@
+#FIT3162 Computer Science Project 2
+
+#Overview
+This unit provides practical experience in researching, designing, developing and testing a non-trivial computer science project. Projects are generally software-based, although sometimes they may involve hardware development or investigation of theory. Projects cover the whole process of software (or hardware) development, from analysis through design to implementation and testing. Comprehensive written documentation on the project is required. Students are assigned in groups to a project supervisor. There are no lectures in this unit, although you will be expected to attend regular meetings with your project supervisor.
+
+##Seminar
+**Wednesday** 10am-12pm
+
+##Workshop
+**Tuesday** 12pm-2pm
