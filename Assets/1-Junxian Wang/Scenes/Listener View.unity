@@ -476,8 +476,8 @@ GameObject:
   m_Component:
   - component: {fileID: 165953496}
   - component: {fileID: 165953495}
-  - component: {fileID: 165953497}
   - component: {fileID: 165953494}
+  - component: {fileID: 165953497}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 165953493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e172788d564f99d4084b61e8fe001f95, type: 3}
+  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &271335618
@@ -887,6 +887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 723414434}
+  - component: {fileID: 723414435}
   m_Layer: 5
   m_Name: Window Container
   m_TagString: Untagged
@@ -915,6 +916,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.000045776367}
   m_SizeDelta: {x: 0, y: -0.4280014}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &723414435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723414433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7525933b08a45c642a83186eedca2c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionToCollapse: up
 --- !u!1 &736967397
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +978,6 @@ GameObject:
   - component: {fileID: 766060131}
   - component: {fileID: 766060130}
   - component: {fileID: 766060129}
-  - component: {fileID: 766060132}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1036,13 +1049,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 766060132}
-        m_TargetAssemblyTypeName: ExpandButton, Assembly-CSharp
+      - m_Target: {fileID: 2093517087}
+        m_TargetAssemblyTypeName: WindowExpansionController, Assembly-CSharp
         m_MethodName: ToggleExpansion
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 766060127}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1086,20 +1099,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766060127}
   m_CullTransparentMesh: 1
---- !u!114 &766060132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766060127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7525933b08a45c642a83186eedca2c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  directionToCollapse: right
-  controlledWindow: {fileID: 2093517085}
 --- !u!1 &810674671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1235,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810674671}
   m_CullTransparentMesh: 1
+--- !u!1 &1078977397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1078977399}
+  - component: {fileID: 1078977398}
+  m_Layer: 0
+  m_Name: Input Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1078977398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078977397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebf2176ba2c7d44d83670cbfac74280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedEvents: {fileID: 165953497}
+--- !u!4 &1078977399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078977397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 408.23276, y: 573.7546, z: -324.9532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126431716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1290,7 @@ GameObject:
   - component: {fileID: 1126431718}
   - component: {fileID: 1126431717}
   m_Layer: 0
-  m_Name: DataPersistentSystem
+  m_Name: Data Persistent System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1368,7 +1411,6 @@ GameObject:
   - component: {fileID: 1171340850}
   - component: {fileID: 1171340849}
   - component: {fileID: 1171340848}
-  - component: {fileID: 1171340851}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1440,13 +1482,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1171340851}
-        m_TargetAssemblyTypeName: ExpandButton, Assembly-CSharp
+      - m_Target: {fileID: 723414435}
+        m_TargetAssemblyTypeName: WindowExpansionController, Assembly-CSharp
         m_MethodName: ToggleExpansion
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1171340846}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1490,20 +1532,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171340846}
   m_CullTransparentMesh: 1
---- !u!114 &1171340851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171340846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7525933b08a45c642a83186eedca2c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  directionToCollapse: up
-  controlledWindow: {fileID: 723414433}
 --- !u!1 &1559011189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2093517086}
+  - component: {fileID: 2093517087}
   m_Layer: 5
   m_Name: Window Container
   m_TagString: Untagged
@@ -1823,3 +1852,16 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000045776367, y: 0}
   m_SizeDelta: {x: 0.000083923, y: -0.000030518}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2093517087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093517085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7525933b08a45c642a83186eedca2c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionToCollapse: right

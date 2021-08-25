@@ -270,10 +270,12 @@ MonoBehaviour:
   speed: 7
   playerSprite: {fileID: 634310934}
   playerSpriteParent: {fileID: 1103130226}
+  sceneEvents: {fileID: 1922576867}
   chairTriggerSceneListener: 6
   chairTriggerScenePresenter: 5
-  isInChairPresenter: 0
-  isInChairListener: 0
+  IsInChairPresenter: 0
+  IsInChairListener: 0
+  MovementThisFrame: {x: 0, y: 0}
 --- !u!4 &41672840
 Transform:
   m_ObjectHideFlags: 0
@@ -11340,6 +11342,7 @@ MonoBehaviour:
   Acolor: {r: 0.9150943, g: 0.6074361, b: 0.02158241, a: 1}
   Scolor: {r: 0.9433962, g: 0.24474904, b: 0.24474904, a: 1}
   Pcolor: {r: 0.31933072, g: 0.5738437, b: 0.9811321, a: 1}
+  player: {fileID: 41672836}
   dropdown: {fileID: 511524211}
   dropitems: []
   messagesList: []
@@ -15509,6 +15512,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805229394}
   m_CullTransparentMesh: 1
+--- !u!1 &1819569884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819569886}
+  - component: {fileID: 1819569885}
+  m_Layer: 0
+  m_Name: Input Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1819569885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819569884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1e0fad317b6ac43aea65b64aa9011b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 41672839}
+  sceneEvents: {fileID: 1922576867}
+--- !u!4 &1819569886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819569884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 408.23276, y: 573.7546, z: -324.9532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1821635089
 GameObject:
   m_ObjectHideFlags: 0
@@ -15720,8 +15768,8 @@ GameObject:
   - component: {fileID: 1922576864}
   - component: {fileID: 1922576863}
   - component: {fileID: 1922576865}
-  - component: {fileID: 1922576866}
   - component: {fileID: 1922576867}
+  - component: {fileID: 1922576866}
   - component: {fileID: 1922576862}
   m_Layer: 0
   m_Name: EventSystem
@@ -15822,9 +15870,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922576861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e172788d564f99d4084b61e8fe001f95, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f38399b7d0f8134e86f120d1e78005a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 41672836}
+  welcomeViewIndex: 0
 --- !u!1 &1969044424
 GameObject:
   m_ObjectHideFlags: 0
