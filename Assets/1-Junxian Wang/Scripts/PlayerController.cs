@@ -6,25 +6,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject playerSpriteParent;
+	[SerializeField] InGameNormalViewEvents sceneEvents;
     [SerializeField] int chairTriggerSceneListener;
     [SerializeField] int chairTriggerScenePresenter;
     Animator animator;
-    public bool isInChairPresenter, isInChairListener;
-
-	PlayerControl controls;
-	Vector2 movement;
+    public bool IsInChairPresenter, IsInChairListener;
+	public Vector2 MovementThisFrame;
 	
-
-	private void Awake()
-	{
-		// Setup player control
-		controls = new PlayerControl();
-		controls.Gameplay.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-		controls.Gameplay.Move.canceled += ctx => movement = Vector2.zero;
-		controls.Gameplay.Interact.performed += ctx => interactHandler();
-		
-	}
-
 	// Start is called before the first frame update
 	void Start()
     {
@@ -36,31 +24,27 @@ public class PlayerController : MonoBehaviour
     void Update()
 	{
 		/* Movement */	
-        gameObject.transform.Translate(movement * Time.deltaTime * speed);
+        gameObject.transform.Translate(MovementThisFrame * Time.deltaTime * speed);
 
 		/* Change facing */
-		if (movement.magnitude > 0)
+		if (MovementThisFrame.magnitude > 0)
 		{
-            playerSpriteParent.transform.rotation = Quaternion.LookRotation(Vector3.forward, movement);
+            playerSpriteParent.transform.rotation = Quaternion.LookRotation(Vector3.forward, MovementThisFrame);
 		}
 
 		/* Animation */
-		animator.SetFloat("speed", movement.magnitude);
+		animator.SetFloat("speed", MovementThisFrame.magnitude);
     }
 
-	void interactHandler()
+	public void OnInteract()
 	{
-		if (isInChairListener)
+		if (IsInChairListener)
 		{
-			DataPersistentSystem.SharedInstance.LastScene = SceneManager.GetActiveScene().buildIndex;
-			DataPersistentSystem.SharedInstance.PlayerLastPos = gameObject.transform.position;
-			SceneManager.LoadScene(chairTriggerSceneListener);
+			sceneEvents.TransitToSceneRecordPosition(chairTriggerSceneListener);
 		}
-		else if (isInChairPresenter)
+		else if (IsInChairPresenter)
 		{
-			DataPersistentSystem.SharedInstance.LastScene = SceneManager.GetActiveScene().buildIndex;
-			DataPersistentSystem.SharedInstance.PlayerLastPos = gameObject.transform.position;
-			SceneManager.LoadScene(chairTriggerScenePresenter);
+			sceneEvents.TransitToSceneRecordPosition(chairTriggerScenePresenter);
 		}
 	}
 
@@ -68,11 +52,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Listener Chair"))
 		{
-			isInChairListener = true;
+			IsInChairListener = true;
 		}
 		else if (collision.gameObject.CompareTag("Presenter Chair"))
 		{
-			isInChairPresenter = true;
+			IsInChairPresenter = true;
 		}
 	}
 
@@ -80,21 +64,12 @@ public class PlayerController : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Listener Chair"))
 		{
-			isInChairListener = false;
+			IsInChairListener = false;
 		}
 		else if (collision.gameObject.CompareTag("Presenter Chair"))
 		{
-			isInChairPresenter = false;
+			IsInChairPresenter = false;
 		}
 	}
 
-	private void OnEnable()
-	{
-		controls.Enable();
-	}
-
-	private void OnDisable()
-	{
-		controls.Disable();
-	}
 }
