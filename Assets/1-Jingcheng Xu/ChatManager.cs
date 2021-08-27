@@ -84,7 +84,7 @@ public class ChatManager : MonoBehaviour
 
         Message newMessage = new Message();
 
-        newMessage.text = text;
+        newMessage.text = usrname+": "+text;
 
         GameObject newText = Instantiate(textObject, chatPanel.transform);
 
