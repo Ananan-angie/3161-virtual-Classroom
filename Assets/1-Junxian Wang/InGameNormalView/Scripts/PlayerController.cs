@@ -29,12 +29,12 @@ public class PlayerController : MonoBehaviour
 		/* Change facing */
 		if (MovementThisFrame.magnitude > 0)
 		{
-            playerSpriteParent.transform.rotation = Quaternion.LookRotation(Vector3.forward, MovementThisFrame);
+			playerSpriteParent.transform.rotation = Quaternion.LookRotation(Vector3.forward, MovementThisFrame);
 		}
 
 		/* Animation */
 		animator.SetFloat("speed", MovementThisFrame.magnitude);
-    }
+	}
 
 	public void OnInteract()
 	{
