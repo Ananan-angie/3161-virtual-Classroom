@@ -6,25 +6,27 @@ public class InGameNormalViewInputController : MonoBehaviour
 {
 	[SerializeField] PlayerController playerController;
 	[SerializeField] InGameNormalViewEvents sceneEvents;
-	PlayerControl controls;
+	public PlayerControl Controls;
+	[SerializeField] ChatManager chatManager;
 
 	private void Awake()
 	{
 		// Setup player control
-		controls = new PlayerControl();
-		controls.Gameplay.Move.performed += ctx => playerController.MovementThisFrame = ctx.ReadValue<Vector2>();
-		controls.Gameplay.Move.canceled += ctx => playerController.MovementThisFrame = Vector2.zero;
-		controls.Gameplay.Interact.performed += ctx => playerController.OnInteract();
-		controls.UI.Back.performed += ctx => sceneEvents.ExitScene();
+		Controls = new PlayerControl();
+		Controls.Gameplay.Move.performed += ctx => playerController.MovementThisFrame = ctx.ReadValue<Vector2>();
+		Controls.Gameplay.Move.canceled += ctx => playerController.MovementThisFrame = Vector2.zero;
+		Controls.Gameplay.Interact.performed += ctx => playerController.OnInteract();
+		Controls.UI.Back.performed += ctx => sceneEvents.ExitScene();
+		Controls.UI.Chating.performed += ctx => chatManager.Chat();
 	}
 
 	private void OnEnable()
 	{
-		controls.Enable();
+		Controls.Enable();
 	}
 
 	private void OnDisable()
 	{
-		controls.Disable();
+		Controls.Disable();
 	}
 }
