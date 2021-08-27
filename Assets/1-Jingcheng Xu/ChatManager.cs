@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ChatManager : MonoBehaviour
 {
@@ -13,13 +13,15 @@ public class ChatManager : MonoBehaviour
     public Color Acolor, Scolor, Pcolor;
 
     [SerializeField]
-    GameObject player;
-    [SerializeField]
     TMP_Dropdown dropdown;
     [SerializeField]
     List<string> dropitems;
     [SerializeField]
     List<Message> messagesList = new List<Message>();
+    [SerializeField]
+    InGameNormalViewInputController inputController;
+    [SerializeField]
+    EventSystem eventSystem;
 
 
     private void Awake()
@@ -33,24 +35,23 @@ public class ChatManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (chatBox.isFocused)
-        {
-            PlayerController pc = player.GetComponentInChildren<PlayerController>();
-            player.GetComponentInChildren<PlayerController>().enabled = false;
-        }
-        else
-        {
-            PlayerController pc = player.GetComponentInChildren<PlayerController>();
-            player.GetComponentInChildren<PlayerController>().enabled = true;
-        }
+    public void OnChatSelect()
+	{
+        inputController.Controls.Gameplay.Disable();
+    }
+
+    public void OnChatDeselect()
+	{
+        inputController.Controls.Gameplay.Enable();
     }
 
     public void Chat()
-    {
+    {   
+
         if (chatBox.text != "")
         {
+            eventSystem.SetSelectedGameObject(null); // Deselect the UI
+
             if (dropitems[dropdown.value] == "All")
             {
                 SentToChat(chatBox.text, Message.MessageType.All);
@@ -70,6 +71,8 @@ public class ChatManager : MonoBehaviour
             chatBox.ActivateInputField();
         } 
     }
+
+    
 
     void SentToChat(string text, Message.MessageType messageType)
     {
