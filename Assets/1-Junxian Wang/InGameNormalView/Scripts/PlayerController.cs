@@ -20,12 +20,15 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.position = DataPersistentSystem.SharedInstance.PlayerLastPos;
     }
 
-    // FixedUpdate is called once per frame, before the Update function
-    void Update()
+	private void FixedUpdate()
 	{
-		/* Movement */	
-        gameObject.transform.Translate(MovementThisFrame * Time.deltaTime * speed);
+		/* Movement */
+		gameObject.transform.Translate(MovementThisFrame * Time.deltaTime * speed);
+	}
 
+	// FixedUpdate is called once per frame, before the Update function
+	void Update()
+	{
 		/* Change facing */
 		if (MovementThisFrame.magnitude > 0)
 		{
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour
 		/* Animation */
 		animator.SetFloat("speed", MovementThisFrame.magnitude);
 	}
+
 
 	public void OnInteract()
 	{
