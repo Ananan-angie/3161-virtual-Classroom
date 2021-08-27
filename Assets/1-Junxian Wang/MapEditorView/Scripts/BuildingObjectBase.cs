@@ -6,11 +6,11 @@ using UnityEngine.Tilemaps;
 public class BuildingObjectBase : ScriptableObject
 {
 	[SerializeField] BuildingObjectCategory category;
-	[SerializeField] TileBase tileBase;
+	[SerializeField] Tile tile;
 
-	public TileBase TileBase
+	public Tile Tile
 	{
-		get { return tileBase; }
+		get { return tile; }
 	}
 
 	public BuildingObjectCategory Category

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileMapIntiializer : MonoBehaviour
+public class TileMapManager : MonoBehaviour
 {
-    [SerializeField] List<BuildingObjectCategory> categoriesToInitalize;
+    [SerializeField] BuildingManager buildingManager;
     [SerializeField] Transform gridTransform;
-    public List<Tilemap> ListOfTilemaps;
+    public List<Tilemap> Tilemaps;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class TileMapIntiializer : MonoBehaviour
 
     void CreateTileMaps()
 	{
-        foreach (BuildingObjectCategory category in categoriesToInitalize)
+        foreach (BuildingObjectCategory category in buildingManager.Categories)
 		{
             if (gridTransform.Find(category.name) == null)
 			{
@@ -36,7 +36,7 @@ public class TileMapIntiializer : MonoBehaviour
                 category.Tilemap = map;
 
                 // Store in class
-                ListOfTilemaps.Add(map);
+                Tilemaps.Add(map);
 			}
             else
 			{

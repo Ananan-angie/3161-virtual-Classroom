@@ -19,7 +19,7 @@ public class BuildingCreator : MonoBehaviour
     PlayerControl controls;
 	Camera camera_;
 
-	TileBase previewTile;
+	Tile previewTile;
 	Vector2 mousePos;
 	Vector3Int mouseGridPosLast;
 	Vector3Int mouseGridPosCurr;
@@ -42,7 +42,7 @@ public class BuildingCreator : MonoBehaviour
 
 	private void Start()
 	{
-		listOfTilemaps = FindObjectOfType<TileMapIntiializer>().ListOfTilemaps;
+		listOfTilemaps = FindObjectOfType<TileMapManager>().Tilemaps;
 	}
 
 	private void Update()
@@ -71,7 +71,7 @@ public class BuildingCreator : MonoBehaviour
 	public void SelectBuilder(BuildingObjectBase builder)
 	{
 		builderSelected = builder;
-		previewTile = builder != null ? builder.TileBase : null;
+		previewTile = builder != null ? builder.Tile : null;
 		updatePreview();
 	}
 
