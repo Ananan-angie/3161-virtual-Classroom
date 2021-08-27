@@ -18,13 +18,13 @@ EditorBuildSettings:
     path: Assets/1-Jee Ann Chua/Scenes/CreateSessionView.unity
     guid: 45fcbe1d88a8d4d7d8e399cb01734357
   - enabled: 1
-    path: Assets/1-Junxian Wang/Scenes/MapEditor View.unity
+    path: Assets/1-Junxian Wang/MapEditorView/MapEditor View.unity
     guid: 8b92d3e4ea35f1741a8a6037213e8ac6
   - enabled: 1
-    path: Assets/1-Junxian Wang/Scenes/Presenter View.unity
+    path: Assets/1-Junxian Wang/ListenerPresenterView/Presenter View.unity
     guid: 3528d462898145446a73f1c0915a2751
   - enabled: 1
-    path: Assets/1-Junxian Wang/Scenes/Listener View.unity
+    path: Assets/1-Junxian Wang/ListenerPresenterView/Listener View.unity
     guid: 4e4506e4fa10a6c48a71263f62de0f7e
   - enabled: 1
     path: Assets/1-Jingcheng Xu/AppStartView.unity
