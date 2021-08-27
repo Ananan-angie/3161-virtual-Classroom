@@ -2008,7 +2008,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.46300003, y: 0.43272614}
   m_AnchorMax: {x: 0.536, y: 0.5657064}
-  m_AnchoredPosition: {x: -15.370003, y: 12.313}
+  m_AnchoredPosition: {x: -15.370003, y: 12.313004}
   m_SizeDelta: {x: -6.43, y: -7.3997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303027098
@@ -2309,8 +2309,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1487820139}
-        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
-        m_MethodName: ChangeToScene
+        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2700,7 +2700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.39013532}
   m_AnchorMax: {x: 1, y: 0.47263134}
-  m_AnchoredPosition: {x: -157.66998, y: -2.6175003}
+  m_AnchoredPosition: {x: -157.66998, y: -2.6174927}
   m_SizeDelta: {x: 148.51, y: -5.2351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790316887
@@ -2748,8 +2748,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2019463413}
-        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
-        m_MethodName: ChangeToScene
+        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
