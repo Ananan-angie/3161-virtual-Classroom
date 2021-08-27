@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
-public class Login : MonoBehaviour
+public class LoginEvent : MonoBehaviour
 {
     
     public TMP_InputField userNameField;

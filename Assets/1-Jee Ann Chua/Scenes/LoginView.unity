@@ -1706,7 +1706,6 @@ GameObject:
   - component: {fileID: 954435461}
   - component: {fileID: 954435460}
   - component: {fileID: 954435459}
-  - component: {fileID: 954435462}
   m_Layer: 5
   m_Name: ForgotPassword
   m_TagString: Untagged
@@ -1778,8 +1777,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954435462}
-        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
+      - m_Target: {fileID: 2019463413}
+        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
         m_MethodName: OpenCloseMap
         m_Mode: 2
         m_Arguments:
@@ -1828,18 +1827,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954435457}
   m_CullTransparentMesh: 1
---- !u!114 &954435462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954435457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1006614283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2223,6 @@ GameObject:
   - component: {fileID: 1487820138}
   - component: {fileID: 1487820137}
   - component: {fileID: 1487820136}
-  - component: {fileID: 1487820139}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2308,7 +2294,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1487820139}
+      - m_Target: {fileID: 2019463413}
         m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
         m_MethodName: TransitToScene
         m_Mode: 3
@@ -2358,18 +2344,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487820134}
   m_CullTransparentMesh: 1
---- !u!114 &1487820139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487820134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1660339968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,8 +2356,6 @@ GameObject:
   - component: {fileID: 1660339972}
   - component: {fileID: 1660339971}
   - component: {fileID: 1660339970}
-  - component: {fileID: 1660339973}
-  - component: {fileID: 1660339974}
   m_Layer: 5
   m_Name: Register
   m_TagString: Untagged
@@ -2455,8 +2427,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1660339973}
-        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
+      - m_Target: {fileID: 2019463413}
+        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
         m_MethodName: OpenCloseMap
         m_Mode: 2
         m_Arguments:
@@ -2505,30 +2477,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660339968}
   m_CullTransparentMesh: 1
---- !u!114 &1660339973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660339968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1660339974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660339968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1775589653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2623,6 @@ GameObject:
   - component: {fileID: 1790316889}
   - component: {fileID: 1790316888}
   - component: {fileID: 1790316887}
-  - component: {fileID: 1790316891}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -2797,22 +2744,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790316885}
   m_CullTransparentMesh: 1
---- !u!114 &1790316891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790316885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468cda7330c834f70ba55f3dde684a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userNameField: {fileID: 1458456652}
-  passwordField: {fileID: 18367299}
-  loginButton: {fileID: 1790316887}
-  invalidMessage: {fileID: 477151291}
 --- !u!1 &1846180177
 GameObject:
   m_ObjectHideFlags: 0
