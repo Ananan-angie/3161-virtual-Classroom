@@ -14047,8 +14047,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1922576865}
-        m_TargetAssemblyTypeName: SharedButtonEvent, Assembly-CSharp
-        m_MethodName: ChangeToScene
+        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
