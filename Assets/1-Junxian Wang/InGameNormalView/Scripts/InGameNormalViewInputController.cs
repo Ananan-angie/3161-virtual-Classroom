@@ -7,6 +7,7 @@ public class InGameNormalViewInputController : MonoBehaviour
 	[SerializeField] PlayerController playerController;
 	[SerializeField] InGameNormalViewEvents sceneEvents;
 	PlayerControl controls;
+	[SerializeField] ChatManager chatManager;
 
 	private void Awake()
 	{
@@ -16,6 +17,7 @@ public class InGameNormalViewInputController : MonoBehaviour
 		controls.Gameplay.Move.canceled += ctx => playerController.MovementThisFrame = Vector2.zero;
 		controls.Gameplay.Interact.performed += ctx => playerController.OnInteract();
 		controls.UI.Back.performed += ctx => sceneEvents.ExitScene();
+		controls.UI.Chating.performed += ctx => chatManager.Chat();
 	}
 
 	private void OnEnable()

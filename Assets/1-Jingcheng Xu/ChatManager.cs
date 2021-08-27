@@ -21,12 +21,9 @@ public class ChatManager : MonoBehaviour
     [SerializeField]
     List<Message> messagesList = new List<Message>();
 
-    PlayerControl controls;
 
     private void Awake()
     {
-        controls = new PlayerControl();
-        controls.UI.Chating.performed += ctx => Chat();
         dropitems.Add("All");
         dropitems.Add("Stuff");
         dropitems.Add("Private");
@@ -50,7 +47,7 @@ public class ChatManager : MonoBehaviour
         }
     }
 
-    void Chat()
+    public void Chat()
     {
         if (chatBox.text != "")
         {
@@ -74,7 +71,7 @@ public class ChatManager : MonoBehaviour
         } 
     }
 
-    public void SentToChat(string text, Message.MessageType messageType)
+    void SentToChat(string text, Message.MessageType messageType)
     {
         if (messagesList.Count >= maxMessages)
         {
@@ -113,16 +110,6 @@ public class ChatManager : MonoBehaviour
             }
             return color;
         }
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
     }
 
     [System.Serializable]

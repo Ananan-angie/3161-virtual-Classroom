@@ -11406,7 +11406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8b53d79ad474fa591707c97b569df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usrname: 
+  usrname: Admin
   maxMessages: 7
   textObject: {fileID: 2187932797979003201, guid: c67a9bfb9bb4849f1939b6e3f64f8115, type: 3}
   chatPanel: {fileID: 306224235}
