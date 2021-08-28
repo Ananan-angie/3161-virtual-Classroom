@@ -10,7 +10,6 @@ public class DataPersistentSystem : MonoBehaviour
 
 	private void Awake()
 	{
-		PlayerLastPos = new Vector3(0, 0, -1);
 
 		if (SharedInstance == null)
 		{
