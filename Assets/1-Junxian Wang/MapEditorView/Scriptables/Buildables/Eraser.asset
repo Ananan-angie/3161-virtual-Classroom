@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Eraser
   m_EditorClassIdentifier: 
   category: {fileID: 0}
-  tile: {fileID: 0}
+  tile: {fileID: 11400000, guid: d5cec26bbefbbd44b9aea4ec1e375e47, type: 2}

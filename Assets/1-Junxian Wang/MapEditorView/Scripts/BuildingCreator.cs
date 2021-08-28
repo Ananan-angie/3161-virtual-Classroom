@@ -12,12 +12,15 @@ public enum PaintMode
 
 public class BuildingCreator : MonoBehaviour
 {
-	[SerializeField] Tilemap previewMap;
-	[SerializeField] Tilemap defaultMap;
+	[SerializeField] Transform gridTransform;
 	[SerializeField] BuildingObjectBase eraser;
-	List<Tilemap> listOfTilemaps;
-    PlayerControl controls;
+	[SerializeField] List<BuildingObjectBase> buildings;
+	[SerializeField] List<BuildingObjectCategory> categories;
+	PlayerControl controls;
 	Camera camera_;
+
+	Tilemap previewMap;
+	Tilemap defaultMap;
 
 	Tile previewTile;
 	Vector2 mousePos;
@@ -28,6 +31,16 @@ public class BuildingCreator : MonoBehaviour
 
 	BuildingObjectBase builderSelected;
 	PaintMode paintModeSelected = PaintMode.Brush;
+
+	public List<BuildingObjectCategory> Categories
+	{
+		get { return categories; }
+	}
+
+	public List<BuildingObjectBase> Buildings
+	{
+		get { return buildings; }
+	}
 
 	private void Awake()
 	{
@@ -42,7 +55,7 @@ public class BuildingCreator : MonoBehaviour
 
 	private void Start()
 	{
-		listOfTilemaps = FindObjectOfType<TileMapManager>().Tilemaps;
+		InitializeTilemaps();
 	}
 
 	private void Update()
@@ -175,9 +188,9 @@ public class BuildingCreator : MonoBehaviour
 		// Handle eraser
 		if (builderSelected == eraser && map != previewMap)
 		{
-			foreach (Tilemap t in listOfTilemaps)
+			foreach (BuildingObjectCategory c in categories)
 			{
-				t.SetTile(pos, null);
+				c.Tilemap.SetTile(pos, null);
 			}
 
 		}
@@ -245,6 +258,32 @@ public class BuildingCreator : MonoBehaviour
 			{
 				return defaultMap;
 			}
+		}
+	}
+
+	private void InitializeTilemaps()
+	{
+		GameObject obj;
+		TilemapRenderer tr;
+
+		// Add preview map
+		obj = new GameObject("Tilemap_Preview");
+		previewMap = obj.AddComponent<Tilemap>();
+		tr = obj.AddComponent<TilemapRenderer>();
+		tr.sortingOrder = 99;
+		obj.transform.SetParent(gridTransform);
+
+		// Add default map
+		obj = new GameObject("Tilemap_Default");
+		defaultMap = obj.AddComponent<Tilemap>();
+		tr = obj.AddComponent<TilemapRenderer>();
+		tr.sortingOrder = 0;
+		obj.transform.SetParent(gridTransform);
+
+		// Initialize category's maps
+		foreach (BuildingObjectCategory category in categories)
+		{
+			category.TilemapObject.transform.SetParent(gridTransform);
 		}
 	}
 

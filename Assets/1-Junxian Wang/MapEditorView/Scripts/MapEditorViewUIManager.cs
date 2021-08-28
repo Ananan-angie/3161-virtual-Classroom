@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 
 public class MapEditorViewUIManager : MonoBehaviour
 {
-    [SerializeField] BuildingManager buildingManager;
     [SerializeField] BuildingCreator buildingCreator;
 
     [SerializeField] Dropdown categoryDropdown;
@@ -15,9 +14,6 @@ public class MapEditorViewUIManager : MonoBehaviour
     [SerializeField] Button tools_boxButton;
 
     [SerializeField] GameObject tileViewport;
-
-    [SerializeField] 
-
 
     Dictionary<string, GameObject> tileContainers = new Dictionary<string, GameObject>();
     GameObject activeTileContainer;
@@ -28,7 +24,7 @@ public class MapEditorViewUIManager : MonoBehaviour
     {
         /* ========= Item Selector ========= */
         // Category Dropdown Menu
-        foreach (BuildingObjectCategory category in buildingManager.Categories)
+        foreach (BuildingObjectCategory category in buildingCreator.Categories)
 		{
             dropDownOptionsText.Add(category.name);
         }
@@ -36,7 +32,7 @@ public class MapEditorViewUIManager : MonoBehaviour
         categoryDropdown.onValueChanged.AddListener(ctx => categoryDropdownCallback(ctx));
 
         // Add a tiles container for each category
-        foreach (BuildingObjectCategory category in buildingManager.Categories)
+        foreach (BuildingObjectCategory category in buildingCreator.Categories)
 		{
             GameObject tileContainer = new GameObject(category.name);
             tileContainer.AddComponent<RectTransform>();
@@ -48,7 +44,7 @@ public class MapEditorViewUIManager : MonoBehaviour
 		}
 
         // Add the buildable button to the corresponding category
-        foreach (BuildingObjectBase building in buildingManager.Buildings)
+        foreach (BuildingObjectBase building in buildingCreator.Buildings)
 		{
             GameObject tileButton = new GameObject(building.name);
             tileButton.AddComponent<RectTransform>();

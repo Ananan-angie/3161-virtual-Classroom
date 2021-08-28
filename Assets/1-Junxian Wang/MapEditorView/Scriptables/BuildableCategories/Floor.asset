@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f29218d03773134e9b839816a5ac03d, type: 3}
   m_Name: Floor
   m_EditorClassIdentifier: 
-  layerOrder: 0
+  isCollidable: 0
+  isTrigger: 0
