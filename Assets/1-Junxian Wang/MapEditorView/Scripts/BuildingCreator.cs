@@ -17,7 +17,6 @@ public class BuildingCreator : MonoBehaviour
 	[SerializeField] List<BuildingObjectBase> buildings;
 	[SerializeField] List<BuildingObjectCategory> categories;
 	PlayerControl controls;
-	Camera camera_;
 
 	Tilemap previewMap;
 	Tilemap defaultMap;
@@ -49,8 +48,6 @@ public class BuildingCreator : MonoBehaviour
 		controls.MapEditor.ClearSelection.performed += ctx => SelectBuilder(null);
 		controls.MapEditor.Paint.started += ctx => paintStartHandler();
 		controls.MapEditor.Paint.canceled += ctx => paintEndHandler();
-
-		camera_ = Camera.main;
 	}
 
 	private void Start()
@@ -242,7 +239,7 @@ public class BuildingCreator : MonoBehaviour
 
 	private Vector3Int getMouseGridPos()
 	{
-		Vector3 worldPos = camera_.ScreenToWorldPoint(mousePos);
+		Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 		return previewMap.WorldToCell(worldPos);
 	}
 

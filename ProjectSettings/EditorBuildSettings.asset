@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 45fcbe1d88a8d4d7d8e399cb01734357
   - enabled: 1
     path: Assets/1-Junxian Wang/MapEditorView/MapEditor View.unity
-    guid: 8b92d3e4ea35f1741a8a6037213e8ac6
+    guid: cc51b0d5bdd4e9a45ac280a0c3819379
   - enabled: 1
     path: Assets/1-Junxian Wang/ListenerPresenterView/Presenter View.unity
     guid: 3528d462898145446a73f1c0915a2751
@@ -29,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1-Jingcheng Xu/AppStartView.unity
     guid: 9d3df6dc2cc674b968acedbaf4959896
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
