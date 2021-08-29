@@ -6,6 +6,8 @@ using UnityEngine;
 public abstract class Singleton<T> : MonoBehaviour where T : Component {
     private static T instance;
 
+    protected static bool DontDestroy = false;
+
     private static bool m_applicationIsQuitting = false;
 
     public static T Instance {
@@ -34,18 +36,22 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component {
      *     //Your code goes here
      * }
      * 
-     * To allow DontDestroyOnLoad (persistent when changing scenes), need to override Awake
-     * as by default the isDontDestroyOnLoad is false
+     * If you want object to not destroy on load (change scenes), do it this way
+     * protected override void Awake()
+     * {
+     *     DontDestroy = true;
+     *     base.Awake();
+     *     //Your code goes here
+     * }
      * */
 
-
-    protected virtual void Awake (bool isDontDestroyOnLoad = false) {
+    protected virtual void Awake () {
         if (instance == null) {
             instance = this as T;
-            if (isDontDestroyOnLoad) DontDestroyOnLoad (gameObject);
+            if (DontDestroy) DontDestroyOnLoad (gameObject);
         } else if (instance != this as T) {
             Destroy (gameObject);
-        } else if (isDontDestroyOnLoad) { DontDestroyOnLoad (gameObject); }
+        } else if (DontDestroy) { DontDestroyOnLoad (gameObject); }
     }
 
     private void OnApplicationQuit () {

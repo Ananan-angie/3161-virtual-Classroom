@@ -8,8 +8,9 @@ public class DataPersistentSystem : Singleton<DataPersistentSystem>
     public int LastScene;
 	public Vector3 PlayerLastPos;
 
-	private void Awake()
+	protected override void Awake()
 	{
-		base.Awake(true);
+		DontDestroy = true;
+		base.Awake();
 	}
 }
