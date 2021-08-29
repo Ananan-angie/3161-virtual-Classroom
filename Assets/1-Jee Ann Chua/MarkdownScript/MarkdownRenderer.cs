@@ -25,7 +25,7 @@ namespace LogicUI.FancyTextRendering
 
         private void OnValidate()
         {
-                string readFromFilePath = Application.dataPath + "/1-Jee Ann Chua/Scenes/test.txt";
+                string readFromFilePath = Application.dataPath + "/1-Jee Ann Chua/Data/SessionDetails.txt";
                 string[] fileLines = File.ReadAllLines(readFromFilePath);
         
                 Source = string.Join("\n", fileLines);
