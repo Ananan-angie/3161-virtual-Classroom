@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using System.Linq;
+using System.IO;
 
 public class LoginEvent : MonoBehaviour
 {
-    
+
     public TMP_InputField userNameField;
     public TMP_InputField passwordField;
     public Button loginButton;
     public GameObject invalidMessage;
+    public TextAsset jsonFile;
 
     void Start()
     {
@@ -33,18 +36,21 @@ public class LoginEvent : MonoBehaviour
         //Get Password from Input 
         string password = passwordField.text;
 
-        string foundPassword;
+        UserDetails col = JsonUtility.FromJson<UserDetails>(jsonFile.text);
+        List<UserDetail> listOfDetails = col.userdetails.ToList();
 
-        //Look for key-pair value
-        if (loginDetails.TryGetValue(userName, out foundPassword) && (foundPassword == password))
-        {
-            SceneManager.LoadScene(7);
+        foreach(UserDetail userdetails in listOfDetails){
+            if(userdetails.username == userName && userdetails.password == password)
+            {
+                SceneManager.LoadScene(7);
+            }
+            else
+            {
+                invalidMessage.SetActive(true);
+            }
         }
-        else
-        {
-            invalidMessage.SetActive(true);
-        }
-
     }
+
+
     
 }
