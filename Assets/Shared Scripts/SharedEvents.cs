@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SharedEvents : Singleton<SharedEvents>
 {
-    protected new static bool DontDestroy = false;
 
 	public void TransitToScene(int sceneNo)
     {
@@ -15,7 +14,7 @@ public class SharedEvents : Singleton<SharedEvents>
 
     public void BackToLastScene()
 	{
-        SceneManager.LoadScene(DataPersistentSystem.SharedInstance.LastScene);
+        SceneManager.LoadScene(DataPersistentSystem.Instance.LastScene);
     }
 
     public void OpenCloseMap(GameObject map)
