@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SharedEvents : MonoBehaviour
+public class SharedEvents : Singleton<SharedEvents>
 {
-	private void Start()
-	{
-        if (FindObjectOfType<DataPersistentSystem>() == null)
-		{
-            throw new MissingReferenceException("Error: SharedEvents require DataPersistentSystem to be present in scene.");
-		}
-	}
+    protected new static bool DontDestroy = false;
 
 	public void TransitToScene(int sceneNo)
     {
         SceneManager.LoadScene(sceneNo);
-        DataPersistentSystem.SharedInstance.LastScene = SceneManager.GetActiveScene().buildIndex;
+        DataPersistentSystem.Instance.LastScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void BackToLastScene()

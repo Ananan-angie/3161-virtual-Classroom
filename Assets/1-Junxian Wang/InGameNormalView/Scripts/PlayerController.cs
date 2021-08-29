@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
     {
         animator = playerSprite.GetComponent<Animator>();
-        gameObject.transform.position = DataPersistentSystem.SharedInstance.PlayerLastPos;
+        gameObject.transform.position = DataPersistentSystem.Instance.PlayerLastPos;
     }
 
 	private void FixedUpdate()
