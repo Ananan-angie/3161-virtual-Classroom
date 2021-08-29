@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/1-Feiyu Chen/Welcome View.unity
+    path: Assets/1-Feiyu Chen/session/Welcome View.unity
     guid: 87bb0191147f94ed686c16844ddc6f21
   - enabled: 1
-    path: Assets/1-Feiyu Chen/Setting View.unity
+    path: Assets/1-Feiyu Chen/session/Setting View.unity
     guid: 30815e1bc66d04f549e04be20b3a5eed
   - enabled: 1
     path: Assets/1-Jee Ann Chua/Scenes/LoginView.unity
@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/1-Jingcheng Xu/AppStartView.unity
     guid: 9d3df6dc2cc674b968acedbaf4959896
-  - enabled: 1
-    path: Assets/1-Jingcheng Xu/InGameNornalView.unity
-    guid: 631f9f3e5b1a44573abbea39836b5b28
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
