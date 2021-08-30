@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 38800942}
   - component: {fileID: 38800941}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 40907786}
   - component: {fileID: 40907785}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 50977271}
   - component: {fileID: 50977270}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 86466337}
   - component: {fileID: 86466336}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 133296767}
   - component: {fileID: 133296766}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,7 +1293,7 @@ GameObject:
   - component: {fileID: 142752117}
   - component: {fileID: 142752116}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,7 +1427,7 @@ GameObject:
   - component: {fileID: 145077360}
   - component: {fileID: 145077359}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1561,7 +1561,7 @@ GameObject:
   - component: {fileID: 183757223}
   - component: {fileID: 183757222}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1695,7 +1695,7 @@ GameObject:
   - component: {fileID: 185934394}
   - component: {fileID: 185934393}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 187940367}
   - component: {fileID: 187940366}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 215026027}
   - component: {fileID: 215026026}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2634,7 +2634,7 @@ GameObject:
   - component: {fileID: 246472350}
   - component: {fileID: 246472349}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2768,7 +2768,7 @@ GameObject:
   - component: {fileID: 257733740}
   - component: {fileID: 257733739}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2902,7 +2902,7 @@ GameObject:
   - component: {fileID: 258784739}
   - component: {fileID: 258784738}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3036,7 +3036,7 @@ GameObject:
   - component: {fileID: 288898966}
   - component: {fileID: 288898965}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3170,7 +3170,7 @@ GameObject:
   - component: {fileID: 347362217}
   - component: {fileID: 347362216}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3304,7 +3304,7 @@ GameObject:
   - component: {fileID: 374875874}
   - component: {fileID: 374875873}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3438,7 +3438,7 @@ GameObject:
   - component: {fileID: 375157230}
   - component: {fileID: 375157229}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3572,7 +3572,7 @@ GameObject:
   - component: {fileID: 386692982}
   - component: {fileID: 386692981}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3706,7 +3706,7 @@ GameObject:
   - component: {fileID: 388860967}
   - component: {fileID: 388860966}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3840,7 +3840,7 @@ GameObject:
   - component: {fileID: 415933615}
   - component: {fileID: 415933614}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4242,7 +4242,7 @@ GameObject:
   - component: {fileID: 417178117}
   - component: {fileID: 417178116}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4376,7 +4376,7 @@ GameObject:
   - component: {fileID: 424462649}
   - component: {fileID: 424462648}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4510,7 +4510,7 @@ GameObject:
   - component: {fileID: 442684523}
   - component: {fileID: 442684522}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4644,7 +4644,7 @@ GameObject:
   - component: {fileID: 445830195}
   - component: {fileID: 445830194}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4778,7 +4778,7 @@ GameObject:
   - component: {fileID: 457406016}
   - component: {fileID: 457406015}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5022,7 +5022,7 @@ GameObject:
   - component: {fileID: 489300781}
   - component: {fileID: 489300780}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5156,7 +5156,7 @@ GameObject:
   - component: {fileID: 496757836}
   - component: {fileID: 496757835}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5290,7 +5290,7 @@ GameObject:
   - component: {fileID: 534881388}
   - component: {fileID: 534881387}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5534,7 +5534,7 @@ GameObject:
   - component: {fileID: 556240807}
   - component: {fileID: 556240806}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5771,7 +5771,7 @@ GameObject:
   - component: {fileID: 604664492}
   - component: {fileID: 604664491}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5905,7 +5905,7 @@ GameObject:
   - component: {fileID: 611184552}
   - component: {fileID: 611184551}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6117,7 +6117,7 @@ GameObject:
   - component: {fileID: 634478134}
   - component: {fileID: 634478133}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6251,7 +6251,7 @@ GameObject:
   - component: {fileID: 637305686}
   - component: {fileID: 637305685}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6385,7 +6385,7 @@ GameObject:
   - component: {fileID: 640369550}
   - component: {fileID: 640369549}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6519,7 +6519,7 @@ GameObject:
   - component: {fileID: 665271310}
   - component: {fileID: 665271309}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6653,7 +6653,7 @@ GameObject:
   - component: {fileID: 667107431}
   - component: {fileID: 667107430}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6895,7 +6895,7 @@ GameObject:
   - component: {fileID: 688500969}
   - component: {fileID: 688500968}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7029,7 +7029,7 @@ GameObject:
   - component: {fileID: 695274155}
   - component: {fileID: 695274154}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7163,7 +7163,7 @@ GameObject:
   - component: {fileID: 705078593}
   - component: {fileID: 705078592}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7506,7 +7506,7 @@ GameObject:
   - component: {fileID: 762023403}
   - component: {fileID: 762023402}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7640,7 +7640,7 @@ GameObject:
   - component: {fileID: 766933644}
   - component: {fileID: 766933643}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7774,7 +7774,7 @@ GameObject:
   - component: {fileID: 786403651}
   - component: {fileID: 786403650}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7908,7 +7908,7 @@ GameObject:
   - component: {fileID: 799166283}
   - component: {fileID: 799166282}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8168,7 +8168,7 @@ GameObject:
   - component: {fileID: 820648129}
   - component: {fileID: 820648128}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8302,7 +8302,7 @@ GameObject:
   - component: {fileID: 826220270}
   - component: {fileID: 826220269}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8436,7 +8436,7 @@ GameObject:
   - component: {fileID: 829377635}
   - component: {fileID: 829377634}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8704,7 +8704,7 @@ GameObject:
   - component: {fileID: 858552109}
   - component: {fileID: 858552108}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8914,7 +8914,7 @@ GameObject:
   - component: {fileID: 868417669}
   - component: {fileID: 868417668}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9249,7 +9249,7 @@ GameObject:
   - component: {fileID: 917441785}
   - component: {fileID: 917441784}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9493,7 +9493,7 @@ GameObject:
   - component: {fileID: 944592502}
   - component: {fileID: 944592501}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9761,7 +9761,7 @@ GameObject:
   - component: {fileID: 979207855}
   - component: {fileID: 979207854}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9895,7 +9895,7 @@ GameObject:
   - component: {fileID: 1014458473}
   - component: {fileID: 1014458472}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10029,7 +10029,7 @@ GameObject:
   - component: {fileID: 1032806227}
   - component: {fileID: 1032806226}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10163,7 +10163,7 @@ GameObject:
   - component: {fileID: 1034800123}
   - component: {fileID: 1034800122}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10297,7 +10297,7 @@ GameObject:
   - component: {fileID: 1074094995}
   - component: {fileID: 1074094994}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10431,7 +10431,7 @@ GameObject:
   - component: {fileID: 1079780190}
   - component: {fileID: 1079780189}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10699,7 +10699,7 @@ GameObject:
   - component: {fileID: 1106864881}
   - component: {fileID: 1106864880}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10833,7 +10833,7 @@ GameObject:
   - component: {fileID: 1172752598}
   - component: {fileID: 1172752597}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10967,7 +10967,7 @@ GameObject:
   - component: {fileID: 1174948786}
   - component: {fileID: 1174948785}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11178,7 +11178,7 @@ GameObject:
   - component: {fileID: 1187333902}
   - component: {fileID: 1187333901}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11422,7 +11422,7 @@ GameObject:
   - component: {fileID: 1223891792}
   - component: {fileID: 1223891791}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11667,7 +11667,7 @@ GameObject:
   - component: {fileID: 1274566333}
   - component: {fileID: 1274566332}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11801,7 +11801,7 @@ GameObject:
   - component: {fileID: 1308596359}
   - component: {fileID: 1308596358}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12010,7 +12010,7 @@ GameObject:
   - component: {fileID: 1332492051}
   - component: {fileID: 1332492050}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12310,7 +12310,7 @@ GameObject:
   - component: {fileID: 1357808847}
   - component: {fileID: 1357808846}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12444,7 +12444,7 @@ GameObject:
   - component: {fileID: 1358255333}
   - component: {fileID: 1358255332}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12613,7 +12613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00026463086}
+  m_AnchoredPosition: {x: 0, y: 0.0006134339}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1363231121
@@ -12654,7 +12654,7 @@ GameObject:
   - component: {fileID: 1372162695}
   - component: {fileID: 1372162694}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12788,7 +12788,7 @@ GameObject:
   - component: {fileID: 1374239957}
   - component: {fileID: 1374239956}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12922,7 +12922,7 @@ GameObject:
   - component: {fileID: 1377588910}
   - component: {fileID: 1377588909}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13299,7 +13299,7 @@ GameObject:
   - component: {fileID: 1403636196}
   - component: {fileID: 1403636195}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13543,7 +13543,7 @@ GameObject:
   - component: {fileID: 1410654393}
   - component: {fileID: 1410654392}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13752,7 +13752,7 @@ GameObject:
   - component: {fileID: 1411126850}
   - component: {fileID: 1411126849}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14218,7 +14218,7 @@ GameObject:
   - component: {fileID: 1486297158}
   - component: {fileID: 1486297157}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14352,7 +14352,7 @@ GameObject:
   - component: {fileID: 1494264359}
   - component: {fileID: 1494264358}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14619,7 +14619,7 @@ GameObject:
   - component: {fileID: 1518568749}
   - component: {fileID: 1518568748}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14753,7 +14753,7 @@ GameObject:
   - component: {fileID: 1520574256}
   - component: {fileID: 1520574255}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14962,7 +14962,7 @@ GameObject:
   - component: {fileID: 1531784323}
   - component: {fileID: 1531784322}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15096,7 +15096,7 @@ GameObject:
   - component: {fileID: 1573916025}
   - component: {fileID: 1573916024}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15230,7 +15230,7 @@ GameObject:
   - component: {fileID: 1579159900}
   - component: {fileID: 1579159899}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15823,7 +15823,7 @@ GameObject:
   - component: {fileID: 1634867537}
   - component: {fileID: 1634867536}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16108,7 +16108,7 @@ GameObject:
   - component: {fileID: 1649573648}
   - component: {fileID: 1649573647}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16242,7 +16242,7 @@ GameObject:
   - component: {fileID: 1662510043}
   - component: {fileID: 1662510042}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16376,7 +16376,7 @@ GameObject:
   - component: {fileID: 1662606688}
   - component: {fileID: 1662606687}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16722,7 +16722,7 @@ GameObject:
   - component: {fileID: 1686817596}
   - component: {fileID: 1686817595}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16856,7 +16856,7 @@ GameObject:
   - component: {fileID: 1713013094}
   - component: {fileID: 1713013093}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16990,7 +16990,7 @@ GameObject:
   - component: {fileID: 1715467079}
   - component: {fileID: 1715467078}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17124,7 +17124,7 @@ GameObject:
   - component: {fileID: 1725534633}
   - component: {fileID: 1725534632}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17258,7 +17258,7 @@ GameObject:
   - component: {fileID: 1729068684}
   - component: {fileID: 1729068683}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17392,7 +17392,7 @@ GameObject:
   - component: {fileID: 1751731415}
   - component: {fileID: 1751731414}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17616,7 +17616,7 @@ GameObject:
   - component: {fileID: 1787256821}
   - component: {fileID: 1787256820}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17884,7 +17884,7 @@ GameObject:
   - component: {fileID: 1797230549}
   - component: {fileID: 1797230548}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18018,7 +18018,7 @@ GameObject:
   - component: {fileID: 1819127395}
   - component: {fileID: 1819127394}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18455,7 +18455,7 @@ GameObject:
   - component: {fileID: 1874712834}
   - component: {fileID: 1874712833}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18589,7 +18589,7 @@ GameObject:
   - component: {fileID: 1874830517}
   - component: {fileID: 1874830516}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18723,7 +18723,7 @@ GameObject:
   - component: {fileID: 1880662654}
   - component: {fileID: 1880662653}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18978,7 +18978,7 @@ GameObject:
   - component: {fileID: 1900374869}
   - component: {fileID: 1900374868}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19112,7 +19112,7 @@ GameObject:
   - component: {fileID: 1906713096}
   - component: {fileID: 1906713095}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19379,7 +19379,7 @@ GameObject:
   - component: {fileID: 1912150973}
   - component: {fileID: 1912150972}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19513,7 +19513,7 @@ GameObject:
   - component: {fileID: 1916302438}
   - component: {fileID: 1916302437}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19647,7 +19647,7 @@ GameObject:
   - component: {fileID: 1919149333}
   - component: {fileID: 1919149332}
   m_Layer: 5
-  m_Name: Text (TMP) (5)
+  m_Name: Fri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19781,7 +19781,7 @@ GameObject:
   - component: {fileID: 1929321535}
   - component: {fileID: 1929321534}
   m_Layer: 5
-  m_Name: Text (TMP) (4)
+  m_Name: Thu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19915,7 +19915,7 @@ GameObject:
   - component: {fileID: 1959061955}
   - component: {fileID: 1959061954}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: Wed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20049,7 +20049,7 @@ GameObject:
   - component: {fileID: 1963950641}
   - component: {fileID: 1963950640}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20254,7 +20254,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1314937350}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9989164
+  m_Size: 0.55888885
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -20430,7 +20430,7 @@ GameObject:
   - component: {fileID: 1994470250}
   - component: {fileID: 1994470249}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20747,7 +20747,7 @@ GameObject:
   - component: {fileID: 2030362758}
   - component: {fileID: 2030362757}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20881,7 +20881,7 @@ GameObject:
   - component: {fileID: 2051909391}
   - component: {fileID: 2051909390}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Mon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21015,7 +21015,7 @@ GameObject:
   - component: {fileID: 2055167246}
   - component: {fileID: 2055167245}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21334,7 +21334,7 @@ GameObject:
   - component: {fileID: 2100902466}
   - component: {fileID: 2100902465}
   m_Layer: 5
-  m_Name: Text (TMP) (6)
+  m_Name: Sat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21468,7 +21468,7 @@ GameObject:
   - component: {fileID: 2106161602}
   - component: {fileID: 2106161601}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21602,7 +21602,7 @@ GameObject:
   - component: {fileID: 2129177445}
   - component: {fileID: 2129177444}
   m_Layer: 5
-  m_Name: Text (TMP) (7)
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21736,7 +21736,7 @@ GameObject:
   - component: {fileID: 2132800793}
   - component: {fileID: 2132800792}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: Tue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
