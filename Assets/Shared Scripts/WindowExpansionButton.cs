@@ -2,93 +2,96 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 [RequireComponent(typeof(Button))]
 public class WindowExpansionButton : MonoBehaviour
 {
     [SerializeField] string directionToCollapse = "up";
     [SerializeField] RectTransform windowToControl;
-    float windowHeight, windowWidth, buttonHeight, buttonWidth;
+    RectTransform parentWindow;
+    Vector2 windowSize;
     TextMeshProUGUI buttonText;
     EventSystem eventSystem;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        // Get dimensions
-        windowHeight = windowToControl.rect.height;
-        windowWidth = windowToControl.rect.width;
-        buttonHeight = GetComponent<RectTransform>().rect.height;
-        buttonWidth = GetComponent<RectTransform>().rect.width;
-
+	private void Start()
+	{
         // Get components
         GetComponent<Button>().onClick.AddListener(ToggleExpansion);
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
+        parentWindow = gameObject.transform.parent.GetComponent<RectTransform>();
         eventSystem = FindObjectOfType<EventSystem>();
 
         // Set up inital text
-        SetText(windowToControl.gameObject.activeSelf);
-    }
+        SetText(!windowToControl.gameObject.activeSelf);
 
-    public void ToggleExpansion()
+        // Get dimensions
+        Canvas.ForceUpdateCanvases();
+        windowSize = windowToControl.sizeDelta;
+    }
+    
+	public void ToggleExpansion()
 	{
         // Deselect from UI component
         eventSystem.SetSelectedGameObject(null);
 
         // Set window activation
-        bool isActivating = !windowToControl.gameObject.activeSelf;
-        windowToControl.gameObject.SetActive(isActivating);
+        bool isCollapsing = windowToControl.gameObject.activeSelf;
+        windowToControl.gameObject.SetActive(!isCollapsing);
 
         // Set button translation and text
-        SetText(isActivating);
-        SetTranslation(isActivating);
+        SetText(isCollapsing);
+        SetTranslation(isCollapsing);
     }
 
-    public void SetText(bool isActivating)
+    public void SetText(bool isCollapsing)
 	{
         if (directionToCollapse == "up")
         {
-            buttonText.text = isActivating ? "˄" : "˅";
+            buttonText.text = isCollapsing ? "˅" : "˄";
         }
         else if (directionToCollapse == "down")
         {
-            buttonText.text = isActivating ? "˅" : "˄";
+            buttonText.text = isCollapsing ? "˄"  : "˅";
         }
         else if (directionToCollapse == "left")
         {
-            buttonText.text = isActivating ? "˂" : "˃";
+            buttonText.text = isCollapsing ? "˃" : "˂";
         }
         else if (directionToCollapse == "right")
         {
-            buttonText.text = isActivating ? "˃" : "˂";
+            buttonText.text = isCollapsing ? "˂" : "˃";
         }
     }
 
-    public void SetTranslation(bool isActivating)
+    public void SetTranslation(bool isCollapsing)
 	{
-        Vector3 translation = new Vector3();
+		Vector2 translation = new Vector2();
+        Vector2 sizeChange = new Vector2();
 
-        if (directionToCollapse == "up")
+		if (directionToCollapse == "up")
         {
-            translation.x = 0;
-            translation.y = isActivating ? -windowHeight + buttonHeight : windowHeight - buttonHeight;
+            translation.y = isCollapsing ? windowSize.y : -windowSize.y;
+            sizeChange =  -translation;
+
         }
         else if (directionToCollapse == "down")
         {
-            translation.x = 0;
-            translation.y = isActivating ? windowHeight - buttonHeight : -windowHeight + buttonHeight;
+            translation.y = isCollapsing ? -windowSize.y : windowSize.y;
+            sizeChange = translation;
         }
         else if (directionToCollapse == "left")
         {
-            translation.x = isActivating ? windowWidth - buttonWidth : -windowWidth + buttonWidth;
-            translation.y = 0;
+            translation.x = isCollapsing ? -windowSize.x : windowSize.x;
+            sizeChange = translation;
         }
         else if (directionToCollapse == "right")
         {
-            translation.x = isActivating ? -windowWidth + buttonWidth : windowWidth - buttonWidth;
-            translation.y = 0;
+            translation.x = isCollapsing ? windowSize.x : -windowSize.x;
+            sizeChange = -translation;
         }
 
-        transform.position = transform.position + translation;
+        parentWindow.sizeDelta += sizeChange;
+        parentWindow.position += (Vector3)translation / 2;
     }
 }
