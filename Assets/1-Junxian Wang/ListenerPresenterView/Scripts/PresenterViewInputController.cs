@@ -1,24 +1,14 @@
 using UnityEngine;
 
-public class PresenterViewInputController : MonoBehaviour
+public class PresenterViewInputController : InputController
 {
 	[SerializeField] SharedEvents sharedEvents;
-	PlayerControl controls;
+	[SerializeField] ChatManager chatManager;
 
-	private void Awake()
+	protected override void Awake()
 	{
-		// Setup player control
-		controls = new PlayerControl();
-		controls.UI.Back.performed += ctx => sharedEvents.BackToLastScene();
-	}
-
-	private void OnEnable()
-	{
-		controls.Enable();
-	}
-
-	private void OnDisable()
-	{
-		controls.Disable();
+		base.Awake();
+		Controls.UI.Back.performed += ctx => sharedEvents.BackToLastScene();
+		Controls.UI.Chating.performed += ctx => chatManager.Chat();
 	}
 }

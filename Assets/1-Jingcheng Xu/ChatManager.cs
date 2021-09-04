@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class ChatManager : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class ChatManager : MonoBehaviour
     [SerializeField]
     List<Message> messagesList = new List<Message>();
     [SerializeField]
-    InGameNormalViewInputController inputController;
+    InputController inputController;
     [SerializeField]
     EventSystem eventSystem;
 
@@ -35,7 +36,7 @@ public class ChatManager : MonoBehaviour
         }
     }
 
-    public void OnChatSelect()
+	public void OnChatSelect()
 	{
         inputController.Controls.Gameplay.Disable();
     }

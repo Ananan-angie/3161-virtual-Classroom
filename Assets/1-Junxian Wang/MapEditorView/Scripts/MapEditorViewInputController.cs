@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapEditorViewInputController : MonoBehaviour
+public class MapEditorViewInputController : InputController
 {
-    PlayerControl control;
-
-	private void Awake()
+	protected override void Awake()
 	{
-        control = new PlayerControl();
-		control.UI.Back.performed += ctx => SharedEvents.Instance.BackToLastScene();
+		base.Awake();
+		Controls.UI.Back.performed += ctx => SharedEvents.Instance.BackToLastScene();
 	}
 }
