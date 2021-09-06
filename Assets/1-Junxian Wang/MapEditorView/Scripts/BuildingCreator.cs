@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 public enum PaintMode
 {
@@ -13,32 +15,41 @@ public enum PaintMode
 public class BuildingCreator : MonoBehaviour
 {
 	[SerializeField] Transform gridTransform;
-	[SerializeField] BuildingObjectBase eraser;
-	[SerializeField] List<BuildingObjectBase> buildings;
-	[SerializeField] List<BuildingObjectCategory> categories;
+	[SerializeField] Tile eraser;
+
+	Tile[] tileAssets;
+	TilemapConstructor[] tilemapConstructors;
+
 	PlayerControl controls;
 
 	Tilemap previewMap;
 	Tilemap defaultMap;
 
-	Tile previewTile;
+	Tile builderSelected;
+	Tilemap tilemapSelected;
+
 	Vector2 mousePos;
 	Vector3Int mouseGridPosLast;
 	Vector3Int mouseGridPosCurr;
 	bool isMouseHolding;
 	Vector3Int mouseGridPosHoldStart;
 
-	BuildingObjectBase builderSelected;
 	PaintMode paintModeSelected = PaintMode.Brush;
 
-	public List<BuildingObjectCategory> Categories
+	public TilemapConstructor[] TilemapConstructors
 	{
-		get { return categories; }
+		get { return tilemapConstructors; }
 	}
 
-	public List<BuildingObjectBase> Buildings
+	public Tile[] TileAssets
 	{
-		get { return buildings; }
+		get { return tileAssets; }
+	}
+
+	public Tilemap TilemapSelected
+	{
+		get { return tilemapSelected; }
+		set { tilemapSelected = value; }
 	}
 
 	private void Awake()
@@ -48,16 +59,23 @@ public class BuildingCreator : MonoBehaviour
 		controls.MapEditor.ClearSelection.performed += ctx => SelectBuilder(null);
 		controls.MapEditor.Paint.started += ctx => paintStartHandler();
 		controls.MapEditor.Paint.canceled += ctx => paintEndHandler();
+
+		// Load all tile assets
+		tileAssets = Resources.LoadAll<Tile>("Tiles");
+
+		// Load all tilemap constructor assets
+		tilemapConstructors = Resources.LoadAll<TilemapConstructor>("Scriptables/TilemapConstructors");
 	}
 
 	private void Start()
 	{
 		InitializeTilemaps();
+		tilemapSelected = defaultMap;
 	}
 
 	private void Update()
 	{
-		// When some buildable is selected
+		// When some builder tile is selected
 		if (builderSelected != null)
 		{
 			Vector3Int gridPos = getMouseGridPos();
@@ -78,16 +96,33 @@ public class BuildingCreator : MonoBehaviour
 		}
 	}
 
-	public void SelectBuilder(BuildingObjectBase builder)
+	public void SelectBuilder(Tile builder)
 	{
 		builderSelected = builder;
-		previewTile = builder != null ? builder.Tile : null;
 		updatePreview();
+	}
+
+	public void SelectCategory(int index)
+	{
+		tilemapSelected = tilemapConstructors[index].Tilemap;
 	}
 
 	public void SelectPaintMode(PaintMode mode)
 	{
 		paintModeSelected = mode;
+	}
+
+	public void SelectEraser()
+	{
+		SelectBuilder(eraser);
+	}
+
+	public void ClearTilemaps()
+	{
+		foreach (TilemapConstructor t in tilemapConstructors)
+		{
+			t.Tilemap.ClearAllTiles();
+		}
 	}
 
 	private void updatePreview()
@@ -115,7 +150,7 @@ public class BuildingCreator : MonoBehaviour
 	{
 		if (paintModeSelected == PaintMode.Brush && isMouseHolding)
 		{
-			drawTile(mouseGridPosCurr, Tilemap);
+			drawTile(mouseGridPosCurr, tilemapSelected);
 		}
 	}
 
@@ -141,7 +176,7 @@ public class BuildingCreator : MonoBehaviour
 			// tile is only drawn after the cursor's cell position is changed.
 			if (paintModeSelected == PaintMode.Brush)
 			{
-				drawTile(mouseGridPosCurr, Tilemap);
+				drawTile(mouseGridPosCurr, tilemapSelected);
 			}
 		}
 		else
@@ -164,7 +199,7 @@ public class BuildingCreator : MonoBehaviour
 			{
 				if (builderSelected != null && !EventSystem.current.IsPointerOverGameObject())
 				{
-					drawBox(Tilemap); // Draw box ending at current mouse pos
+					drawBox(tilemapSelected); // Draw box ending at current mouse pos
 				}
 			}
 
@@ -172,7 +207,7 @@ public class BuildingCreator : MonoBehaviour
 			{
 				if (builderSelected != null && !EventSystem.current.IsPointerOverGameObject())
 				{
-					drawLine(Tilemap); // Draw line ending at current mouse pos
+					drawLine(tilemapSelected); // Draw line ending at current mouse pos
 				}
 			}
 		}
@@ -185,8 +220,9 @@ public class BuildingCreator : MonoBehaviour
 		// Handle eraser
 		if (builderSelected == eraser && map != previewMap)
 		{
-			foreach (BuildingObjectCategory c in categories)
+			foreach (TilemapConstructor c in tilemapConstructors)
 			{
+				Debug.Log("1");
 				c.Tilemap.SetTile(pos, null);
 			}
 
@@ -194,7 +230,7 @@ public class BuildingCreator : MonoBehaviour
 		// Normal drawing
 		else
 		{
-			map.SetTile(pos, previewTile);
+			map.SetTile(pos, builderSelected);
 		}
 	}
 
@@ -243,21 +279,6 @@ public class BuildingCreator : MonoBehaviour
 		return previewMap.WorldToCell(worldPos);
 	}
 
-	private Tilemap Tilemap
-	{
-		get
-		{
-			if (builderSelected != null && builderSelected.Category != null && builderSelected.Category.Tilemap != null)
-			{
-				return builderSelected.Category.Tilemap;
-			}
-			else
-			{
-				return defaultMap;
-			}
-		}
-	}
-
 	private void InitializeTilemaps()
 	{
 		GameObject obj;
@@ -278,9 +299,10 @@ public class BuildingCreator : MonoBehaviour
 		obj.transform.SetParent(gridTransform);
 
 		// Initialize category's maps
-		foreach (BuildingObjectCategory category in categories)
+		foreach (TilemapConstructor c in tilemapConstructors)
 		{
-			category.TilemapObject.transform.SetParent(gridTransform);
+			c.CreateTilemap();
+			c.TilemapObject.transform.SetParent(gridTransform);
 		}
 	}
 

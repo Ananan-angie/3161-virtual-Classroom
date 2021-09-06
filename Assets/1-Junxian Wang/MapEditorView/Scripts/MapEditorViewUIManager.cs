@@ -9,73 +9,53 @@ public class MapEditorViewUIManager : MonoBehaviour
     [SerializeField] BuildingCreator buildingCreator;
 
     [SerializeField] Dropdown categoryDropdown;
+    [SerializeField] Button tools_newButton;
+    [SerializeField] Button tools_saveButton;
+    [SerializeField] Button tools_loadButton;
     [SerializeField] Button tools_brushButton;
     [SerializeField] Button tools_lineButton;
     [SerializeField] Button tools_boxButton;
+    [SerializeField] Button tools_eraserButton;
 
     [SerializeField] GameObject tileViewport;
 
-    Dictionary<string, GameObject> tileContainers = new Dictionary<string, GameObject>();
-    GameObject activeTileContainer;
     List<string> dropDownOptionsText = new List<string>();
 
     // Start is called before the first frame update
     void Start()
     {
         /* ========= Item Selector ========= */
+
         // Category Dropdown Menu
-        foreach (BuildingObjectCategory category in buildingCreator.Categories)
+        foreach (TilemapConstructor c in buildingCreator.TilemapConstructors)
 		{
-            dropDownOptionsText.Add(category.name);
+            dropDownOptionsText.Add(c.name);
         }
         categoryDropdown.AddOptions(dropDownOptionsText);
-        categoryDropdown.onValueChanged.AddListener(ctx => categoryDropdownCallback(ctx));
+        categoryDropdown.onValueChanged.AddListener(ctx => buildingCreator.SelectCategory(ctx));
+        buildingCreator.SelectCategory(categoryDropdown.value);
 
-        // Add a tiles container for each category
-        foreach (BuildingObjectCategory category in buildingCreator.Categories)
+		// Add the tile button to the corresponding category
+		foreach (Tile tile in buildingCreator.TileAssets)
 		{
-            GameObject tileContainer = new GameObject(category.name);
-            tileContainer.AddComponent<RectTransform>();
-            tileContainer.AddComponent<GridLayoutGroup>();
-            tileContainer.GetComponent<RectTransform>().sizeDelta = tileViewport.GetComponent<RectTransform>().sizeDelta;
-            tileContainer.transform.SetParent(tileViewport.transform, false);
-            tileContainer.SetActive(false);
-            tileContainers.Add(category.name, tileContainer);
+			GameObject tileButton = new GameObject(tile.name);
+			tileButton.AddComponent<RectTransform>();
+			tileButton.AddComponent<Button>();
+			tileButton.GetComponent<Button>().onClick.AddListener(delegate { buildingCreator.SelectBuilder(tile); });
+            
+            Image i = tileButton.AddComponent<Image>();
+			tileButton.GetComponent<Image>().sprite = tile.sprite;
+
+            tileButton.transform.SetParent(tileViewport.transform, false);
 		}
 
-        // Add the buildable button to the corresponding category
-        foreach (BuildingObjectBase building in buildingCreator.Buildings)
-		{
-            GameObject tileButton = new GameObject(building.name);
-            tileButton.AddComponent<RectTransform>();
-            tileButton.AddComponent<Button>();
-            tileButton.GetComponent<Button>().onClick.AddListener(delegate { buildingCreator.SelectBuilder(building); });
-            tileButton.AddComponent<Image>();
-            tileButton.GetComponent<Image>().sprite = building.Tile.sprite;
-
-            GameObject tileContainer = tileContainers[building.Category.name];
-            tileButton.transform.SetParent(tileContainer.transform, false);
-		}
-
-        /* ========= Tools Menu ========= */
-        tools_brushButton.onClick.AddListener(delegate { buildingCreator.SelectPaintMode(PaintMode.Brush); } );
+		/* ========= Tools Menu ========= */
+        tools_newButton.onClick.AddListener(delegate { buildingCreator.ClearTilemaps(); });
+        tools_saveButton.onClick.AddListener(delegate { TilemapSaveSystem.Save(buildingCreator.TilemapConstructors); });
+        tools_loadButton.onClick.AddListener(delegate { TilemapSaveSystem.Load(buildingCreator.TilemapConstructors); });
+        tools_brushButton.onClick.AddListener(delegate { buildingCreator.SelectPaintMode(PaintMode.Brush); });
         tools_lineButton.onClick.AddListener(delegate { buildingCreator.SelectPaintMode(PaintMode.Line); });
         tools_boxButton.onClick.AddListener(delegate { buildingCreator.SelectPaintMode(PaintMode.Box); });
-    }
-
-    void categoryDropdownCallback(int index)
-	{
-        setActiveTileContainer(dropDownOptionsText[index]);
-    }
-
-    void setActiveTileContainer(string categoryName)
-	{
-        if (activeTileContainer != null)
-		{
-            activeTileContainer.SetActive(false);
-        }
-        GameObject currentContainer = tileContainers[categoryName];
-        currentContainer.SetActive(true);
-        activeTileContainer = currentContainer;
+        tools_eraserButton.onClick.AddListener(delegate { buildingCreator.SelectEraser(); });
     }
 }
