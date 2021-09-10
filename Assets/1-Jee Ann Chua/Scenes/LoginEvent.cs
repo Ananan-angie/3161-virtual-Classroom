@@ -22,12 +22,6 @@ public class LoginEvent : MonoBehaviour
         loginButton.onClick.AddListener(adminDetails);
     }
 
-    Dictionary<string, string> loginDetails = new Dictionary<string, string>
-    {
-        {"abc123", "abc123"},
-        {"qwert123", "qwert"},
-    };
-
 
     public void adminDetails()
     {
@@ -39,15 +33,17 @@ public class LoginEvent : MonoBehaviour
         UserDetails col = JsonUtility.FromJson<UserDetails>(jsonFile.text);
         List<UserDetail> listOfDetails = col.userdetails.ToList();
 
+        bool found = false;
         foreach(UserDetail userdetails in listOfDetails){
             if(userdetails.username == userName && userdetails.password == password)
             {
                 SceneManager.LoadScene(7);
+                found = true;
             }
-            else
-            {
-                invalidMessage.SetActive(true);
-            }
+        }
+        if( !found )
+        {
+            invalidMessage.SetActive(true);
         }
     }
 
