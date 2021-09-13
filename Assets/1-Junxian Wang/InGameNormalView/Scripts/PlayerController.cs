@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] InGameNormalViewEvents sceneEvents;
     [SerializeField] int chairTriggerSceneListener;
     [SerializeField] int chairTriggerScenePresenter;
+	[SerializeField] InGameNormalViewUIManager uiManager;
     Animator animator;
     public bool IsInChairPresenter, IsInChairListener;
 	public Vector2 MovementThisFrame;
@@ -62,6 +63,10 @@ public class PlayerController : MonoBehaviour
 		{
 			IsInChairPresenter = true;
 		}
+		else if (collision.gameObject.CompareTag("Room"))
+		{
+			uiManager.ChangeRoomText(int.Parse(collision.gameObject.name));
+		}
 	}
 
 	private void OnTriggerExit2D(Collider2D collision)
@@ -73,6 +78,10 @@ public class PlayerController : MonoBehaviour
 		else if (collision.gameObject.CompareTag("Presenter Chair"))
 		{
 			IsInChairPresenter = false;
+		}
+		else if (collision.gameObject.CompareTag("Room"))
+		{
+			uiManager.ChangeRoomText(-1);
 		}
 	}
 
