@@ -17,30 +17,27 @@ public class Teleport : MonoBehaviour
     private void Awake()
     {
         dropitems.Add("Main");
-        dropitems.Add("Class 1");
-        dropitems.Add("Class 2");
+        dropitems.Add("Student 1");
+        dropitems.Add("Lecturer 1");
+        dropitems.Add("Student 2");
+        dropitems.Add("Lecturer 1");
         foreach (var item in dropitems)
         {
             dropdown.options.Add(new TMP_Dropdown.OptionData() { text = item });
         }
         positions.Add(new Vector3(0, 0, 0));
         positions.Add(new Vector3(-10, 9, 0));
+        positions.Add(new Vector3(-10, 19, 0));
         positions.Add(new Vector3(8, 9, 0));
+        positions.Add(new Vector3(8, 19, 0));
+
     }
 
     public void StartTeleport()
     {
-        if (dropitems[dropdown.value] == "Main")
+        if (dropdown.value <= positions.Capacity)
         {
-            player.transform.position = positions[0];
-        }
-        else if (dropitems[dropdown.value] == "Class 1")
-        {
-            player.transform.position = positions[1];
-        }
-        else if (dropitems[dropdown.value] == "Class 2")
-        {
-            player.transform.position = positions[2];
+            player.transform.position = positions[dropdown.value];
         }
     }
 
