@@ -7,34 +7,56 @@ using UnityEngine.Tilemaps;
 
 public static class TilemapSaveSystem
 {
-	public static void Save(TilemapConstructor[] tilemapConstructors)
+    public static string SavePath = Path.Combine(Application.persistentDataPath, "Saves/Maps");
+
+	public static void Save(string mapName, ClassroomTilemap[] classroomTilemaps)
 	{
-        if (tilemapConstructors.Length > 0)
+        // Clear the save folder of that map name
+        string savePath = Path.Combine(SavePath, mapName);
+        if (Directory.Exists(savePath))
 		{
-            foreach (TilemapConstructor c in tilemapConstructors)
+            Directory.Delete(savePath, true);
+		}
+
+        // Save the map in the folder
+        if (classroomTilemaps.Length > 0)
+		{
+            foreach (ClassroomTilemap c in classroomTilemaps)
             {
-                SaveTilemap(c.name, c.Tilemap);
+                SaveTilemap(mapName, c.Tilemap);
+            }
+            string json = JsonUtilityArrayHelper.ToJson(classroomTilemaps);
+            SaveJSON(mapName, "map.mapdata", json);
+        }
+        else
+		{
+            throw new System.Exception("Zero input given");
+		}
+	}
+
+    public static ClassroomTilemap[] Load(string mapName, Transform parent = null)
+	{
+        string json = LoadJSON(mapName, "map.mapdata");
+
+        ClassroomTilemap[] classroomTilemaps = JsonUtilityArrayHelper.FromJson<ClassroomTilemap>(json);
+
+        if (classroomTilemaps.Length > 0)
+        {
+            foreach (ClassroomTilemap c in classroomTilemaps)
+            {
+                c.CreateTilemap(parent, true);
+                LoadTilemap(mapName, c.Tilemap);
             }
         }
         else
 		{
-            throw new System.Exception("Tile map constructors not initallized, need to create (load) tile maps using this object first");
+            Debug.LogWarning($"WARNING: No map data was collected for map {mapName}.");
 		}
-	}
-
-    public static void Load(TilemapConstructor[] tilemapConstructors)
-	{
-        if (tilemapConstructors.Length > 0)
-        {
-            foreach (TilemapConstructor c in tilemapConstructors)
-            {
-                if (c.TilemapObject == null) c.CreateTilemap();
-                LoadTilemap(c.name, c.Tilemap);
-            }
-        }
+        
+        return classroomTilemaps;
     }
 
-    public static void SaveTilemap(string saveName, Tilemap tilemap)
+    public static void SaveTilemap(string mapName, Tilemap tilemap)
     {
         List<TileSaveData> TileDataList = new List<TileSaveData>();
 
@@ -53,17 +75,20 @@ public static class TilemapSaveSystem
 
             TileDataList.Add(tileData);
         }
-        SaveTileData(saveName, TileDataList);
+
+        string json = JsonUtilityArrayHelper.ToJson(TileDataList.ToArray(), true);
+        SaveJSON(mapName, tilemap.name + ".tiledata", json);
     }
 
-    public static void LoadTilemap(string saveName, Tilemap tilemap)
+    public static void LoadTilemap(string mapName, Tilemap tilemap)
     {
         tilemap.ClearAllTiles();
-        List<TileSaveData> TileDataList = LoadTileData(saveName);
+        string json = LoadJSON(mapName, tilemap.name + ".tiledata");
+        List<TileSaveData> TileDataList = JsonUtilityArrayHelper.FromJson<TileSaveData>(json).ToList();
         SetTilemap(tilemap, TileDataList);
     }
 
-    public static void SetTilemap(Tilemap tileMap, List<TileSaveData> tileSaveDataList)
+    public static void SetTilemap(Tilemap tilemap, List<TileSaveData> tileSaveDataList)
     {
         Tile[] tileAsset = Resources.LoadAll<Tile>("Tiles");
 
@@ -73,7 +98,7 @@ public static class TilemapSaveSystem
             {
                 if (tileAsset[i].name == tile.tileBaseName)
                 {
-                    tileMap.SetTile(tile.cellPos, tileAsset[i]);
+                    tilemap.SetTile(tile.cellPos, tileAsset[i]);
                     break;
                 }
             }
@@ -81,40 +106,23 @@ public static class TilemapSaveSystem
         Resources.UnloadUnusedAssets();
     }
 
+    private static void SaveJSON(string folderName, string fileNameWithSuffix, string JSON)
+	{
+        string path = Path.Combine(SavePath, folderName); 
+        if (!Directory.Exists(path))
+		{
+            Directory.CreateDirectory(path);
+		}
+        path = Path.Combine(path, fileNameWithSuffix);
 
-    public static void SaveTileData(string saveName, List<TileSaveData> tilesToSave)
-    {
-        string path = Path.Combine(Application.persistentDataPath, "Saves/Tilemaps");
-
-        if(!Directory.Exists(path)){
-            Directory.CreateDirectory (path);
-        }
-
-        path = Path.Combine(path, saveName + ".humble");   
-
-        string saveJson = JsonHelper.ToJson(tilesToSave.ToArray(), true);
-
-        File.WriteAllText(path, saveJson);
+        File.WriteAllText(path, JSON);
     }
 
-    public static List<TileSaveData> LoadTileData(string saveName)
+    private static string LoadJSON(string folderName, string fileNameWithSuffix)
     {
-        string path = Path.Combine(Application.persistentDataPath, "Saves/Tilemaps");
-        path = Path.Combine(path, saveName + ".humble");
+        string path = Path.Combine(SavePath, folderName, fileNameWithSuffix);
 
-        if (File.Exists(path))
-        {
-            string loadJson = File.ReadAllText(path);
-            
-            List<TileSaveData> loadTiles = JsonHelper.FromJson<TileSaveData>(loadJson).ToList();
-
-            return loadTiles;
-        } 
-        else
-        {
-            Debug.LogError("Save file not found.");
-            return null;
-        }
+        return File.ReadAllText(path);
     }
 
     public static void DeleteAllData()
@@ -124,3 +132,4 @@ public static class TilemapSaveSystem
         directory.Delete(true);
     }
 }
+

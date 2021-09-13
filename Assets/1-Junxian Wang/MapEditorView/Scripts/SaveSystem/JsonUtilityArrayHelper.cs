@@ -6,7 +6,7 @@ using UnityEngine;
 //Credits go to Boxhead Productions for making this, Programmer & JP Silvashy for suggesting it.
 //https://stackoverflow.com/questions/36239705/serialize-and-deserialize-json-and-json-array-in-unity
 
-public static class JsonHelper
+public static class JsonUtilityArrayHelper
 {
     public static T[] FromJson<T>(string json)
     {

@@ -12,33 +12,62 @@ public enum PaintMode
 	Box
 }
 
-public class BuildingCreator : MonoBehaviour
+public class MapEditorManager : MonoBehaviour
 {
 	[SerializeField] Transform gridTransform;
-	[SerializeField] Tile eraser;
+	public Tile eraser;
+	[SerializeField] MapEditorViewUIManager UIManager;
 
 	Tile[] tileAssets;
-	TilemapConstructor[] tilemapConstructors;
-
-	PlayerControl controls;
+	List<ClassroomTilemap> classroomTilemaps = new List<ClassroomTilemap>();
 
 	Tilemap previewMap;
 	Tilemap defaultMap;
 
+	string mapSelected;
 	Tile builderSelected;
 	Tilemap tilemapSelected;
 
-	Vector2 mousePos;
+	[HideInInspector] public Vector2 MousePos;
 	Vector3Int mouseGridPosLast;
 	Vector3Int mouseGridPosCurr;
 	bool isMouseHolding;
 	Vector3Int mouseGridPosHoldStart;
 
+	int roomCount = 0;
+	public ClassroomTilemap VisibleRoomLayer = null;
+
+	bool isEraser;
+
 	PaintMode paintModeSelected = PaintMode.Brush;
 
-	public TilemapConstructor[] TilemapConstructors
+	static ClassroomTilemap[] defaultClassroomTilemaps =
 	{
-		get { return tilemapConstructors; }
+		new ClassroomTilemap(
+			name: "Floor", 
+			layerOrder: 1),
+
+		new ClassroomTilemap(
+			name: "Wall", 
+			layerOrder: 2, 
+			isCollidable: true),
+
+		new ClassroomTilemap(
+			name: "Listener Chair", 
+			layerOrder: 2, 
+			isTrigger: true,
+			triggerTag: "Listener Chair"),
+
+		new ClassroomTilemap(
+			name: "Presenter Chair",
+			layerOrder: 2,
+			isTrigger: true,
+			triggerTag: "Presenter Chair")
+	};
+
+	public List<ClassroomTilemap> ClassroomTilemaps
+	{
+		get { return classroomTilemaps; }
 	}
 
 	public Tile[] TileAssets
@@ -54,22 +83,11 @@ public class BuildingCreator : MonoBehaviour
 
 	private void Awake()
 	{
-		controls = new PlayerControl();
-		controls.MapEditor.MousePosChange.performed += ctx => mousePos = ctx.ReadValue<Vector2>();
-		controls.MapEditor.ClearSelection.performed += ctx => SelectBuilder(null);
-		controls.MapEditor.Paint.started += ctx => paintStartHandler();
-		controls.MapEditor.Paint.canceled += ctx => paintEndHandler();
-
 		// Load all tile assets
 		tileAssets = Resources.LoadAll<Tile>("Tiles");
 
-		// Load all tilemap constructor assets
-		tilemapConstructors = Resources.LoadAll<TilemapConstructor>("Scriptables/TilemapConstructors");
-	}
-
-	private void Start()
-	{
 		InitializeTilemaps();
+		NewMap();
 		tilemapSelected = defaultMap;
 	}
 
@@ -100,11 +118,17 @@ public class BuildingCreator : MonoBehaviour
 	{
 		builderSelected = builder;
 		updatePreview();
+		isEraser = false;
 	}
 
-	public void SelectCategory(int index)
+	public void SelectLayer(int index)
 	{
-		tilemapSelected = tilemapConstructors[index].Tilemap;
+		SelectLayer(classroomTilemaps[index]);
+	}
+
+	public void SelectLayer(ClassroomTilemap tilemap)
+	{
+		tilemapSelected = tilemap.Tilemap;
 	}
 
 	public void SelectPaintMode(PaintMode mode)
@@ -115,14 +139,7 @@ public class BuildingCreator : MonoBehaviour
 	public void SelectEraser()
 	{
 		SelectBuilder(eraser);
-	}
-
-	public void ClearTilemaps()
-	{
-		foreach (TilemapConstructor t in tilemapConstructors)
-		{
-			t.Tilemap.ClearAllTiles();
-		}
+		isEraser = true;
 	}
 
 	private void updatePreview()
@@ -164,7 +181,7 @@ public class BuildingCreator : MonoBehaviour
 	 *		Record hold start pos
 	 *		Draws box when hold ends
 	 */
-	private void paintStartHandler()
+	public void PaintStartHandler()
 	{
 		if (builderSelected != null && !EventSystem.current.IsPointerOverGameObject())
 		{
@@ -185,7 +202,7 @@ public class BuildingCreator : MonoBehaviour
 		}
 	}
 
-	private void paintEndHandler()
+	public void PaintEndHandler()
 	{
 		if (isMouseHolding == true)
 		{
@@ -218,14 +235,12 @@ public class BuildingCreator : MonoBehaviour
 	private void drawTile(Vector3Int pos, Tilemap map)
 	{
 		// Handle eraser
-		if (builderSelected == eraser && map != previewMap)
+		if (isEraser && map != previewMap)
 		{
-			foreach (TilemapConstructor c in tilemapConstructors)
+			foreach (ClassroomTilemap c in classroomTilemaps)
 			{
-				Debug.Log("1");
 				c.Tilemap.SetTile(pos, null);
 			}
-
 		}
 		// Normal drawing
 		else
@@ -275,7 +290,7 @@ public class BuildingCreator : MonoBehaviour
 
 	private Vector3Int getMouseGridPos()
 	{
-		Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+		Vector3 worldPos = Camera.main.ScreenToWorldPoint(MousePos);
 		return previewMap.WorldToCell(worldPos);
 	}
 
@@ -297,22 +312,100 @@ public class BuildingCreator : MonoBehaviour
 		tr = obj.AddComponent<TilemapRenderer>();
 		tr.sortingOrder = 0;
 		obj.transform.SetParent(gridTransform);
+	}
 
-		// Initialize category's maps
-		foreach (TilemapConstructor c in tilemapConstructors)
+	public void NewMap(string mapName = "NewMap")
+	{
+		// Remove all currently created tilemaps
+		foreach (ClassroomTilemap c in classroomTilemaps)
 		{
-			c.CreateTilemap();
-			c.TilemapObject.transform.SetParent(gridTransform);
+			Destroy(c.TilemapObject);
+			c.ResetTilemapObject();
 		}
+
+		// Reinitialize default tilemaps
+		foreach (ClassroomTilemap c in defaultClassroomTilemaps)
+		{
+			c.CreateTilemap(gridTransform);
+		}
+		classroomTilemaps = defaultClassroomTilemaps.ToList();
+
+		UIManager.UpdateCategoryDropdown();
+
+		mapSelected = mapName;
+		UIManager.SetMapText(mapName);
 	}
 
-	private void OnEnable()
+	public void LoadMap(string mapName)
 	{
-		controls.Enable();
+		// Try to load map
+		ClassroomTilemap[] loadMap;
+		try
+		{
+			loadMap = TilemapSaveSystem.Load(mapName, gridTransform);
+		}
+		catch (DirectoryNotFoundException)
+		{
+			Debug.Log($"Map {mapName} is not found.");
+			return;
+		}
+
+		// Remove all currently created tilemaps
+		foreach (ClassroomTilemap c in classroomTilemaps)
+		{
+			Destroy(c.TilemapObject);
+		}
+
+		classroomTilemaps = loadMap.ToList();
+		UIManager.UpdateCategoryDropdown();
+
+		mapSelected = mapName;
+		UIManager.SetMapText(mapName);
+
+		Debug.Log($"Loaded map {mapName}");
 	}
 
-	private void OnDisable()
+	public void SaveMap()
 	{
-		controls.Disable();
+		TilemapSaveSystem.Save(mapSelected, classroomTilemaps.ToArray());
+		Debug.Log($"Saved map {mapSelected}");
+	}
+
+	public void ChangeMapName(string mapName)
+	{
+		mapSelected = mapName;
+		UIManager.SetMapText(mapName);
+	}
+
+	public void CreateNewRoom()
+	{
+		roomCount++;
+
+		ClassroomTilemap room = new ClassroomTilemap(
+			name: "Room " + roomCount,
+			layerOrder: 2,
+			isTrigger: true,
+			triggerTag: "Room",
+			roomID: roomCount);
+
+		classroomTilemaps.Add(room);
+		room.CreateTilemap(gridTransform);
+
+		UIManager.UpdateDropdownRooms();
+
+		room.TilemapObject.SetActive(false);
+	}
+
+	public void SelectRoom(ClassroomTilemap room)
+	{
+		SelectLayer(room);
+		SelectBuilder(eraser);
+
+		if (VisibleRoomLayer.name != null)
+		{
+			VisibleRoomLayer.TilemapObject.SetActive(false);
+		}
+		VisibleRoomLayer = room;
+		room.TilemapObject.SetActive(true);
 	}
 }
