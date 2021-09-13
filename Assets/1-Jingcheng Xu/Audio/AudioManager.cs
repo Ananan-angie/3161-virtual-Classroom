@@ -7,7 +7,6 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Slider mainVolume;
 
     public void SetMainVolume(float volume)
     {
@@ -20,17 +19,5 @@ public class AudioManager : MonoBehaviour
     public void SetOtherVolume(float volume)
     {
         audioMixer.SetFloat("Other", volume);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetMainVolume(100f);
-        mainVolume.value = 100;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        SetMainVolume(mainVolume.value);
     }
 }
