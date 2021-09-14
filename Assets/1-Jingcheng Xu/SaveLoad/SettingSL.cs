@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
+using UnityEngine.UI;
 
 public class SettingSL : MonoBehaviour
 {
+    [SerializeField]
+    Slider volume;
+    
     public static void SaveVolume(float v)
     {
         string path = Path.Combine(Application.persistentDataPath, "Saves/Settings");
@@ -20,7 +24,7 @@ public class SettingSL : MonoBehaviour
         File.WriteAllText(path, v.ToString());
     }
 
-    public static float SaveVolume()
+    public static float loadVolume()
     {
         string path = Path.Combine(Application.persistentDataPath, "Saves/Settings");
         path = Path.Combine(path, "Volume.humble");
@@ -38,6 +42,12 @@ public class SettingSL : MonoBehaviour
             return 0;
         }
     }
+
+    private void Awake()
+    {
+        volume.value = loadVolume();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
