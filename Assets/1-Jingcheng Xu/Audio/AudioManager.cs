@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioMixer audioMixer;
-
+    
     public void SetMainVolume(float volume)
     {
         audioMixer.SetFloat("Main", volume);
