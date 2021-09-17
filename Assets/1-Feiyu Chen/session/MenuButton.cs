@@ -3,10 +3,11 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
  public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
  
-     public Text theText;
+     public TextMeshPro theText;
  
      public void OnPointerEnter(PointerEventData eventData)
      {
