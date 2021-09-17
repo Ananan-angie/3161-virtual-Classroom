@@ -73,8 +73,8 @@ public class UIManager : MonoBehaviour
         bool found = false;
 
         // finds the upcoming class of current time this week
-        for (int t = 0; t < 13; t++){
-            for (int d = 1; d < 8; d++){
+        for (int d = 1; d < 8; d++){
+            for (int t = 0; t < 13; t++){
                 if(t + 8 >= hour && d >= day && arr2d[t,d] != ""){
                     name = arr2d[t,d];
                     scheduleDay = d;
@@ -87,8 +87,8 @@ public class UIManager : MonoBehaviour
         
         // if no upcoming class this week, finds the first class of the week
         if(!found){
-            for (int t = 0; t < 13; t++){
-                for (int d = 1; d < 8; d++){
+            for (int d = 1; d < 8; d++){
+                for (int t = 0; t < 13; t++){
                     if(arr2d[t,d] != ""){
                         name = arr2d[t,d];
                         scheduleDay = d;
