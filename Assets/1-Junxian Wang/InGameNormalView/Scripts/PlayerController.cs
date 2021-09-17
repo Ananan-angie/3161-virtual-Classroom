@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     public bool IsInChairPresenter, IsInChairListener;
 	public Vector2 MovementThisFrame;
-	
+
 	// Start is called before the first frame update
 	void Start()
     {
