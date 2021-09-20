@@ -8,9 +8,9 @@ using TMPro;
 
 public class RetrievePassword : MonoBehaviour
 {
-    public TextAsset jsonFile;
-    public TMP_InputField emailInput;
-    public TMP_Text message;
+    [SerializeField] TextAsset jsonFile;
+    [SerializeField] TMP_InputField emailInput;
+    [SerializeField] TMP_Text message;
 
     public void getPassword(){
         UserDetails col = JsonUtility.FromJson<UserDetails>(jsonFile.text);

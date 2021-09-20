@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class SnapToScrollView : MonoBehaviour
 {
-    public ScrollRect scrollRect;
-    public RectTransform contentPanel;
+    [SerializeField] public ScrollRect scrollRect;
+    [SerializeField] public RectTransform contentPanel;
 
     public void SnapTo(RectTransform target)
     {
-        Vector2 offset = new Vector2(122,-20);
+        Vector2 position = target.anchoredPosition;
+        Vector2 offset = new Vector2(target.anchoredPosition.x, -85);
         Canvas.ForceUpdateCanvases();
 
         contentPanel.anchoredPosition =

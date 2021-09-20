@@ -9,11 +9,11 @@ using System.Linq;
 public class LoginEvent : MonoBehaviour
 {
 
-    public TMP_InputField userNameField;
-    public TMP_InputField passwordField;
-    public Button loginButton;
-    public GameObject invalidMessage;
-    public TextAsset jsonFile;
+    [SerializeField] TMP_InputField userNameField;
+    [SerializeField] TMP_InputField passwordField;
+    [SerializeField] Button loginButton;
+    [SerializeField] GameObject invalidMessage;
+    [SerializeField] TextAsset jsonFile;
 
     void Start()
     {

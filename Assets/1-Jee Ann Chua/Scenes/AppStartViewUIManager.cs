@@ -9,6 +9,7 @@ public class AppStartViewUIManager : MonoBehaviour
 {
     public Transform[] time;
     
+    [SerializeField] Transform[] time;
     [SerializeField] TextMeshProUGUI userInfo;
     [SerializeField] Button newSessionButton;
     [SerializeField] Button joinSessionButton;
