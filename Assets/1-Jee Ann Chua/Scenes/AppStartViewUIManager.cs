@@ -4,9 +4,10 @@ using UnityEngine;
 using TMPro;
 using System;
 
-public class UIManager : MonoBehaviour
+public class AppStartViewUIManager : MonoBehaviour
 {
     public Transform[] time;
+    [SerializeField] TextMeshProUGUI userInfo;
 
     // schedule
     string[,] arr2d = new string[13,8]{
@@ -26,9 +27,14 @@ public class UIManager : MonoBehaviour
     };
 
     public TMP_Text UpcomingClass;
-    string name;
+    string className;
     int scheduleDay;
     int scheduleTime;
+
+    private void Awake()
+    {
+        userInfo.text = $"User Name: {ClassroomNetworkManager.Instance.clientID}";
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +82,7 @@ public class UIManager : MonoBehaviour
         for (int d = 1; d < 8; d++){
             for (int t = 0; t < 13; t++){
                 if(t + 8 >= hour && d >= day && arr2d[t,d] != ""){
-                    name = arr2d[t,d];
+                    className = arr2d[t,d];
                     scheduleDay = d;
                     scheduleTime = t+8;
                     found = true;
@@ -90,7 +96,7 @@ public class UIManager : MonoBehaviour
             for (int d = 1; d < 8; d++){
                 for (int t = 0; t < 13; t++){
                     if(arr2d[t,d] != ""){
-                        name = arr2d[t,d];
+                        className = arr2d[t,d];
                         scheduleDay = d;
                         scheduleTime = t+8;
                         found = true;
@@ -102,14 +108,14 @@ public class UIManager : MonoBehaviour
     End:
         if(found){
             if(scheduleTime < 12){
-                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "AM" + "\n Class Name: " + name + "\n Class Number : 01" + "\n Tutor: ";
+                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "AM" + "\n Class Name: " + className + "\n Class Number : 01" + "\n Tutor: ";
             }
             else if(scheduleTime == 12){
-                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "PM" + "\n Class Name: " + name + "\n Class Number : 01" + "\n Tutor: "; 
+                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "PM" + "\n Class Name: " + className + "\n Class Number : 01" + "\n Tutor: "; 
             }
             else{
                 scheduleTime -= 12;
-                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "PM" + "\n Class Name: " + name + "\n Class Number : 01" + "\n Tutor: "; 
+                UpcomingClass.text = "Day: " + Enum.GetName(typeof(DayOfWeek),scheduleDay) + "\n Time: " + scheduleTime + "PM" + "\n Class Name: " + className + "\n Class Number : 01" + "\n Tutor: "; 
             }
             
         }
