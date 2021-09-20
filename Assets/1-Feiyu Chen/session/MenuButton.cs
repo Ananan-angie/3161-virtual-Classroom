@@ -7,7 +7,7 @@ using TMPro;
 
  public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
  
-     public TextMeshPro theText;
+     public TMP_Text theText;
  
      public void OnPointerEnter(PointerEventData eventData)
      {

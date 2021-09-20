@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 374094743}
   - component: {fileID: 374094742}
   - component: {fileID: 374094741}
+  - component: {fileID: 374094744}
   m_Layer: 5
   m_Name: volume
   m_TagString: Untagged
@@ -608,6 +609,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374094739}
   m_CullTransparentMesh: 1
+--- !u!114 &374094744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374094739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 647428489}
 --- !u!1 &418497044
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +634,7 @@ GameObject:
   - component: {fileID: 418497047}
   - component: {fileID: 418497046}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Sample
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1059,7 +1073,7 @@ GameObject:
   - component: {fileID: 647428490}
   - component: {fileID: 647428489}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1268,6 +1282,7 @@ GameObject:
   - component: {fileID: 890657926}
   - component: {fileID: 890657925}
   - component: {fileID: 890657924}
+  - component: {fileID: 890657927}
   m_Layer: 5
   m_Name: Sample soundtrack setting
   m_TagString: Untagged
@@ -1377,6 +1392,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890657922}
   m_CullTransparentMesh: 1
+--- !u!114 &890657927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890657922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 418497046}
 --- !u!1 &918719692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1577,7 @@ GameObject:
   - component: {fileID: 965558908}
   - component: {fileID: 965558907}
   - component: {fileID: 965558906}
+  - component: {fileID: 965558909}
   m_Layer: 5
   m_Name: Output Device
   m_TagString: Untagged
@@ -1658,6 +1687,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 965558904}
   m_CullTransparentMesh: 1
+--- !u!114 &965558909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965558904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1149626142}
 --- !u!1 &980781257
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1961,7 @@ GameObject:
   - component: {fileID: 1149626143}
   - component: {fileID: 1149626142}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: output
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2391,7 +2433,7 @@ GameObject:
   - component: {fileID: 1521334556}
   - component: {fileID: 1521334555}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: build
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2525,6 +2567,7 @@ GameObject:
   - component: {fileID: 1731794710}
   - component: {fileID: 1731794709}
   - component: {fileID: 1731794708}
+  - component: {fileID: 1731794711}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2646,6 +2689,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731794706}
   m_CullTransparentMesh: 1
+--- !u!114 &1731794711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731794706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 288315911}
 --- !u!1 &1762408793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,6 +2789,7 @@ GameObject:
   - component: {fileID: 1838837802}
   - component: {fileID: 1838837801}
   - component: {fileID: 1838837800}
+  - component: {fileID: 1838837803}
   m_Layer: 5
   m_Name: Build in speaker
   m_TagString: Untagged
@@ -2842,6 +2899,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838837798}
   m_CullTransparentMesh: 1
+--- !u!114 &1838837803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838837798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1521334555}
 --- !u!1 &1861446084
 GameObject:
   m_ObjectHideFlags: 0

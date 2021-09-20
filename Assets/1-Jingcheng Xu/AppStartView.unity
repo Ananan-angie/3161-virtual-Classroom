@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 71956698}
   - component: {fileID: 71956697}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: new
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1964,6 +1964,7 @@ GameObject:
   - component: {fileID: 197677058}
   - component: {fileID: 197677057}
   - component: {fileID: 197677060}
+  - component: {fileID: 197677061}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2100,6 +2101,19 @@ MonoBehaviour:
   header: Settings
   body: Go to setting page
   showDelay: 1
+--- !u!114 &197677061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197677055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 243142029}
 --- !u!1 &215026024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2260,7 @@ GameObject:
   - component: {fileID: 219239162}
   - component: {fileID: 219239161}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: join
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2514,7 +2528,7 @@ GameObject:
   - component: {fileID: 243142030}
   - component: {fileID: 243142029}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9687,7 +9701,7 @@ GameObject:
   - component: {fileID: 947865058}
   - component: {fileID: 947865057}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: history
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13356,6 +13370,7 @@ GameObject:
   - component: {fileID: 1396416489}
   - component: {fileID: 1396416488}
   - component: {fileID: 1396416491}
+  - component: {fileID: 1396416492}
   m_Layer: 5
   m_Name: MapEditor
   m_TagString: Untagged
@@ -13492,6 +13507,19 @@ MonoBehaviour:
   header: Map editor
   body: Edit maps
   showDelay: 1
+--- !u!114 &1396416492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396416486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1791097599}
 --- !u!1 &1403636193
 GameObject:
   m_ObjectHideFlags: 0
@@ -14708,6 +14736,7 @@ GameObject:
   - component: {fileID: 1504393599}
   - component: {fileID: 1504393598}
   - component: {fileID: 1504393601}
+  - component: {fileID: 1504393602}
   m_Layer: 5
   m_Name: JoinSession
   m_TagString: Untagged
@@ -14844,6 +14873,19 @@ MonoBehaviour:
   header: Join session
   body: Join a session
   showDelay: 1
+--- !u!114 &1504393602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504393596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 219239161}
 --- !u!1 &1518568746
 GameObject:
   m_ObjectHideFlags: 0
@@ -15850,7 +15892,7 @@ GameObject:
   - component: {fileID: 1628371699}
   - component: {fileID: 1628371698}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: editor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18003,7 +18045,7 @@ GameObject:
   - component: {fileID: 1791097600}
   - component: {fileID: 1791097599}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19111,6 +19153,7 @@ GameObject:
   - component: {fileID: 1885709245}
   - component: {fileID: 1885709244}
   - component: {fileID: 1885709247}
+  - component: {fileID: 1885709248}
   m_Layer: 5
   m_Name: SessionHistory
   m_TagString: Untagged
@@ -19235,6 +19278,19 @@ MonoBehaviour:
   header: Session history
   body: Display session history
   showDelay: 1
+--- !u!114 &1885709248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885709242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 947865057}
 --- !u!1 &1900374866
 GameObject:
   m_ObjectHideFlags: 0
@@ -19516,6 +19572,7 @@ GameObject:
   - component: {fileID: 1908654716}
   - component: {fileID: 1908654715}
   - component: {fileID: 1908654718}
+  - component: {fileID: 1908654719}
   m_Layer: 5
   m_Name: NewSession
   m_TagString: Untagged
@@ -19652,6 +19709,19 @@ MonoBehaviour:
   header: New session
   body: Go to New session
   showDelay: 1
+--- !u!114 &1908654719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908654713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 71956697}
 --- !u!1 &1912150970
 GameObject:
   m_ObjectHideFlags: 0
@@ -20595,6 +20665,7 @@ GameObject:
   - component: {fileID: 1989173835}
   - component: {fileID: 1989173834}
   - component: {fileID: 1989173837}
+  - component: {fileID: 1989173838}
   m_Layer: 5
   m_Name: UserAppearanceEditor
   m_TagString: Untagged
@@ -20719,6 +20790,19 @@ MonoBehaviour:
   header: User appearance editor
   body: Modify user appearance
   showDelay: 1
+--- !u!114 &1989173838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989173832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1628371698}
 --- !u!1 &1994470247
 GameObject:
   m_ObjectHideFlags: 0

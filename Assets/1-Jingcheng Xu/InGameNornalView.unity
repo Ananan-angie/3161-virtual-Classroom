@@ -11169,7 +11169,7 @@ GameObject:
   - component: {fileID: 141210927}
   - component: {fileID: 141210926}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11888,6 +11888,7 @@ GameObject:
   - component: {fileID: 485905785}
   - component: {fileID: 485905784}
   - component: {fileID: 485905787}
+  - component: {fileID: 485905788}
   m_Layer: 5
   m_Name: MiniMap
   m_TagString: Untagged
@@ -12036,6 +12037,19 @@ MonoBehaviour:
   header: Mini map
   body: Open/Close mini map
   showDelay: 1
+--- !u!114 &485905788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485905782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 141210926}
 --- !u!1 &491324376
 GameObject:
   m_ObjectHideFlags: 0
@@ -12125,7 +12139,7 @@ GameObject:
   - component: {fileID: 559273515}
   - component: {fileID: 559273514}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17932,7 +17946,7 @@ GameObject:
   - component: {fileID: 1031371032}
   - component: {fileID: 1031371031}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: tele
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18455,6 +18469,7 @@ GameObject:
   - component: {fileID: 1231497098}
   - component: {fileID: 1231497097}
   - component: {fileID: 1231497100}
+  - component: {fileID: 1231497101}
   m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
@@ -18603,6 +18618,19 @@ MonoBehaviour:
   header: Setting
   body: Go to setting page
   showDelay: 1
+--- !u!114 &1231497101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231497095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 559273514}
 --- !u!1 &1248876716
 GameObject:
   m_ObjectHideFlags: 0
@@ -20542,6 +20570,7 @@ GameObject:
   - component: {fileID: 1960477520}
   - component: {fileID: 1960477519}
   - component: {fileID: 1960477518}
+  - component: {fileID: 1960477517}
   m_Layer: 5
   m_Name: Teleport
   m_TagString: Untagged
@@ -20570,6 +20599,19 @@ RectTransform:
   m_AnchoredPosition: {x: 1321, y: -95.211}
   m_SizeDelta: {x: 202.76025, y: 167.60004}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1960477517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960477515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4f9cd7991ff404e94dc3852f944431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theText: {fileID: 1031371031}
 --- !u!114 &1960477518
 MonoBehaviour:
   m_ObjectHideFlags: 0
