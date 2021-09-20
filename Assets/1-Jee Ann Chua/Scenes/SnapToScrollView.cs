@@ -12,7 +12,6 @@ public class SnapToScrollView : MonoBehaviour
     {
         Vector2 position = target.anchoredPosition;
         Vector2 offset = new Vector2(target.anchoredPosition.x, -85);
-        Debug.Log(offset);
         Canvas.ForceUpdateCanvases();
 
         contentPanel.anchoredPosition =
