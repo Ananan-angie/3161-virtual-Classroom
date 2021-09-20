@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
+using UnityEngine.Networking;
 
 public class ChatManager : MonoBehaviour
 {
-    public string usrname;
     public int maxMessages = 25;
     public GameObject textObject,chatPanel;
     public TMP_InputField chatBox;
@@ -46,24 +45,27 @@ public class ChatManager : MonoBehaviour
         inputController.Controls.Gameplay.Enable();
     }
 
-    public void Chat()
+    public void SendChat()
     {   
-
         if (chatBox.text != "")
         {
             eventSystem.SetSelectedGameObject(null); // Deselect the UI
 
+            // Send over network
+            ClassroomNetworkManager.Instance.SendChat(chatBox.text);
+
+            // Display text inside chat list
             if (dropitems[dropdown.value] == "All")
             {
-                SentToChat(chatBox.text, Message.MessageType.All);
+                DisplayInChatList(ClassroomNetworkManager.Instance.clientID, chatBox.text, Message.MessageType.All);
             }
             else if (dropitems[dropdown.value] == "Stuff")
             {
-                SentToChat(chatBox.text, Message.MessageType.Stuff);
+                DisplayInChatList(ClassroomNetworkManager.Instance.clientID, chatBox.text, Message.MessageType.Stuff);
             }
             else
             {
-                SentToChat(chatBox.text, Message.MessageType.Private);
+                DisplayInChatList(ClassroomNetworkManager.Instance.clientID, chatBox.text, Message.MessageType.Private);
             }
             chatBox.text = "";
         }
@@ -73,9 +75,7 @@ public class ChatManager : MonoBehaviour
         } 
     }
 
-    
-
-    void SentToChat(string text, Message.MessageType messageType)
+    public void DisplayInChatList(string username, string text, Message.MessageType messageType)
     {
         if (messagesList.Count >= maxMessages)
         {
@@ -85,7 +85,7 @@ public class ChatManager : MonoBehaviour
 
         Message newMessage = new Message();
 
-        newMessage.text = usrname+": "+text;
+        newMessage.text = username + ": "+text;
 
         GameObject newText = Instantiate(textObject, chatPanel.transform);
 
