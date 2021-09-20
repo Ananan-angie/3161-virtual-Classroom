@@ -62,25 +62,25 @@ public class Calendar : MonoBehaviour
     /// <summary>
     /// Setup in editor since there will always be six weeks. 
     /// </summary>
-    public Transform[] weeks;
+    [SerializeField] Transform[] weeks;
 
     /// <summary>
     /// This is the text object that displays the current month and year
     /// </summary>
-    public TMP_Text MonthAndYear;
+    [SerializeField] TMP_Text MonthAndYear;
 
     /// <summary>
     /// this currDate is the date our Calendar is currently on. The year and month are based on the calendar, 
     /// while the day itself is almost always just 1
     /// If you have some option to select a day in the calendar, you would want the change this objects day value to the last selected day
     /// </summary>
-    public DateTime currDate = DateTime.Now;
+    [SerializeField] DateTime currDate = DateTime.Now;
 
     // schedule details
-    public TMP_Text details;
+    [SerializeField] TMP_Text details;
 
     // to store the day selected
-    public string text;
+    [SerializeField] string text;
 
     /// <summary>
     /// In start we set the Calendar to the current date

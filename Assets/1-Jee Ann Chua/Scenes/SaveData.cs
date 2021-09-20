@@ -7,12 +7,12 @@ using TMPro;
 
 public class SaveData : MonoBehaviour
 {
-    public TMP_InputField nameField;
-    public TMP_InputField userNameField;
-    public TMP_InputField passwordField;
-    List<UserDetail> saveListData = new List<UserDetail>();
-    public TextAsset jsonFile;
-    public GameObject successMessage;
+    [SerializeField] TMP_InputField nameField;
+    [SerializeField] TMP_InputField userNameField;
+    [SerializeField] TMP_InputField passwordField;
+    [SerializeField] List<UserDetail> saveListData = new List<UserDetail>();
+    [SerializeField] TextAsset jsonFile;
+    [SerializeField] GameObject successMessage;
 
     public void storeData(){
         // Read existing json file linked in inspector

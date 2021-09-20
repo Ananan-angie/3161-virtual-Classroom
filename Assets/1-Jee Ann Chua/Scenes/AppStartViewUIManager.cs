@@ -6,7 +6,7 @@ using System;
 
 public class AppStartViewUIManager : MonoBehaviour
 {
-    public Transform[] time;
+    [SerializeField] Transform[] time;
     [SerializeField] TextMeshProUGUI userInfo;
 
     // schedule
