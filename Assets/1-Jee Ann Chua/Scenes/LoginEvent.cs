@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
-using System.IO;
 
 public class LoginEvent : MonoBehaviour
 {
@@ -39,6 +38,8 @@ public class LoginEvent : MonoBehaviour
             {
                 SceneManager.LoadScene(7);
                 found = true;
+                ClassroomNetworkManager.Instance.clientID = userdetails.name;
+                break;
             }
         }
         if( !found )

@@ -1,10 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
-public class SharedEvents : Singleton<SharedEvents>
+public class SharedUtilities : Singleton<SharedUtilities>
 {
+	protected override void Awake()
+	{
+        base.Awake();	
+	}
 
 	public void TransitToScene(int sceneNo)
     {
@@ -30,6 +33,15 @@ public class SharedEvents : Singleton<SharedEvents>
 
     public void PrintButtonName(GameObject button)
     {
-        print("Hello from: " + button.name);
+        Debug.Log("Hello from: " + button.name);
+    }
+
+    public IEnumerator UpdateTime(string text)
+	{
+        while (true)
+		{
+            text = $"Time: {System.DateTime.Now.ToShortTimeString()}";
+            yield return new WaitForSeconds(2);
+        }
     }
 }

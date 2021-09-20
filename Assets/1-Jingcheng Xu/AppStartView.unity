@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0025482, y: 3.4725}
-  m_SizeDelta: {x: 877.34, y: 56.945}
+  m_AnchoredPosition: {x: -0.0025482, y: -0.000034094}
+  m_SizeDelta: {x: 877.34, y: 63.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24491450
 MonoBehaviour:
@@ -207,8 +207,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2037,7 +2037,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598870324}
-        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedUtilities, Assembly-CSharp
         m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
@@ -5696,10 +5696,9 @@ GameObject:
   m_Component:
   - component: {fileID: 598870323}
   - component: {fileID: 598870322}
-  - component: {fileID: 598870324}
   - component: {fileID: 598870325}
   - component: {fileID: 598870321}
-  - component: {fileID: 598870326}
+  - component: {fileID: 598870324}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5772,7 +5771,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 598870320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c4b310b855acf41898216e75713edd, type: 3}
+  m_Script: {fileID: 11500000, guid: a2a2ca8d0e4b3f442b9529a5a7944946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &598870325
@@ -5790,33 +5789,6 @@ MonoBehaviour:
   TextMesh: {fileID: 737727707}
   front: 'Current: '
   end: ' '
---- !u!114 &598870326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 598870320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d610e4253b7047ba91c197a3be38473, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-  - {fileID: 1190529966}
-  - {fileID: 485595869}
-  - {fileID: 934240760}
-  - {fileID: 542947213}
-  - {fileID: 1611070687}
-  - {fileID: 1432335933}
-  - {fileID: 1409778612}
-  - {fileID: 77772060}
-  - {fileID: 1439403510}
-  - {fileID: 97288334}
-  - {fileID: 1382470576}
-  - {fileID: 2135907263}
-  - {fileID: 1863318359}
-  UpcomingClass: {fileID: 850588191}
 --- !u!1 &604664489
 GameObject:
   m_ObjectHideFlags: 0
@@ -8700,8 +8672,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11765,8 +11737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3577321, y: 0.44669792}
   m_AnchorMax: {x: 0.66246414, y: 0.5533021}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 2}
+  m_AnchoredPosition: {x: -19.38501, y: -0.002105713}
+  m_SizeDelta: {x: -225.5, y: -55.946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236533794
 MonoBehaviour:
@@ -13443,7 +13415,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598870324}
-        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedUtilities, Assembly-CSharp
         m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
@@ -14809,7 +14781,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598870324}
-        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedUtilities, Assembly-CSharp
         m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
@@ -19645,7 +19617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598870324}
-        m_TargetAssemblyTypeName: SharedEvents, Assembly-CSharp
+        m_TargetAssemblyTypeName: SharedUtilities, Assembly-CSharp
         m_MethodName: TransitToScene
         m_Mode: 3
         m_Arguments:
@@ -21534,6 +21506,7 @@ GameObject:
   - component: {fileID: 2064201447}
   - component: {fileID: 2064201446}
   - component: {fileID: 2064201445}
+  - component: {fileID: 2064201449}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21590,7 +21563,7 @@ Canvas:
   m_GameObject: {fileID: 2064201444}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1838576731}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -21626,6 +21599,34 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2064201449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064201444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d610e4253b7047ba91c197a3be38473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time:
+  - {fileID: 1190529966}
+  - {fileID: 485595869}
+  - {fileID: 934240760}
+  - {fileID: 542947213}
+  - {fileID: 1611070687}
+  - {fileID: 1432335933}
+  - {fileID: 1409778612}
+  - {fileID: 77772060}
+  - {fileID: 1439403510}
+  - {fileID: 97288334}
+  - {fileID: 1382470576}
+  - {fileID: 2135907263}
+  - {fileID: 1863318359}
+  userInfo: {fileID: 229714220}
+  UpcomingClass: {fileID: 850588191}
 --- !u!1 &2100126900
 GameObject:
   m_ObjectHideFlags: 0
