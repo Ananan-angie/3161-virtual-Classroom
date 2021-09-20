@@ -3069,6 +3069,7 @@ MonoBehaviour:
   Acolor: {r: 0.9150943, g: 0.6074361, b: 0.02158241, a: 1}
   Scolor: {r: 0.9433962, g: 0.24474904, b: 0.24474904, a: 1}
   Pcolor: {r: 0.31933072, g: 0.5738437, b: 0.9811321, a: 1}
+  netManager: {fileID: 0}
   dropdown: {fileID: 2166918144614396046}
   dropitems: []
   messagesList: []

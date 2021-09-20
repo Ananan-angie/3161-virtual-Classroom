@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using NaughtyAttributes;
 
 [System.Serializable]
 public class ClassroomTilemap : Object
 {
-	public string name;
+	public new string name;
 
 	public int layerOrder = 0;
 

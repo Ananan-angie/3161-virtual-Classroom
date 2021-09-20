@@ -13,6 +13,6 @@ public class InGameNormalViewInputController : InputController
 		Controls.Gameplay.Move.canceled += ctx => playerController.MovementThisFrame = Vector2.zero;
 		Controls.Gameplay.Interact.performed += ctx => playerController.OnInteract();
 		Controls.UI.Back.performed += ctx => sceneEvents.ExitScene();
-		Controls.UI.Chating.performed += ctx => chatManager.Chat();
+		Controls.UI.Chating.performed += ctx => chatManager.SendChat();
 	}
 }
