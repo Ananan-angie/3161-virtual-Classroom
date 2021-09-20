@@ -2,25 +2,35 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class SharedUtilities : Singleton<SharedUtilities>
+public enum Scene
 {
-	protected override void Awake()
-	{
-        base.Awake();	
-	}
+    Login,
+    CreateSession,
+    Setting,
+    Welcome,
+    MapEditor,
+    Presenter,
+    Listener,
+    AppStart,
+    InGameNormal
+}
 
-	public void TransitToScene(int sceneNo)
+
+public static class SharedUtilities
+{
+
+	public static void TransitToScene(Scene scene)
     {
-        SceneManager.LoadScene(sceneNo);
+        SceneManager.LoadScene((int)scene);
         DataPersistentSystem.Instance.LastScene = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void BackToLastScene()
+    public static void BackToLastScene()
 	{
         SceneManager.LoadScene(DataPersistentSystem.Instance.LastScene);
     }
 
-    public void OpenCloseMap(GameObject map)
+    public static void OpenCloseMap(GameObject map)
     {
         if (map.activeSelf)
         {
@@ -31,12 +41,12 @@ public class SharedUtilities : Singleton<SharedUtilities>
         }
     }
 
-    public void PrintButtonName(GameObject button)
+    public static void PrintButtonName(GameObject button)
     {
         Debug.Log("Hello from: " + button.name);
     }
 
-    public IEnumerator UpdateTime(string text)
+    public static IEnumerator UpdateTime(string text)
 	{
         while (true)
 		{

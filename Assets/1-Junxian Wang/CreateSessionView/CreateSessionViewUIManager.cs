@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 public class CreateSessionViewUIManager : MonoBehaviour
 {
     [SerializeField] Button createSessionButton;
+	[SerializeField] Button backButton;
+
+	private void Awake()
+	{
+		backButton.onClick.AddListener(() => SharedUtilities.BackToLastScene());
+	}
 
 	private void Start()
 	{
@@ -18,7 +24,7 @@ public class CreateSessionViewUIManager : MonoBehaviour
 
 			ClassroomNetworkManager.Instance.JoinRoom();
 
-			SharedUtilities.Instance.TransitToScene(8);
+			SharedUtilities.TransitToScene(Scene.InGameNormal);
 
 			createSessionButton.interactable = true;
 		});

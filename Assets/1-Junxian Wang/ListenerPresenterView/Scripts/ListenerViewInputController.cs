@@ -7,7 +7,7 @@ public class ListenerViewInputController : InputController
 	protected override void Awake()
 	{
 		base.Awake();
-		Controls.UI.Back.performed += ctx => SharedUtilities.Instance.BackToLastScene();
+		Controls.UI.Back.performed += ctx => SharedUtilities.BackToLastScene();
 		Controls.UI.Chating.performed += ctx => chatManager.SendChat();
 	}
 }

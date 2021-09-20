@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 {
 	[SerializeField] ChatManager chatManager;
+	[SerializeField] InGameNormalViewUIManager uiManager;
 
     public string Domain = "ws://172.25.72.142:8002/ws";
 	public static WebSocket websocket;
 	public int roomID = -1;
 	public string clientID = "None";
+	bool isRoomConnected = false;
 
 	public void CreateRoom()
 	{
@@ -40,6 +42,21 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		}
 		var request = new ServerMessage.JoinRoom.Request(roomID, clientID);
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
+	}
+
+	public async Task JoinRoomBlocking()
+	{
+		if (roomID < 0)
+		{
+			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before joinRoom");
+		}
+		var request = new ServerMessage.JoinRoom.Request(roomID, clientID);
+		SendWebSocketMessage(JsonConvert.SerializeObject(request));
+
+		while (!isRoomConnected)
+		{
+			await Task.Delay(100);
+		}
 	}
 
 	public void SendChat(string msg)
@@ -134,14 +151,20 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		else if (response_raw.type == "joinRoom")
 		{
 			var response = JsonConvert.DeserializeObject<ServerMessage.JoinRoom.Response>(json);
+			isRoomConnected = true;
 			if (response.status.statusCode != ServerMessage.SuccessCode)
 			{
+				
 				// Debug.LogWarning($"Room join failed with error code: {response.status.statusCode} {response.status.statusDesc}");
 			}
 		}
 		else if (response_raw.type == "chat")
 		{
+			chatManager = FindObjectOfType<ChatManager>();
+			uiManager = FindObjectOfType<InGameNormalViewUIManager>();
+			uiManager.AddDebugText(json + "\n");
 			var response = JsonConvert.DeserializeObject<ServerMessage.Chat.Response>(json);
+			uiManager.AddDebugText($"{response.data.from} {response.data.message}" + "\n");
 			chatManager.DisplayInChatList(response.data.from, response.data.message, ChatManager.Message.MessageType.All);
 		}
 	}

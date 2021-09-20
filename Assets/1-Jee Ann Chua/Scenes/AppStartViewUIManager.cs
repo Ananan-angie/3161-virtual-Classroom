@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class AppStartViewUIManager : MonoBehaviour
 {
     public Transform[] time;
+    
     [SerializeField] TextMeshProUGUI userInfo;
+    [SerializeField] Button newSessionButton;
+    [SerializeField] Button joinSessionButton;
+    [SerializeField] Button mapEditorButton;
+    [SerializeField] Button settingsButton;
+
+    [SerializeField] TMP_InputField sessionIDInput;
 
     // schedule
     string[,] arr2d = new string[13,8]{
@@ -34,6 +42,15 @@ public class AppStartViewUIManager : MonoBehaviour
     private void Awake()
     {
         userInfo.text = $"User Name: {ClassroomNetworkManager.Instance.clientID}";
+        newSessionButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.CreateSession));
+        joinSessionButton.onClick.AddListener(() => sessionIDInput.gameObject.transform.parent.gameObject.SetActive(true));
+        mapEditorButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.MapEditor));
+        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.Setting));
+        sessionIDInput.onEndEdit.AddListener(async (text) => {
+            ClassroomNetworkManager.Instance.roomID = int.Parse(text);
+            await ClassroomNetworkManager.Instance.JoinRoomBlocking();
+            SharedUtilities.TransitToScene(Scene.InGameNormal);
+        });
     }
 
     // Start is called before the first frame update

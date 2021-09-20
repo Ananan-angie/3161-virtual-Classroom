@@ -16,7 +16,7 @@ public class MapEditorViewInputController : InputController
 		Controls.MapEditor.Paint.started += ctx => mapEditorManager.PaintStartHandler();
 		Controls.MapEditor.Paint.canceled += ctx => mapEditorManager.PaintEndHandler();
 
-		Controls.UI.Back.performed += ctx => SharedUtilities.Instance.BackToLastScene();
+		Controls.UI.Back.performed += ctx => SharedUtilities.BackToLastScene();
 		Controls.Gameplay.Move.performed += ctx => playerController.MovementThisFrame = ctx.ReadValue<Vector2>();
 		Controls.Gameplay.Move.canceled += ctx => playerController.MovementThisFrame = Vector2.zero;
 		Controls.Gameplay.Interact.performed += ctx => playerController.OnInteract();

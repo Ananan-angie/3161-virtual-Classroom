@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject playerSprite;
     [SerializeField] GameObject playerSpriteParent;
 	[SerializeField] InGameNormalViewEvents sceneEvents;
-    [SerializeField] int chairTriggerSceneListener;
-    [SerializeField] int chairTriggerScenePresenter;
 	[SerializeField] InGameNormalViewUIManager uiManager;
     Animator animator;
     public bool IsInChairPresenter, IsInChairListener;
@@ -45,11 +43,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (IsInChairListener)
 		{
-			sceneEvents.TransitToSceneRecordPosition(chairTriggerSceneListener);
+			sceneEvents.TransitToSceneRecordPosition(Scene.Listener);
 		}
 		else if (IsInChairPresenter)
 		{
-			sceneEvents.TransitToSceneRecordPosition(chairTriggerScenePresenter);
+			sceneEvents.TransitToSceneRecordPosition(Scene.Presenter);
 		}
 	}
 

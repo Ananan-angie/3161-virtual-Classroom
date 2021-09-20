@@ -4,18 +4,16 @@ using UnityEngine.SceneManagement;
 public class InGameNormalViewEvents : MonoBehaviour
 {
 	[SerializeField] GameObject player;
-	[SerializeField] int welcomeViewIndex;
 
-	public void TransitToSceneRecordPosition(int sceneNo)
+	public void TransitToSceneRecordPosition(Scene scene)
 	{
-		DataPersistentSystem.Instance.LastScene = SceneManager.GetActiveScene().buildIndex;
 		DataPersistentSystem.Instance.PlayerLastPos = player.transform.position;
-		SceneManager.LoadScene(sceneNo);
+		SharedUtilities.TransitToScene(scene);
 	}
 
 	public void ExitScene()
 	{
 		DataPersistentSystem.Instance.PlayerLastPos = Vector3.zero;
-		SceneManager.LoadScene(welcomeViewIndex);
+		SharedUtilities.TransitToScene(Scene.Welcome);
 	}
 }
