@@ -2059,6 +2059,7 @@ MonoBehaviour:
   nameField: {fileID: 1846952200}
   userNameField: {fileID: 1913561749}
   passwordField: {fileID: 485705178}
+  saveListData: []
   jsonFile: {fileID: 4900000, guid: 0f4df53779bf54c969e78529e700af14, type: 3}
   successMessage: {fileID: 1870119913}
 --- !u!114 &602657579
@@ -2459,6 +2460,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 1487820136}
+  registerButton: {fileID: 1660339970}
+  registerAccButton: {fileID: 602657575}
+  forgotButton: {fileID: 954435459}
+  retrievePasswordButton: {fileID: 2099947574}
+  userNameField: {fileID: 1458456652}
+  passwordField: {fileID: 18367299}
+  loginButton: {fileID: 1790316887}
+  invalidMessage: {fileID: 477151291}
+  jsonFile: {fileID: 4900000, guid: 0f4df53779bf54c969e78529e700af14, type: 3}
+  nameField: {fileID: 1846952200}
+  regUserNameField: {fileID: 1913561749}
+  regPassField: {fileID: 485705178}
+  emailInput: {fileID: 1616755778}
+  message: {fileID: 1436415404}
+  saveListData: []
+  successMessage: {fileID: 1870119913}
+  registerPopUp: {fileID: 59683858}
+  forgotPopUp: {fileID: 1666600159}
 --- !u!1 &937194635
 GameObject:
   m_ObjectHideFlags: 0
@@ -5311,19 +5330,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790316888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2019463414}
-        m_TargetAssemblyTypeName: LoginEvent, Assembly-CSharp
-        m_MethodName: adminDetails
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1790316888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6426,7 +6433,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2019463412}
   - component: {fileID: 2019463411}
-  - component: {fileID: 2019463414}
   - component: {fileID: 2019463410}
   m_Layer: 0
   m_Name: EventSystem
@@ -6491,23 +6497,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2019463414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019463409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 468cda7330c834f70ba55f3dde684a01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userNameField: {fileID: 1458456652}
-  passwordField: {fileID: 18367299}
-  loginButton: {fileID: 1790316887}
-  invalidMessage: {fileID: 477151291}
-  jsonFile: {fileID: 4900000, guid: 0f4df53779bf54c969e78529e700af14, type: 3}
 --- !u!1 &2064463049
 GameObject:
   m_ObjectHideFlags: 0
