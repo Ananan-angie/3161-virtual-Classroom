@@ -15,7 +15,7 @@ public class AppStartViewUIManager : MonoBehaviour
     [SerializeField] Button mapEditorButton;
     [SerializeField] Button settingsButton;
 
-    [SerializeField] TMP_InputField sessionIDInput;
+    [SerializeField] ModalInputWindow sessionIDInput;
 
     // schedule
     string[,] arr2d = new string[13,8]{
@@ -43,14 +43,14 @@ public class AppStartViewUIManager : MonoBehaviour
     {
         userInfo.text = $"User Name: {ClassroomNetworkManager.Instance.clientID}";
         newSessionButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.CreateSession));
-        joinSessionButton.onClick.AddListener(() => sessionIDInput.gameObject.transform.parent.gameObject.SetActive(true));
+        joinSessionButton.onClick.AddListener(() => sessionIDInput.gameObject.SetActive(true));
         mapEditorButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.MapEditor));
         settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.Setting));
-        sessionIDInput.onEndEdit.AddListener(async (text) => {
+        sessionIDInput.onEnter = async (text) => {
             ClassroomNetworkManager.Instance.roomID = int.Parse(text);
             await ClassroomNetworkManager.Instance.JoinRoomBlocking();
             SharedUtilities.TransitToScene(Scene.InGameNormal);
-        });
+        };
     }
 
     // Start is called before the first frame update
