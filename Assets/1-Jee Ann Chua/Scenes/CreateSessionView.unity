@@ -10276,7 +10276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.032455783, y: 0}
   m_AnchorMax: {x: 0.2252381, y: 0}
-  m_AnchoredPosition: {x: -0.49534607, y: 43}
+  m_AnchoredPosition: {x: -0.4953003, y: 43}
   m_SizeDelta: {x: 3.1916962, y: 37.605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042029391
@@ -17856,20 +17856,15 @@ MonoBehaviour:
     a project supervisor. There are no lectures in this unit, although you will be
     expected to attend regular meetings with your project supervisor.
 
-    
 
-    
 
-    
 
     <voffset=0.3em><u><b><size=1.7em>Seminar</size></b></u></voffset>
 
     <b>Wednesday</b>
     10am-12pm
 
-    
 
-    
 
     <voffset=0.3em><u><b><size=1.7em>Workshop</size></b></u></voffset>
 
@@ -18650,6 +18645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   createSessionButton: {fileID: 2097404394}
+  backButton: {fileID: 1042029391}
 --- !u!1 &1593566047
 GameObject:
   m_ObjectHideFlags: 0

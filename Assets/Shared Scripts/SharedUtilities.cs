@@ -30,7 +30,7 @@ public static class SharedUtilities
         SceneManager.LoadScene(DataPersistentSystem.Instance.LastScene);
     }
 
-    public static void OpenCloseMap(GameObject map)
+    public static void OpenCloseGameObject(GameObject map)
     {
         if (map.activeSelf)
         {
