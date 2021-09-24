@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using TMPro;
+using SFB;
 
 public class MapEditorViewUIManager : MonoBehaviour
 {
@@ -54,19 +55,28 @@ public class MapEditorViewUIManager : MonoBehaviour
 		}
 
 		/* ========= Tools Menu ========= */
-        tools_newButton.onClick.AddListener(delegate { mapEditorManager.NewMap(); });
-        tools_saveButton.onClick.AddListener(delegate { mapEditorManager.SaveMap(); });
-        tools_loadButton.onClick.AddListener(delegate { mapEditorManager.LoadMap("testMap"); });
-        tools_brushButton.onClick.AddListener(delegate { mapEditorManager.SelectPaintMode(PaintMode.Brush); });
-        tools_lineButton.onClick.AddListener(delegate { mapEditorManager.SelectPaintMode(PaintMode.Line); });
-        tools_boxButton.onClick.AddListener(delegate { mapEditorManager.SelectPaintMode(PaintMode.Box); });
-        tools_eraserButton.onClick.AddListener(delegate { mapEditorManager.SelectEraser(); });
-        addRoomButton.onClick.AddListener(delegate { mapEditorManager.CreateNewRoom(); });
+        tools_newButton.onClick.AddListener(() => mapEditorManager.NewMap());
+        tools_saveButton.onClick.AddListener(() =>
+        {
+            string[] paths = StandaloneFileBrowser.OpenFolderPanel("Save Map to Folder", TilemapSaveSystem.DefaultSavePath, false);
+            mapEditorManager.SaveMap(paths[0]);
+        });
+        tools_loadButton.onClick.AddListener(() => 
+        {
+            string[] paths = StandaloneFileBrowser.OpenFolderPanel("Open Map from Folder", TilemapSaveSystem.DefaultSavePath, false);
+            mapEditorManager.LoadMap(paths[0]);
+        });
+        tools_brushButton.onClick.AddListener(() => mapEditorManager.SelectPaintMode(PaintMode.Brush));
+        tools_lineButton.onClick.AddListener(() => mapEditorManager.SelectPaintMode(PaintMode.Line));
+        tools_boxButton.onClick.AddListener(() => mapEditorManager.SelectPaintMode(PaintMode.Box));
+        tools_eraserButton.onClick.AddListener(() => mapEditorManager.SelectEraser());
+        addRoomButton.onClick.AddListener(() => mapEditorManager.CreateNewRoom());
     }
 
     public void UpdateCategoryDropdown()
 	{
         categoryDropdown.ClearOptions();
+        dropDownOptionsText = new List<string>();
 
         foreach (ClassroomTilemap c in mapEditorManager.ClassroomTilemaps)
         {

@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [System.Serializable]
-public class ClassroomTilemap : Object
+public class ClassroomTilemap
 {
-	public new string name;
+
+	public string name;
 
 	public int layerOrder = 0;
 
@@ -15,7 +16,7 @@ public class ClassroomTilemap : Object
 	public string triggerTag;
 
 	public int roomID;
-	
+
 	GameObject tilemapObject;
 
 	public bool IsRoom { get { return triggerTag == "Room"; } }

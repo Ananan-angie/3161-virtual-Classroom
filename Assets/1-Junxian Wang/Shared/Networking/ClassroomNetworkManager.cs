@@ -11,11 +11,13 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 	[SerializeField] ChatManager chatManager;
 	[SerializeField] InGameNormalViewUIManager uiManager;
 
-    public string Domain = "ws://172.25.72.142:8002/ws";
+    public string Domain = "ws://172.25.69.118:8002/ws";
 	public static WebSocket websocket;
 	public int roomID = -1;
 	public string clientID = "None";
 	bool isRoomConnected = false;
+
+	int checkDelay_ms = 100; 
 
 	public void CreateRoom()
 	{
@@ -27,10 +29,10 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 	{
 		var request = new ServerMessage.CreateRoom.Request();
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
-		
+
 		while (roomID < 0)
 		{
-			await Task.Delay(100);
+			await Task.Delay(checkDelay_ms);
 		}
 	}
 
@@ -39,6 +41,7 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		if (roomID < 0)
 		{
 			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before joinRoom");
+			return;
 		}
 		var request = new ServerMessage.JoinRoom.Request(roomID, clientID);
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
@@ -49,6 +52,7 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		if (roomID < 0)
 		{
 			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before joinRoom");
+			return;
 		}
 		var request = new ServerMessage.JoinRoom.Request(roomID, clientID);
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
@@ -64,8 +68,20 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		if (roomID < 0)
 		{
 			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before sendChat");
+			return;
 		}
 		var request = new ServerMessage.Chat.Request(roomID, clientID, msg);
+		SendWebSocketMessage(JsonConvert.SerializeObject(request));
+	}
+
+	public void LeaveRoom()
+	{
+		if (roomID < 0)
+		{
+			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before leaveRoom");
+			return;
+		}
+		var request = new ServerMessage.LeaveRoom.Request(roomID, clientID);
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
 	}
 
@@ -158,6 +174,11 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 				// Debug.LogWarning($"Room join failed with error code: {response.status.statusCode} {response.status.statusDesc}");
 			}
 		}
+		else if (response_raw.type == "leaveRoom")
+		{
+			var response = JsonConvert.DeserializeObject<ServerMessage.LeaveRoom.Response>(json);
+			isRoomConnected = false;
+		}
 		else if (response_raw.type == "chat")
 		{
 			chatManager = FindObjectOfType<ChatManager>();
@@ -217,6 +238,43 @@ public class ServerMessage
 			{
 				public int roomId;
 				public string clientId;
+			}
+		}
+
+		public class Response
+		{
+			public string type;
+			public Status status;
+
+			public class Status
+			{
+				public int statusCode;
+				public string statusDesc;
+			}
+		}
+	}
+
+	public class LeaveRoom
+	{
+		public class Request
+		{
+			public string type = "leaveRoom";
+			public Data data = new Data();
+
+			public Request(int roomID, string clientID, string consumerID = "", string producerID = "")
+			{
+				data.roomId = roomID;
+				data.clientId = clientID;
+				data.consumerId = consumerID;
+				data.ProducerId = producerID;
+			}
+
+			public class Data
+			{
+				public int roomId;
+				public string clientId;
+				public string consumerId;
+				public string ProducerId;
 			}
 		}
 

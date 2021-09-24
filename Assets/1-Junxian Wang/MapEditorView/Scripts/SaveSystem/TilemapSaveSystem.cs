@@ -7,15 +7,17 @@ using UnityEngine.Tilemaps;
 
 public static class TilemapSaveSystem
 {
-    public static string SavePath = Path.Combine(Application.persistentDataPath, "Saves/Maps");
+    public static string DefaultSavePath = Path.Combine(Application.persistentDataPath, "Saves/Maps");
+    public static string Suffix_Map = "mapdata";
+    public static string Suffix_Tilemap = "tiledata";
 
-	public static void Save(string mapName, ClassroomTilemap[] classroomTilemaps)
+	public static void Save(string mapPath, string mapName, ClassroomTilemap[] classroomTilemaps)
 	{
+        string path = Path.Combine(mapPath, mapName);
         // Clear the save folder of that map name
-        string savePath = Path.Combine(SavePath, mapName);
-        if (Directory.Exists(savePath))
+        if (Directory.Exists(path))
 		{
-            Directory.Delete(savePath, true);
+            Directory.Delete(path, true);
 		}
 
         // Save the map in the folder
@@ -23,10 +25,10 @@ public static class TilemapSaveSystem
 		{
             foreach (ClassroomTilemap c in classroomTilemaps)
             {
-                SaveTilemap(mapName, c.Tilemap);
+                SaveTilemap(path, c.Tilemap);
             }
             string json = JsonUtilityArrayHelper.ToJson(classroomTilemaps);
-            SaveJSON(mapName, "map.mapdata", json);
+            SaveJSON(path, "map." + Suffix_Map, json);
         }
         else
 		{
@@ -34,9 +36,9 @@ public static class TilemapSaveSystem
 		}
 	}
 
-    public static ClassroomTilemap[] Load(string mapName, Transform parent = null)
+    public static ClassroomTilemap[] Load(string mapPath, Transform parent = null)
 	{
-        string json = LoadJSON(mapName, "map.mapdata");
+        string json = LoadJSON(mapPath, "map." + Suffix_Map);
 
         ClassroomTilemap[] classroomTilemaps = JsonUtilityArrayHelper.FromJson<ClassroomTilemap>(json);
 
@@ -45,18 +47,18 @@ public static class TilemapSaveSystem
             foreach (ClassroomTilemap c in classroomTilemaps)
             {
                 c.CreateTilemap(parent, true);
-                LoadTilemap(mapName, c.Tilemap);
+                LoadTilemap(mapPath, c.Tilemap);
             }
         }
         else
 		{
-            Debug.LogWarning($"WARNING: No map data was collected for map {mapName}.");
+            Debug.LogWarning($"WARNING: No map data was collected for map path {mapPath}.");
 		}
         
         return classroomTilemaps;
     }
 
-    public static void SaveTilemap(string mapName, Tilemap tilemap)
+    public static void SaveTilemap(string mapPath, Tilemap tilemap)
     {
         List<TileSaveData> TileDataList = new List<TileSaveData>();
 
@@ -77,13 +79,13 @@ public static class TilemapSaveSystem
         }
 
         string json = JsonUtilityArrayHelper.ToJson(TileDataList.ToArray(), true);
-        SaveJSON(mapName, tilemap.name + ".tiledata", json);
+        SaveJSON(mapPath, tilemap.name + "." + Suffix_Tilemap, json);
     }
 
-    public static void LoadTilemap(string mapName, Tilemap tilemap)
+    public static void LoadTilemap(string mapPath, Tilemap tilemap)
     {
         tilemap.ClearAllTiles();
-        string json = LoadJSON(mapName, tilemap.name + ".tiledata");
+        string json = LoadJSON(mapPath, tilemap.name + "." + Suffix_Tilemap);
         List<TileSaveData> TileDataList = JsonUtilityArrayHelper.FromJson<TileSaveData>(json).ToList();
         SetTilemap(tilemap, TileDataList);
     }
@@ -106,29 +108,25 @@ public static class TilemapSaveSystem
         Resources.UnloadUnusedAssets();
     }
 
-    private static void SaveJSON(string folderName, string fileNameWithSuffix, string JSON)
+    private static void SaveJSON(string folderPath, string fileNameWithSuffix, string JSON)
 	{
-        string path = Path.Combine(SavePath, folderName); 
-        if (!Directory.Exists(path))
+        if (!Directory.Exists(folderPath))
 		{
-            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(folderPath);
 		}
-        path = Path.Combine(path, fileNameWithSuffix);
-
+        string path = Path.Combine(folderPath, fileNameWithSuffix);
         File.WriteAllText(path, JSON);
     }
 
-    private static string LoadJSON(string folderName, string fileNameWithSuffix)
+    private static string LoadJSON(string folderPath, string fileNameWithSuffix)
     {
-        string path = Path.Combine(SavePath, folderName, fileNameWithSuffix);
-
+        string path = Path.Combine(folderPath, fileNameWithSuffix);
         return File.ReadAllText(path);
     }
 
     public static void DeleteAllData()
     {
-        string path = Path.Combine(Application.persistentDataPath, "Saves/Tilemaps");
-        DirectoryInfo directory = new DirectoryInfo(path);
+        DirectoryInfo directory = new DirectoryInfo(DefaultSavePath);
         directory.Delete(true);
     }
 }

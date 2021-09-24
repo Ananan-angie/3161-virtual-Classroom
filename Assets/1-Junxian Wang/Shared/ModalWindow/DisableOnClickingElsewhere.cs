@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ModalWindow : MonoBehaviour, IDeselectHandler, IPointerEnterHandler, IPointerExitHandler
+public class DisableOnClickingElsewhere : MonoBehaviour, IDeselectHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	bool isMouseOver = false;
 

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DataPersistentSystem : Singleton<DataPersistentSystem>
 {
-	// Stored Data
+	// Scene Transition
     public int LastScene;
+
+	// InGameNormalView scene transition
 	public Vector3 PlayerLastPos;
+	
 
 	protected override void Awake()
 	{

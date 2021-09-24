@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System;
 
 public enum PaintMode
 {
@@ -24,9 +25,9 @@ public class MapEditorManager : MonoBehaviour
 	Tilemap previewMap;
 	Tilemap defaultMap;
 
-	string mapSelected;
 	Tile builderSelected;
 	Tilemap tilemapSelected;
+	string mapSelected;
 
 	[HideInInspector] public Vector2 MousePos;
 	Vector3Int mouseGridPosLast;
@@ -35,7 +36,7 @@ public class MapEditorManager : MonoBehaviour
 	Vector3Int mouseGridPosHoldStart;
 
 	int roomCount = 0;
-	public ClassroomTilemap VisibleRoomLayer = null;
+	public ClassroomTilemap VisibleRoomLayer;
 
 	bool isEraser;
 
@@ -332,21 +333,20 @@ public class MapEditorManager : MonoBehaviour
 
 		UIManager.UpdateCategoryDropdown();
 
-		mapSelected = mapName;
-		UIManager.SetMapText(mapName);
+		ChangeMapName(mapName);
 	}
 
-	public void LoadMap(string mapName)
+	public void LoadMap(string mapPath)
 	{
 		// Try to load map
 		ClassroomTilemap[] loadMap;
 		try
 		{
-			loadMap = TilemapSaveSystem.Load(mapName, gridTransform);
+			loadMap = TilemapSaveSystem.Load(mapPath, gridTransform);
 		}
 		catch (DirectoryNotFoundException)
 		{
-			Debug.Log($"Map {mapName} is not found.");
+			Debug.Log($"Map {Path.GetFileName(mapPath)} is not found.");
 			return;
 		}
 
@@ -359,16 +359,15 @@ public class MapEditorManager : MonoBehaviour
 		classroomTilemaps = loadMap.ToList();
 		UIManager.UpdateCategoryDropdown();
 
-		mapSelected = mapName;
-		UIManager.SetMapText(mapName);
+		ChangeMapName(Path.GetFileName(mapPath));
 
-		Debug.Log($"Loaded map {mapName}");
+		Debug.Log($"Loaded map {Path.GetFileName(mapPath)}");
 	}
 
-	public void SaveMap()
+	public void SaveMap(string mapPath)
 	{
-		TilemapSaveSystem.Save(mapSelected, classroomTilemaps.ToArray());
-		Debug.Log($"Saved map {mapSelected}");
+		TilemapSaveSystem.Save(mapPath, mapSelected, classroomTilemaps.ToArray());
+		Debug.Log($"Saved map {Path.GetFileName(mapPath)}");
 	}
 
 	public void ChangeMapName(string mapName)
@@ -401,10 +400,12 @@ public class MapEditorManager : MonoBehaviour
 		SelectLayer(room);
 		SelectBuilder(eraser);
 
-		if (VisibleRoomLayer.name != null)
+		try
 		{
 			VisibleRoomLayer.TilemapObject.SetActive(false);
 		}
+		catch (Exception) { }
+
 		VisibleRoomLayer = room;
 		room.TilemapObject.SetActive(true);
 	}
