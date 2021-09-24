@@ -39,9 +39,9 @@ public class LoginViewUIManager : MonoBehaviour
     {
         //Subscribe to onClick event
         loginButton.onClick.AddListener(adminDetails);
-		registerButton.onClick.AddListener(() => SharedUtilities.OpenCloseMap(registerPopUp));
+		registerButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(registerPopUp));
 		registerAccButton.onClick.AddListener(storeData);
-		forgotButton.onClick.AddListener(() => SharedUtilities.OpenCloseMap(forgotPopUp));
+		forgotButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(forgotPopUp));
 		retrievePasswordButton.onClick.AddListener(getPassword);
     }
 
