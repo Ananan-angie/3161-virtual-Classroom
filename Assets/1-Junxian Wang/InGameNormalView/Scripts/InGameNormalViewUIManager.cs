@@ -6,6 +6,9 @@ public class InGameNormalViewUIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] TextMeshProUGUI roomText;
+    [SerializeField] GameObject map;
+    [SerializeField] Button mapButton;
+    [SerializeField] Button settingsButton;
     [SerializeField] Button createButton;
     [SerializeField] Button joinButton;
     [SerializeField] TextMeshProUGUI userInfo;
@@ -15,6 +18,8 @@ public class InGameNormalViewUIManager : MonoBehaviour
 	{
         StartCoroutine(SharedUtilities.UpdateTime(timeText.text));
 
+        mapButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(map));
+        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.Setting));
         createButton.onClick.AddListener(() => ClassroomNetworkManager.Instance.CreateRoom());
         joinButton.onClick.AddListener(() => ClassroomNetworkManager.Instance.JoinRoom());
 
