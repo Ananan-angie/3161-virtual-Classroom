@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public enum Scene
+public enum GameScene
 {
     Login,
     CreateSession,
@@ -19,7 +19,7 @@ public enum Scene
 public static class SharedUtilities
 {
 
-	public static void TransitToScene(Scene scene)
+	public static void TransitToScene(GameScene scene)
     {
         SceneManager.LoadScene((int)scene);
         DataPersistentSystem.Instance.LastScene = SceneManager.GetActiveScene().buildIndex;

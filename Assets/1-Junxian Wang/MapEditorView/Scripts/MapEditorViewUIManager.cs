@@ -128,7 +128,11 @@ public class MapEditorViewUIManager : MonoBehaviour
             itemContentRoom.SetActive(false);
             scrollRect.content = itemContentTile.GetComponent<RectTransform>();
             mapEditorManager.SelectLayer(choice);
-            mapEditorManager.VisibleRoomLayer.TilemapObject.SetActive(false);
+            try
+            {
+                mapEditorManager.VisibleRoomLayer.TilemapObject.SetActive(false);
+            }
+            catch (System.Exception) { }
         }
 	}
 

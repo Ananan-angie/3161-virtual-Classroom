@@ -36,7 +36,7 @@ public class LoginEvent : MonoBehaviour
         foreach(UserDetail userdetails in listOfDetails){
             if(userdetails.username == userName && userdetails.password == password)
             {
-                SharedUtilities.TransitToScene(Scene.AppStart);
+                SharedUtilities.TransitToScene(GameScene.AppStart);
                 found = true;
                 ClassroomNetworkManager.Instance.clientID = userdetails.name;
                 break;

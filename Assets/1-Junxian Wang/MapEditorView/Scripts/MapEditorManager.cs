@@ -321,15 +321,15 @@ public class MapEditorManager : MonoBehaviour
 		foreach (ClassroomTilemap c in classroomTilemaps)
 		{
 			Destroy(c.TilemapObject);
-			c.ResetTilemapObject();
 		}
 
 		// Reinitialize default tilemaps
-		foreach (ClassroomTilemap c in defaultClassroomTilemaps)
+		classroomTilemaps = defaultClassroomTilemaps.Select(c => (ClassroomTilemap)c.Clone()).ToList();
+
+		foreach (ClassroomTilemap c in classroomTilemaps)
 		{
 			c.CreateTilemap(gridTransform);
 		}
-		classroomTilemaps = defaultClassroomTilemaps.ToList();
 
 		UIManager.UpdateCategoryDropdown();
 

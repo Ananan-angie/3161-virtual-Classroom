@@ -1396,7 +1396,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.45490196, g: 0.49019608, b: 0.54901963, a: 1}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2011,7 +2011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebf2176ba2c7d44d83670cbfac74280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedEvents: {fileID: 165953497}
   chatManager: {fileID: 2166918143537940516}
 --- !u!4 &1078977399
 Transform:
@@ -3061,7 +3060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e8b53d79ad474fa591707c97b569df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usrname: Admin
   maxMessages: 7
   textObject: {fileID: 2187932797979003201, guid: c67a9bfb9bb4849f1939b6e3f64f8115, type: 3}
   chatPanel: {fileID: 2166918144722680754}
@@ -3069,7 +3067,6 @@ MonoBehaviour:
   Acolor: {r: 0.9150943, g: 0.6074361, b: 0.02158241, a: 1}
   Scolor: {r: 0.9433962, g: 0.24474904, b: 0.24474904, a: 1}
   Pcolor: {r: 0.31933072, g: 0.5738437, b: 0.9811321, a: 1}
-  netManager: {fileID: 0}
   dropdown: {fileID: 2166918144614396046}
   dropitems: []
   messagesList: []

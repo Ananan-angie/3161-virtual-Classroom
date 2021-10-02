@@ -10,10 +10,10 @@ public class WelcomeViewUIManager : MonoBehaviour
 
 	private void Awake()
 	{
-		enterButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.InGameNormal));
+		enterButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.InGameNormal));
 		exitButton.onClick.AddListener(() => {
 			ClassroomNetworkManager.Instance.LeaveRoom();
-			SharedUtilities.TransitToScene(Scene.AppStart);
+			SharedUtilities.TransitToScene(GameScene.AppStart);
 		});
 	}
 }

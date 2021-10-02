@@ -42,14 +42,14 @@ public class AppStartViewUIManager : MonoBehaviour
     private void Awake()
     {
         userInfo.text = $"User Name: {ClassroomNetworkManager.Instance.clientID}";
-        newSessionButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.CreateSession));
+        newSessionButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.CreateSession));
         joinSessionButton.onClick.AddListener(() => sessionIDInput.gameObject.SetActive(true));
-        mapEditorButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.MapEditor));
-        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.Setting));
+        mapEditorButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.MapEditor));
+        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.Setting));
         sessionIDInput.onEnter = async (text) => {
             ClassroomNetworkManager.Instance.roomID = int.Parse(text);
             await ClassroomNetworkManager.Instance.JoinRoomBlocking();
-            SharedUtilities.TransitToScene(Scene.InGameNormal);
+            SharedUtilities.TransitToScene(GameScene.InGameNormal);
         };
     }
 

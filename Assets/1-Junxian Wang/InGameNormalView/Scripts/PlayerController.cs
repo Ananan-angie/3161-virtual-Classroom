@@ -43,11 +43,11 @@ public class PlayerController : MonoBehaviour
 	{
 		if (IsInChairListener)
 		{
-			sceneEvents.TransitToSceneRecordPosition(Scene.Listener);
+			sceneEvents.TransitToSceneRecordPosition(GameScene.Listener);
 		}
 		else if (IsInChairPresenter)
 		{
-			sceneEvents.TransitToSceneRecordPosition(Scene.Presenter);
+			sceneEvents.TransitToSceneRecordPosition(GameScene.Presenter);
 		}
 	}
 

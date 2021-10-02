@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
 
 [System.Serializable]
-public class ClassroomTilemap
+public class ClassroomTilemap : ICloneable
 {
 
 	public string name;
@@ -37,7 +38,7 @@ public class ClassroomTilemap
 		{
 			if (tilemapObject == null)
 			{
-				throw new System.Exception("Constructor not yet linked to a tilemap");
+				throw new Exception("Constructor not yet linked to a tilemap");
 			}
 			return tilemapObject;
 		}
@@ -49,7 +50,7 @@ public class ClassroomTilemap
 		{
 			if (tilemapObject == null)
 			{
-				throw new System.Exception("Constructor not yet linked to a tilemap");
+				throw new Exception("Constructor not yet linked to a tilemap");
 			}
 			return tilemapObject.GetComponent<Tilemap>();
 		}
@@ -101,5 +102,10 @@ public class ClassroomTilemap
 	public void ResetTilemapObject()
 	{
 		tilemapObject = null;
+	}
+
+	public object Clone()
+	{
+		return MemberwiseClone();
 	}
 }

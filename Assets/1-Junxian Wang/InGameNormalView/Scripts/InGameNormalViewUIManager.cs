@@ -19,7 +19,7 @@ public class InGameNormalViewUIManager : MonoBehaviour
         StartCoroutine(SharedUtilities.UpdateTime(timeText.text));
 
         mapButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(map));
-        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(Scene.Setting));
+        settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.Setting));
         createButton.onClick.AddListener(() => ClassroomNetworkManager.Instance.CreateRoom());
         joinButton.onClick.AddListener(() => ClassroomNetworkManager.Instance.JoinRoom());
 
