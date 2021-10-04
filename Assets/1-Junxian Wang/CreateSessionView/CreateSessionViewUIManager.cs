@@ -24,7 +24,7 @@ public class CreateSessionViewUIManager : MonoBehaviour
 
 			ClassroomNetworkManager.Instance.JoinRoom();
 
-			SharedUtilities.TransitToScene(GameScene.InGameNormal);
+			SharedUtilities.TransitToScene(GameScene.Welcome);
 
 			createSessionButton.interactable = true;
 		});
