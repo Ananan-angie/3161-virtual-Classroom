@@ -11,7 +11,7 @@ public class SnapToScrollView : MonoBehaviour
     public void SnapTo(RectTransform target)
     {
         Vector2 position = target.anchoredPosition;
-        Vector2 offset = new Vector2(target.anchoredPosition.x, -85);
+        Vector2 offset = new Vector2(target.anchoredPosition.x, -200);
         Canvas.ForceUpdateCanvases();
 
         contentPanel.anchoredPosition =
