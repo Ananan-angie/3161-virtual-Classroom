@@ -64,7 +64,7 @@ public class TransparentWindow : MonoBehaviour
 		SetWindowLong(hwnd, GWL_STYLE, WS_POPUP | WS_VISIBLE);
 
 		// Make window always on top (Set argument 5, 6 to window size if windowed)
-		SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, 0);
+		SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, Screen.width, Screen.height, 0);
 
 		// Click through settings
 

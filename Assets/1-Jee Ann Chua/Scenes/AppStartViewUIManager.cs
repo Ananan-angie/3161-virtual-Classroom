@@ -49,7 +49,7 @@ public class AppStartViewUIManager : MonoBehaviour
         sessionIDInput.onEnter = async (text) => {
             ClassroomNetworkManager.Instance.roomID = int.Parse(text);
             await ClassroomNetworkManager.Instance.JoinRoomBlocking();
-            SharedUtilities.TransitToScene(GameScene.InGameNormal);
+            SharedUtilities.TransitToScene(GameScene.Welcome);
         };
     }
 
