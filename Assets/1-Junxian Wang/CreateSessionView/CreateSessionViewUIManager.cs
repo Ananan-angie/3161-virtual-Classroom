@@ -12,6 +12,7 @@ public class CreateSessionViewUIManager : MonoBehaviour
 	[SerializeField] Button sessionMapEditor;
 	[SerializeField] Button importMap;
 	[SerializeField] Button welcomeScreenEditor;
+	[SerializeField] Button importWelcomeScreen;
 	public TextMeshProUGUI selectedMapName;
 
 	private void Awake()
@@ -20,6 +21,7 @@ public class CreateSessionViewUIManager : MonoBehaviour
 		sessionMapEditor.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.MapEditor));
 		importMap.onClick.AddListener(OnImportMap);
 		welcomeScreenEditor.onClick.AddListener(openEditor);
+		importWelcomeScreen.onClick.AddListener(OnImportWelcomeScreen)
 	}
 
 	private void Start()
@@ -41,7 +43,16 @@ public class CreateSessionViewUIManager : MonoBehaviour
 	private void OnImportMap()
 	{
 		string[] paths = StandaloneFileBrowser.OpenFolderPanel("Open Map from Folder", TilemapSaveSystem.DefaultSavePath, false);
-		selectedMapName.text = Path.GetFileName(paths[0]);
+		try
+		{
+			selectedMapName.text = Path.GetFileName(paths[0]);
+		}
+		catch (System.IndexOutOfRangeException) { }
+	}
+
+	private void OnImportWelcomeScreen()
+	{
+		string[] paths = StandaloneFileBrowser.OpenFilePanel("Open Welcome Message File", TilemapSaveSystem.DefaultSavePath, "txt", false);
 	}
 	
 	private void openEditor()
