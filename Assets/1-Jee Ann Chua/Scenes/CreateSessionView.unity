@@ -17769,20 +17769,15 @@ MonoBehaviour:
     a project supervisor. There are no lectures in this unit, although you will be
     expected to attend regular meetings with your project supervisor.
 
-    
 
-    
 
-    
 
     <voffset=0.3em><u><b><size=1.7em>Seminar</size></b></u></voffset>
 
     <b>Wednesday</b>
     10am-12pm
 
-    
 
-    
 
     <voffset=0.3em><u><b><size=1.7em>Workshop</size></b></u></voffset>
 
@@ -18700,6 +18695,7 @@ MonoBehaviour:
   backButton: {fileID: 1042029391}
   sessionMapEditor: {fileID: 1789584479}
   importMap: {fileID: 2078245147}
+  welcomeScreenEditor: {fileID: 1117445778}
   selectedMapName: {fileID: 1709875894}
 --- !u!1 &1593566047
 GameObject:
