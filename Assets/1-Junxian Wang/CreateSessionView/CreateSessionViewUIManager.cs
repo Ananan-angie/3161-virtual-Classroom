@@ -1,17 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading.Tasks;
+using TMPro;
+using SFB;
 
 public class CreateSessionViewUIManager : MonoBehaviour
 {
     [SerializeField] Button createSessionButton;
 	[SerializeField] Button backButton;
+	[SerializeField] Button sessionMapEditor;
+	[SerializeField] Button importMap;
+	public TextMeshProUGUI selectedMapName;
 
 	private void Awake()
 	{
 		backButton.onClick.AddListener(() => SharedUtilities.BackToLastScene());
+		sessionMapEditor.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.MapEditor));
+		importMap.onClick.AddListener(OnImportMap);
 	}
 
 	private void Start()
@@ -28,5 +33,11 @@ public class CreateSessionViewUIManager : MonoBehaviour
 
 			createSessionButton.interactable = true;
 		});
+	}
+
+	private void OnImportMap()
+	{
+		string[] paths = StandaloneFileBrowser.OpenFolderPanel("Open Map from Folder", TilemapSaveSystem.DefaultSavePath, false);
+		selectedMapName.text = Path.GetFileName(paths[0]);
 	}
 }
