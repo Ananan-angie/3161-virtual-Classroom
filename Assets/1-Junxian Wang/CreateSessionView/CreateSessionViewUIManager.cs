@@ -21,7 +21,7 @@ public class CreateSessionViewUIManager : MonoBehaviour
 		sessionMapEditor.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.MapEditor));
 		importMap.onClick.AddListener(OnImportMap);
 		welcomeScreenEditor.onClick.AddListener(openEditor);
-		importWelcomeScreen.onClick.AddListener(OnImportWelcomeScreen)
+		importWelcomeScreen.onClick.AddListener(OnImportWelcomeScreen);
 	}
 
 	private void Start()
