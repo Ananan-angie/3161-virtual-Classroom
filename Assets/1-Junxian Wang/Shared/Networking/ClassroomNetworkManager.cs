@@ -11,13 +11,16 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 	[SerializeField] ChatManager chatManager;
 	[SerializeField] InGameNormalViewUIManager uiManager;
 
-    public string Domain = "ws://172.25.69.118:8002/ws";
+	public string Domain;
 	public static WebSocket websocket;
+	public bool isWebsocketConnected = false;
 	public int roomID = -1;
 	public string clientID = "None";
-	bool isRoomConnected = false;
 
-	int checkDelay_ms = 100; 
+	int checkDelay_ms = 100;
+
+	// Async condition task that awaits response of a particular request
+	TaskCompletionSource<bool> joinRoomResponse;
 
 	public void CreateRoom()
 	{
@@ -47,20 +50,17 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
 	}
 
-	public async Task JoinRoomBlocking()
+	public async Task<bool> JoinRoomBlocking()
 	{
 		if (roomID < 0)
 		{
-			Debug.LogWarning("Room ID has not yet been attached to NetworkManager before joinRoom");
-			return;
+			throw new System.Exception("Room ID has not yet been attached to NetworkManager before joinRoom");
 		}
 		var request = new ServerMessage.JoinRoom.Request(roomID, clientID);
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
 
-		while (!isRoomConnected)
-		{
-			await Task.Delay(100);
-		}
+		joinRoomResponse = new TaskCompletionSource<bool>();
+		return await joinRoomResponse.Task;
 	}
 
 	public void SendChat(string msg)
@@ -85,16 +85,33 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		SendWebSocketMessage(JsonConvert.SerializeObject(request));
 	}
 
-	protected override async void Awake()
+	protected override void Awake()
 	{
 		DontDestroy = true;
 		base.Awake();
+	}
+
+	private void Update()
+	{
+#if !UNITY_WEBGL || UNITY_EDITOR
+		websocket?.DispatchMessageQueue();
+#endif
+	}
+
+
+	public async Task<bool> InitWebSocket(string address = "172.29.137.50")
+	{
+		Domain = $"ws://{address}:8002/ws";
 
 		websocket = new WebSocket(Domain);
+
+		TaskCompletionSource<bool> WebsocketConnectResponse = new TaskCompletionSource<bool>();
 
 		websocket.OnOpen += () =>
 		{
 			Debug.Log("Connection open!");
+			isWebsocketConnected = true;
+			WebsocketConnectResponse.SetResult(true);
 		};
 
 		websocket.OnError += (e) =>
@@ -105,6 +122,8 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		websocket.OnClose += (e) =>
 		{
 			Debug.Log("Connection closed!");
+			isWebsocketConnected = false;
+			WebsocketConnectResponse.SetResult(false);
 		};
 
 		websocket.OnMessage += (bytes) =>
@@ -115,14 +134,9 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		};
 
 		// waiting for messages
-		await websocket.Connect();
-	}
+		websocket.Connect();
 
-	private void Update()
-	{
-#if !UNITY_WEBGL || UNITY_EDITOR
-		websocket.DispatchMessageQueue();
-#endif
+		return await WebsocketConnectResponse.Task;
 	}
 
 	private async void OnApplicationQuit()
@@ -167,17 +181,19 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 		else if (response_raw.type == "joinRoom")
 		{
 			var response = JsonConvert.DeserializeObject<ServerMessage.JoinRoom.Response>(json);
-			isRoomConnected = true;
+			
 			if (response.status.statusCode != ServerMessage.SuccessCode)
 			{
-				
-				// Debug.LogWarning($"Room join failed with error code: {response.status.statusCode} {response.status.statusDesc}");
+				joinRoomResponse.SetResult(false);
+			}
+			else
+			{
+				joinRoomResponse.SetResult(true);
 			}
 		}
 		else if (response_raw.type == "leaveRoom")
 		{
 			var response = JsonConvert.DeserializeObject<ServerMessage.LeaveRoom.Response>(json);
-			isRoomConnected = false;
 		}
 		else if (response_raw.type == "chat")
 		{

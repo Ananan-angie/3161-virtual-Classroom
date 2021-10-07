@@ -8,7 +8,7 @@
       "hash": "bf09948bcab85f0d1c30ad438e7f6d1d590823fb"
     },
     "com.endel.nativewebsocket": {
-      "version": "1.1.0",
+      "version": "1.1.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

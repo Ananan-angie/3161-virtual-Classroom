@@ -24,25 +24,30 @@ public class LoginViewUIManager : MonoBehaviour
     [SerializeField] TMP_InputField regPassField;
 	[SerializeField] TMP_InputField emailInput;
     [SerializeField] TMP_Text message;
-    [SerializeField] List<UserDetail> saveListData = new List<UserDetail>();
     [SerializeField] GameObject successMessage;
 	[SerializeField] GameObject registerPopUp;
 	[SerializeField] GameObject forgotPopUp;
-
-
-	private void Awake()
-	{
-		settings.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.Setting));
-	}
+    [SerializeField] ModalInputWindow addressInputWndow;
 
 	void Start()
     {
-        //Subscribe to onClick event
+        settings.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.Setting));
         loginButton.onClick.AddListener(adminDetails);
-		registerButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(registerPopUp));
-		registerAccButton.onClick.AddListener(storeData);
-		forgotButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(forgotPopUp));
-		retrievePasswordButton.onClick.AddListener(getPassword);
+        registerButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(registerPopUp));
+        registerAccButton.onClick.AddListener(storeData);
+        forgotButton.onClick.AddListener(() => SharedUtilities.OpenCloseGameObject(forgotPopUp));
+        retrievePasswordButton.onClick.AddListener(getPassword);
+        addressInputWndow.OnEnter = async input =>
+        {
+            if (!string.IsNullOrEmpty(input))
+            {
+                bool success = await ClassroomNetworkManager.Instance.InitWebSocket(input);
+
+                if (success) addressInputWndow.gameObject.SetActive(false);
+                else addressInputWndow.DisplayErrorMessage("Server not joined: Invalid address");
+            }
+            else addressInputWndow.DisplayErrorMessage("Address cannot be empty.");
+        };
     }
 
 	void adminDetails()

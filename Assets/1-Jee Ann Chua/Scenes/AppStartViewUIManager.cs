@@ -46,10 +46,15 @@ public class AppStartViewUIManager : MonoBehaviour
         joinSessionButton.onClick.AddListener(() => sessionIDInput.gameObject.SetActive(true));
         mapEditorButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.MapEditor));
         settingsButton.onClick.AddListener(() => SharedUtilities.TransitToScene(GameScene.Setting));
-        sessionIDInput.onEnter = async (text) => {
+        sessionIDInput.OnEnter = async (text) => {
             ClassroomNetworkManager.Instance.roomID = int.Parse(text);
-            await ClassroomNetworkManager.Instance.JoinRoomBlocking();
-            SharedUtilities.TransitToScene(GameScene.Welcome);
+            bool roomJoined = await ClassroomNetworkManager.Instance.JoinRoomBlocking();
+            if (roomJoined)
+            {
+                sessionIDInput.gameObject.SetActive(false);
+                SharedUtilities.TransitToScene(GameScene.Welcome);
+            }
+            else sessionIDInput.DisplayErrorMessage("Room not joined: Invalid input.");
         };
     }
 
