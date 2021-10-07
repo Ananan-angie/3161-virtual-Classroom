@@ -48,6 +48,8 @@ public class LoginViewUIManager : MonoBehaviour
             }
             else addressInputWndow.DisplayErrorMessage("Address cannot be empty.");
         };
+
+        addressInputWndow.gameObject.SetActive(!ClassroomNetworkManager.Instance.isWebsocketConnected);
     }
 
 	void adminDetails()

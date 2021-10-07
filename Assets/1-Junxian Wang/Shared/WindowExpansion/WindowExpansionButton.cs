@@ -9,6 +9,7 @@ public class WindowExpansionButton : MonoBehaviour
 {
     [SerializeField] string directionToCollapse = "up";
     [SerializeField] RectTransform windowToControl;
+    [SerializeField] bool isTranslating = true;
     RectTransform parentWindow;
     Vector2 windowSize;
     TextMeshProUGUI buttonText;
@@ -41,7 +42,7 @@ public class WindowExpansionButton : MonoBehaviour
 
         // Set button translation and text
         SetText(isCollapsing);
-        SetTranslation(isCollapsing);
+        if (isTranslating) SetTranslation(isCollapsing);
     }
 
     public void SetText(bool isCollapsing)

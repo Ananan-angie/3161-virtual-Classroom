@@ -33,6 +33,9 @@ public class ModalInputWindow : MonoBehaviour
         });
         CancelButton.onClick.AddListener(() => gameObject.SetActive(false));
 
+        QuestionTMPro.text = QuestionText;
+        PlaceholderTMPro.text = PlaceholderText;
+
 #if UNITY_EDITOR
         InvokeRepeating("UpdateInspectorText", 0, 0.1f);
 #endif
