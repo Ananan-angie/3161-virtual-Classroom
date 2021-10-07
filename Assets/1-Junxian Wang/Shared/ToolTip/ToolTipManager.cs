@@ -57,4 +57,9 @@ public class ToolTipManager : MonoBehaviour
 	{
         tooltip.SetActive(false);
 	}
+
+	private void OnDestroy()
+	{
+		LeanTween.cancel(gameObject);
+	}
 }
