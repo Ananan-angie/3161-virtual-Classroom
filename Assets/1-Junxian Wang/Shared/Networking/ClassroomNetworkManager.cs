@@ -141,7 +141,7 @@ public class ClassroomNetworkManager : Singleton<ClassroomNetworkManager>
 
 	private async void OnApplicationQuit()
 	{
-		await websocket.Close();
+		// await websocket.Close();
 	}
 
 	private async void SendWebSocketMessage(string text)
